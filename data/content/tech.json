@@ -1,0 +1,578 @@
+[
+  {
+    "slug": "react",
+    "name": "React.js",
+    "category": "Frontend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "nextjs",
+    "name": "Next.js",
+    "category": "Frontend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "typescript",
+    "name": "TypeScript",
+    "category": "Frontend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "javascript",
+    "name": "JavaScript",
+    "category": "Frontend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "tailwind",
+    "name": "Tailwind CSS",
+    "category": "Frontend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "nodejs",
+    "name": "Node.js",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "express",
+    "name": "Express.js",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "dotnet",
+    "name": ".NET 8 Web API",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "redis",
+    "name": "Redis",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "bullmq",
+    "name": "BullMQ",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "postgresql",
+    "name": "PostgreSQL",
+    "category": "Databases",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "mssql",
+    "name": "MSSQL",
+    "category": "Databases",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "mongodb",
+    "name": "MongoDB",
+    "category": "Databases",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "supabase",
+    "name": "Supabase",
+    "category": "Databases",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "drizzle",
+    "name": "Drizzle ORM",
+    "category": "Databases",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "docker",
+    "name": "Docker",
+    "category": "Infrastructure",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "nginx",
+    "name": "Nginx",
+    "category": "Infrastructure",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "swiftui",
+    "name": "SwiftUI",
+    "category": "Native & Game Development",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "unity",
+    "name": "Unity",
+    "category": "Native & Game Development",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "git",
+    "name": "Git",
+    "category": "Tools",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "github",
+    "name": "GitHub",
+    "category": "Tools",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "python",
+    "name": "Python (temel)",
+    "category": "Tools",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "better-auth",
+    "name": "Better Auth",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  },
+  {
+    "slug": "ffmpeg",
+    "name": "FFmpeg",
+    "category": "Backend",
+    "tagline": null,
+    "summary": null,
+    "experience": null,
+    "highlights": [],
+    "link": null,
+    "contentTodos": [
+      {
+        "field": "summary",
+        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+      },
+      {
+        "field": "experience",
+        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+      },
+      {
+        "field": "link",
+        "note": "İstersen resmi site bağlantısını ekle."
+      }
+    ]
+  }
+]

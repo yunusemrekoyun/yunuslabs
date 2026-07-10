@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { projects } from "../data/portfolio";
+import { projects, techItems } from "../data/portfolio";
 import { getSiteUrl } from "../lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,6 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}/projects/${slug}`,
     changeFrequency: "monthly",
     priority: 0.8,
+  }));
+  const techRoutes: MetadataRoute.Sitemap = techItems.map(({ slug }) => ({
+    url: `${siteUrl}/stack/${slug}`,
+    changeFrequency: "monthly",
+    priority: 0.5,
   }));
 
   return [
@@ -22,5 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...projectRoutes,
+    ...techRoutes,
   ];
 }

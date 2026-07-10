@@ -7,6 +7,7 @@ import {
   profile,
   projects,
   stackGroups,
+  techHref,
 } from "../data/portfolio";
 import styles from "./PortfolioSections.module.css";
 
@@ -245,9 +246,14 @@ export function PortfolioSections() {
                 <dd className={styles.stackDescription}>{group.description}</dd>
                 <dd>
                   <ul className={styles.stackTechnologies} aria-label={`${group.title} teknolojileri`}>
-                    {group.technologies.map((technology) => (
-                      <li key={technology}>{technology}</li>
-                    ))}
+                    {group.technologies.map((technology) => {
+                      const href = techHref(technology);
+                      return (
+                        <li key={technology}>
+                          {href ? <Link href={href}>{technology}</Link> : technology}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </dd>
               </div>

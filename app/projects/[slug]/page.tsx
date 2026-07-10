@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LiquidGlassCursor } from "../../../components/LiquidGlassCursor";
-import { profile, projects, type PortfolioProject } from "../../../data/portfolio";
+import { profile, projects, techHref, type PortfolioProject } from "../../../data/portfolio";
 import { getSiteUrl } from "../../../lib/site";
 import styles from "./ProjectDetail.module.css";
 
@@ -243,11 +243,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <h2>Bu iş için kullanılan araçlar.</h2>
                   </div>
                   <ul>
-                    {project.technologies.map((technology, index) => (
-                      <li data-motion="scale" data-motion-index={index} key={technology}>
-                        {technology}
-                      </li>
-                    ))}
+                    {project.technologies.map((technology, index) => {
+                      const href = techHref(technology);
+                      return (
+                        <li data-motion="scale" data-motion-index={index} key={technology}>
+                          {href ? <Link href={href}>{technology}</Link> : technology}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </section>
               ) : null}

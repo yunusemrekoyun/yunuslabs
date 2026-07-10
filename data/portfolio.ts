@@ -10,6 +10,7 @@ import processData from "./content/process.json";
 import profileData from "./content/profile.json";
 import projectsData from "./content/projects.json";
 import stackData from "./content/stack.json";
+import techData from "./content/tech.json";
 
 export type NullableLink = string | null;
 
@@ -93,6 +94,20 @@ export type NowItem = {
   readonly description: string;
 };
 
+export type TechItem = {
+  readonly slug: string;
+  readonly name: string;
+  readonly category: string;
+  readonly tagline: string | null;
+  /** What the technology is, in Yunus's own words. */
+  readonly summary: string | null;
+  /** How and where he uses it. */
+  readonly experience: string | null;
+  readonly highlights: readonly string[];
+  readonly link: string | null;
+  readonly contentTodos: readonly ContentTodo[];
+};
+
 export type Profile = {
   readonly name: string;
   readonly shortName: string;
@@ -125,3 +140,22 @@ export type ProjectSlug = (typeof projects)[number]["slug"];
 export const projectBySlug = Object.fromEntries(
   projects.map((project) => [project.slug, project]),
 ) as Readonly<Record<ProjectSlug, PortfolioProject>>;
+
+export const techItems = techData as readonly TechItem[];
+
+export const techBySlug = Object.fromEntries(
+  techItems.map((tech) => [tech.slug, tech]),
+) as Readonly<Record<string, TechItem>>;
+
+const techSlugByName = new Map(techItems.map((tech) => [tech.name, tech.slug]));
+
+/** Detail-page href for a technology name, or null if it has no page. */
+export function techHref(name: string): string | null {
+  const slug = techSlugByName.get(name);
+  return slug ? `/stack/${slug}` : null;
+}
+
+/** Projects whose technology list includes this technology name. */
+export function projectsUsingTech(name: string): readonly PortfolioProject[] {
+  return projects.filter((project) => project.technologies.includes(name));
+}

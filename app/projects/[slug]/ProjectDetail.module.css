@@ -534,6 +534,17 @@
   font-weight: 700;
 }
 
+.stackSection a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 160ms var(--ease-out);
+}
+
+.stackSection a:hover {
+  text-decoration-color: var(--teal);
+}
+
 .galleryGrid {
   display: grid;
   gap: 44px;
