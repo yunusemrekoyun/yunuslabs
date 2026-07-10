@@ -16,6 +16,11 @@ type PointerState = {
 const FILTER_ID = "liquid-glass-filter";
 const FILTER_PADDING = 72;
 
+// How tightly the lens tracks the pointer, per frame (0–1).
+// The black dot is always exactly on the pointer; this is how fast the glass
+// closes the gap to it. 1 = locked together (no glide), lower = more trailing.
+const LENS_FOLLOW = 0.7;
+
 function clamp(min: number, value: number, max: number) {
   return Math.max(min, Math.min(value, max));
 }
@@ -206,8 +211,8 @@ export function LiquidGlassCursor() {
         return;
       }
 
-      state.x += (state.targetX - state.x) * 0.2;
-      state.y += (state.targetY - state.y) * 0.2;
+      state.x += (state.targetX - state.x) * LENS_FOLLOW;
+      state.y += (state.targetY - state.y) * LENS_FOLLOW;
 
       const dx = state.targetX - state.x;
       const dy = state.targetY - state.y;
