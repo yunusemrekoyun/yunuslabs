@@ -1,0 +1,32 @@
+[
+  {
+    "index": "01",
+    "title": "Problemi anlama",
+    "description": "İş sürecini, kullanıcıları ve ürünün gerçekten çözmesi gereken noktayı netleştiririm."
+  },
+  {
+    "index": "02",
+    "title": "Sistem kurgusu",
+    "description": "Ürün akışını, veri modelini ve sistem sınırlarını geliştirmeye başlamadan önce kurarım."
+  },
+  {
+    "index": "03",
+    "title": "Arayüz ve akış",
+    "description": "Karmaşık süreçleri kullanıcı için açık, erişilebilir ve tutarlı etkileşimlere dönüştürürüm."
+  },
+  {
+    "index": "04",
+    "title": "Backend ve veri",
+    "description": "İş kurallarını API, veritabanı ve gereken arka plan süreçleriyle güvenilir hâle getiririm."
+  },
+  {
+    "index": "05",
+    "title": "Kalite katmanı",
+    "description": "Test, güvenlik ve performansı son kontrol değil geliştirme sürecinin bir parçası olarak ele alırım."
+  },
+  {
+    "index": "06",
+    "title": "Canlı ortam",
+    "description": "Container, proxy ve deployment yapılarını kurar; ürünün canlıdaki davranışını takip ederim."
+  }
+]

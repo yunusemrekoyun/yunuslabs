@@ -1,0 +1,66 @@
+[
+  {
+    "id": "frontend",
+    "title": "Frontend",
+    "description": "Ürün akışlarını erişilebilir, hızlı ve farklı ekranlarda doğal çalışan arayüzlere dönüştürüyorum.",
+    "technologies": [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": "backend",
+    "title": "Backend",
+    "description": "API geliştirme, iş kuralları, arka plan işleri ve gerçek dünya süreçlerinin modellenmesine odaklanıyorum.",
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      ".NET 8 Web API",
+      "Redis",
+      "BullMQ"
+    ]
+  },
+  {
+    "id": "databases",
+    "title": "Databases",
+    "description": "İlişkisel ve doküman tabanlı veriyi sorgu ihtiyaçları, tutarlılık ve sürdürülebilir şema yapısıyla ele alıyorum.",
+    "technologies": [
+      "PostgreSQL",
+      "MSSQL",
+      "MongoDB",
+      "Supabase",
+      "Drizzle ORM"
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "title": "Infrastructure",
+    "description": "Uygulamayı geliştirme ortamından canlıya taşıyan container, proxy ve deployment katmanlarını kuruyorum.",
+    "technologies": [
+      "Docker",
+      "Nginx"
+    ]
+  },
+  {
+    "id": "native-game",
+    "title": "Native & Game Development",
+    "description": "Web dışındaki ürün fikirlerini native macOS arayüzleri ve oyun prototipleri üzerinden araştırıyorum.",
+    "technologies": [
+      "SwiftUI",
+      "Unity"
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Tools",
+    "description": "Kod geçmişini, ekip içi akışı ve farklı geliştirme ihtiyaçlarını izlenebilir tutan araçları kullanıyorum.",
+    "technologies": [
+      "Git",
+      "GitHub",
+      "Python (temel)"
+    ]
+  }
+]

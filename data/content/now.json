@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Native macOS araçları",
+    "description": "Masaüstündeki günlük işleri daha kısa akışlara dönüştüren küçük, odaklı ürünler."
+  },
+  {
+    "title": "İşletme yönetim panelleri",
+    "description": "Gerçek operasyonları rol, veri ve görev akışlarıyla bir araya getiren sistemler."
+  },
+  {
+    "title": "Ölçeklenebilir backend mimarileri",
+    "description": "API, queue, cache ve veri katmanlarının birlikte güvenilir çalıştığı yapılar."
+  },
+  {
+    "title": "Ürünleştirme ve deployment",
+    "description": "Fikirden çalışan ürüne ve canlı ortam takibine uzanan uçtan uca geliştirme süreci."
+  }
+]

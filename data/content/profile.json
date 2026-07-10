@@ -1,0 +1,22 @@
+{
+  "name": "Yunus Emre Koyun",
+  "shortName": "Yunus Emre",
+  "role": "Full-stack Developer",
+  "location": "Kütahya, Türkiye",
+  "education": "Bilgisayar Mühendisliği mezunu",
+  "availability": "Yeni projelere ve iş fırsatlarına açık",
+  "intro": "Arayüzden veritabanına, sunucudan canlı ortama kadar ürünün tamamıyla ilgileniyorum.",
+  "about": [
+    "İş süreçlerini yalnızca çalışan ekranlara değil, sürdürülebilir ürünlere dönüştürüyorum.",
+    "Full-stack ürün geliştirme, backend mimarisi, veritabanı tasarımı ve deployment süreçlerine birlikte bakıyorum.",
+    "Web ürünlerinin yanında native macOS araçları ve oyun geliştirme çalışmalarına da alan açıyorum."
+  ],
+  "email": "yunusemrekoyun26@gmail.com",
+  "githubUsername": "yunusemrekoyun",
+  "links": {
+    "email": "mailto:yunusemrekoyun26@gmail.com",
+    "github": "https://github.com/yunusemrekoyun",
+    "linkedin": null,
+    "cv": null
+  }
+}

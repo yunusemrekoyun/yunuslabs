@@ -1,0 +1,26 @@
+[
+  {
+    "company": "Ziraat Teknoloji",
+    "role": "Stajyer Yazılım Geliştirici",
+    "period": "Eylül 2024 — Ocak 2025",
+    "description": null,
+    "contentTodos": [
+      {
+        "field": "description",
+        "note": "Üstlenilen görevleri ve kullanılan teknolojileri doğrulanmış bilgilerle ekle."
+      }
+    ]
+  },
+  {
+    "company": "Belsis Yazılım",
+    "role": "Stajyer Yazılım Geliştirici",
+    "period": "Temmuz 2022 — Eylül 2022",
+    "description": null,
+    "contentTodos": [
+      {
+        "field": "description",
+        "note": "Üstlenilen görevleri ve kullanılan teknolojileri doğrulanmış bilgilerle ekle."
+      }
+    ]
+  }
+]
