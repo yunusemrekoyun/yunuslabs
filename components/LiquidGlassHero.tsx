@@ -134,8 +134,8 @@ export function LiquidGlassHero({ children }: LiquidGlassHeroProps) {
       speed: 0,
     };
 
-    let lensWidth = 220;
-    let lensHeight = 148;
+    let lensWidth = 150;
+    let lensHeight = 104;
     let frameId = 0;
     let isAnimating = false;
     let interactionEnabled = false;
@@ -221,9 +221,9 @@ export function LiquidGlassHero({ children }: LiquidGlassHeroProps) {
       lens.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${angle * 0.04}deg) scale(${stretch})`;
       cursor.style.transform = `translate3d(${state.targetX - 3.5}px, ${state.targetY - 3.5}px, 0)`;
 
-      redShift.setAttribute("scale", (42 + state.speed * 22).toFixed(2));
-      greenShift.setAttribute("scale", (36 + state.speed * 18).toFixed(2));
-      blueShift.setAttribute("scale", (30 + state.speed * 14).toFixed(2));
+      redShift.setAttribute("scale", (28 + state.speed * 14).toFixed(2));
+      greenShift.setAttribute("scale", (24 + state.speed * 12).toFixed(2));
+      blueShift.setAttribute("scale", (20 + state.speed * 9).toFixed(2));
 
       state.speed *= 0.88;
       const remainingDistance = Math.hypot(state.targetX - state.x, state.targetY - state.y);
@@ -339,7 +339,7 @@ export function LiquidGlassHero({ children }: LiquidGlassHeroProps) {
               ref={redShiftRef}
               in="SourceGraphic"
               in2="DISPLACEMENT_MAP"
-              scale="42"
+              scale="28"
               xChannelSelector="R"
               yChannelSelector="G"
               result="RED_SHIFT"
@@ -354,7 +354,7 @@ export function LiquidGlassHero({ children }: LiquidGlassHeroProps) {
               ref={greenShiftRef}
               in="SourceGraphic"
               in2="DISPLACEMENT_MAP"
-              scale="36"
+              scale="24"
               xChannelSelector="R"
               yChannelSelector="G"
               result="GREEN_SHIFT"
@@ -369,7 +369,7 @@ export function LiquidGlassHero({ children }: LiquidGlassHeroProps) {
               ref={blueShiftRef}
               in="SourceGraphic"
               in2="DISPLACEMENT_MAP"
-              scale="30"
+              scale="20"
               xChannelSelector="R"
               yChannelSelector="G"
               result="BLUE_SHIFT"
