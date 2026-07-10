@@ -1,0 +1,40 @@
+# Dependencies
+/node_modules/
+
+# Build output
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment — a single local .env holds everything; never commit it
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+*.pem
+.vscode/
+.idea/
+
+# Local assistant / tooling config — keep out of the repo history
+.claude/
+CLAUDE.md
+.mcp.json
+.cursor/
+.cursorrules
+.aider*
+.github/copilot-instructions.md
+
+# Private, local-only working docs (roadmaps, planning, scratch notes)
+/.local/
+/roadmap/
+ROADMAP.md
+NOTES.md
+TODO.local.md
