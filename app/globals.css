@@ -5,6 +5,46 @@
   --grid: rgba(5, 5, 5, 0.04);
   --teal: #58bbb4;
   --teal-ink: #2c706b;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Liquid glass material — one recipe, two contexts.
+     Light = frosted panels over the paper surfaces.
+     Dark  = frosted panels over the ink / deep-teal surfaces. */
+  --glass-filter: blur(16px) saturate(1.7);
+
+  --glass-light-bg: rgba(255, 255, 255, 0.3);
+  --glass-light-stroke: rgba(255, 255, 255, 0.65);
+  --glass-light-shadow:
+    0 12px 30px rgba(5, 5, 5, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -10px 20px rgba(255, 255, 255, 0.14);
+
+  --glass-dark-bg: rgba(255, 255, 255, 0.07);
+  --glass-dark-stroke: rgba(255, 255, 255, 0.16);
+  --glass-dark-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* No backdrop-filter support → fall back to near-solid fills so the
+   material still reads as a panel rather than washing out. */
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  :root {
+    --glass-light-bg: rgba(248, 247, 242, 0.9);
+    --glass-dark-bg: rgba(11, 20, 18, 0.82);
+  }
+}
+
+/* Respect users who ask for less transparency: frost the glass solid. */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --glass-filter: none;
+    --glass-light-bg: rgba(248, 247, 242, 0.94);
+    --glass-dark-bg: rgba(11, 20, 18, 0.9);
+  }
 }
 
 * {

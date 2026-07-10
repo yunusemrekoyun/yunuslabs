@@ -79,10 +79,17 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: clamp(22px, 3.4vw, 50px);
+  gap: clamp(16px, 2.2vw, 32px);
+  padding: 7px 7px 7px 22px;
+  border-radius: 999px;
   font-size: clamp(0.73rem, 0.84vw, 0.88rem);
   font-weight: 700;
   text-transform: uppercase;
+  background: var(--glass-light-bg);
+  border: 1px solid var(--glass-light-stroke);
+  -webkit-backdrop-filter: var(--glass-filter);
+  backdrop-filter: var(--glass-filter);
+  box-shadow: var(--glass-light-shadow);
 }
 
 .nav > a:first-child {
@@ -104,13 +111,17 @@
   border-radius: 999px;
   background: #050505;
   color: #f8f7f2;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+  transition: background 200ms var(--ease-out), color 200ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
 .navPill:hover {
   background: #58bbb4;
   color: #050505;
   transform: translateY(-2px);
+}
+
+.navPill:active {
+  transform: scale(0.96);
 }
 
 .hero {
