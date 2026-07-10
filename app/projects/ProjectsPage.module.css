@@ -140,13 +140,14 @@
 .hero h1 {
   margin: 0;
   font-family: var(--font-display), "Didot", "Bodoni 72", "Times New Roman", serif;
-  font-size: clamp(5rem, 12vw, 11.8rem);
+  font-size: clamp(4rem, 8vw, 8.4rem);
   font-style: italic;
   font-weight: 900;
   font-optical-sizing: auto;
   font-variation-settings: "opsz" 96;
-  line-height: 0.76;
+  line-height: 0.78;
   letter-spacing: -0.035em;
+  overflow-wrap: break-word;
 }
 
 .hero h1 span {
@@ -553,7 +554,8 @@
   }
 
   .hero h1 {
-    font-size: clamp(4.5rem, 22vw, 7.5rem);
+    font-size: clamp(3.4rem, 17vw, 7.5rem);
+    overflow-wrap: break-word;
   }
 
   .hero h1 span {

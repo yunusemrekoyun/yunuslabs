@@ -821,6 +821,15 @@
   gap: clamp(72px, 10vw, 150px);
 }
 
+.historyGrid > div,
+.historyGrid > aside {
+  min-width: 0;
+}
+
+.experienceList li > div {
+  min-width: 0;
+}
+
 .historyHeading {
   margin-bottom: clamp(64px, 8vw, 112px);
 }
@@ -1038,6 +1047,12 @@
   align-items: end;
 }
 
+/* Let grid children shrink below their content's intrinsic width so a long
+   word (e.g. "netleştirelim.") can never blow the track past the viewport. */
+.contactGrid > div {
+  min-width: 0;
+}
+
 .contactGrid h2 {
   max-width: 900px;
   font-size: clamp(5.5rem, 11vw, 12rem);
@@ -1237,7 +1252,7 @@
   .historyGrid,
   .nowLayout,
   .contactGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .aboutNarrative {
@@ -1472,7 +1487,8 @@
   }
 
   .contactGrid h2 {
-    font-size: clamp(4.8rem, 22vw, 7.2rem);
+    font-size: clamp(3rem, 13vw, 7.2rem);
+    overflow-wrap: break-word;
   }
 
   .contactDetails > p {
