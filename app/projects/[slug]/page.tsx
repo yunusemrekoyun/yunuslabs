@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { LiquidGlassCursor } from "../../../components/LiquidGlassCursor";
 import { profile, projects, type PortfolioProject } from "../../../data/portfolio";
 import { getSiteUrl } from "../../../lib/site";
 import styles from "./ProjectDetail.module.css";
@@ -91,7 +92,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   };
 
   return (
-    <div className={styles.page} data-tone={project.visual.tone}>
+    <>
+      <div className={styles.page} data-tone={project.visual.tone}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
@@ -339,6 +341,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <a href={profile.links.email}>İletişim</a>
         <span>© {new Date().getFullYear()}</span>
       </footer>
-    </div>
+      </div>
+
+      <LiquidGlassCursor />
+    </>
   );
 }

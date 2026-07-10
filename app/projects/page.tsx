@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { LiquidGlassCursor } from "../../components/LiquidGlassCursor";
 import { profile, projects } from "../../data/portfolio";
 import styles from "./ProjectsPage.module.css";
 
@@ -35,8 +36,9 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className={styles.page}>
-      <a className={styles.skipLink} href="#projects-main">
+    <>
+      <div className={styles.page}>
+        <a className={styles.skipLink} href="#projects-main">
         İçeriğe geç
       </a>
 
@@ -169,6 +171,9 @@ export default function ProjectsPage() {
         </nav>
         <span>© {new Date().getFullYear()}</span>
       </footer>
-    </div>
+      </div>
+
+      <LiquidGlassCursor />
+    </>
   );
 }
