@@ -1,0 +1,31 @@
+.switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.switcher a {
+  color: rgba(5, 5, 5, 0.42);
+  transition: color 160ms var(--ease-out);
+}
+
+.switcher a:hover {
+  color: #050505;
+}
+
+.switcher a[aria-current="true"] {
+  color: #050505;
+}
+
+.sep {
+  color: rgba(5, 5, 5, 0.24);
+}

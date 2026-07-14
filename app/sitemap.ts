@@ -1,32 +1,38 @@
 import type { MetadataRoute } from "next";
-import { projects, techItems } from "../data/portfolio";
-import { getSiteUrl } from "../lib/site";
+import { projects, techItems } from "@/data/portfolio";
+import { locales } from "@/i18n/config";
+import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
-  const projectRoutes: MetadataRoute.Sitemap = projects.map(({ slug }) => ({
-    url: `${siteUrl}/projects/${slug}`,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }));
-  const techRoutes: MetadataRoute.Sitemap = techItems.map(({ slug }) => ({
-    url: `${siteUrl}/stack/${slug}`,
-    changeFrequency: "monthly",
-    priority: 0.5,
-  }));
+  const entries: MetadataRoute.Sitemap = [];
 
-  return [
-    {
-      url: siteUrl,
+  for (const locale of locales) {
+    entries.push({
+      url: `${siteUrl}/${locale}`,
       changeFrequency: "monthly",
       priority: 1,
-    },
-    {
-      url: `${siteUrl}/projects`,
+    });
+    entries.push({
+      url: `${siteUrl}/${locale}/projects`,
       changeFrequency: "monthly",
       priority: 0.9,
-    },
-    ...projectRoutes,
-    ...techRoutes,
-  ];
+    });
+    for (const { slug } of projects) {
+      entries.push({
+        url: `${siteUrl}/${locale}/projects/${slug}`,
+        changeFrequency: "monthly",
+        priority: 0.8,
+      });
+    }
+    for (const { slug } of techItems) {
+      entries.push({
+        url: `${siteUrl}/${locale}/stack/${slug}`,
+        changeFrequency: "monthly",
+        priority: 0.5,
+      });
+    }
+  }
+
+  return entries;
 }

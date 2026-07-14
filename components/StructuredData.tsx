@@ -1,12 +1,13 @@
-import { getSiteUrl } from "../lib/site";
+import type { Locale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/get-dictionary";
+import { getSiteUrl } from "@/lib/site";
 
-const personDescription =
-  "Kullanıcı odaklı arayüzlerden backend mimarisine ve canlı ortam yönetimine kadar ürünün tamamını geliştiren full-stack developer.";
-
-export default function StructuredData() {
+export default function StructuredData({ locale }: { locale: Locale }) {
+  const dict = getDictionary(locale);
   const siteUrl = getSiteUrl();
   const personId = `${siteUrl}/#person`;
   const websiteId = `${siteUrl}/#website`;
+  const description = dict.meta.personDescription;
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -17,7 +18,7 @@ export default function StructuredData() {
         url: siteUrl,
         email: "mailto:yunusemrekoyun26@gmail.com",
         jobTitle: "Full-Stack Developer",
-        description: personDescription,
+        description,
         address: {
           "@type": "PostalAddress",
           addressLocality: "Kütahya",
@@ -38,9 +39,9 @@ export default function StructuredData() {
         "@type": "WebSite",
         "@id": websiteId,
         url: siteUrl,
-        name: "Yunus Emre Koyun — Portfolio",
-        description: personDescription,
-        inLanguage: "tr-TR",
+        name: dict.meta.appName,
+        description,
+        inLanguage: locale === "tr" ? "tr-TR" : "en-US",
         creator: { "@id": personId },
         publisher: { "@id": personId },
       },

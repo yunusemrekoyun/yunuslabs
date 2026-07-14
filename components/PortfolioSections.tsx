@@ -8,7 +8,9 @@ import {
   projects,
   stackGroups,
   techHref,
-} from "../data/portfolio";
+} from "@/data/portfolio";
+import { withLocale, type Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/get-dictionary";
 import styles from "./PortfolioSections.module.css";
 
 function ProjectArtwork({
@@ -16,11 +18,13 @@ function ProjectArtwork({
   label,
   layout,
   tone,
+  altPrefix,
 }: {
   index: number;
   label: string;
   layout: number;
   tone: (typeof projects)[number]["visual"]["tone"];
+  altPrefix: string;
 }) {
   return (
     <div
@@ -30,7 +34,7 @@ function ProjectArtwork({
       data-motion-index={index}
       data-tone={tone}
       role="img"
-      aria-label={`Proje arayüzü için ayrılan görsel alan: ${label}`}
+      aria-label={`${altPrefix}: ${label}`}
     >
       <span className={styles.artLabel}>{label}</span>
       <span className={styles.artTopbar} aria-hidden="true" />
@@ -43,7 +47,7 @@ function ProjectArtwork({
   );
 }
 
-export function PortfolioSections() {
+export function PortfolioSections({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -51,16 +55,16 @@ export function PortfolioSections() {
       <section className={`${styles.section} ${styles.aboutSection}`} id="about" aria-labelledby="about-title">
         <div className={styles.shell}>
           <div className={styles.sectionRail} data-motion="line">
-            <span>01 / About</span>
+            <span>01 / {dict.about.rail}</span>
             <span>{profile.location}</span>
           </div>
 
           <div className={styles.aboutGrid}>
             <div className={styles.aboutHeading} data-motion="reveal">
-              <p className={styles.eyebrow}>Ürün geliştirme, baştan sona.</p>
+              <p className={styles.eyebrow}>{dict.about.eyebrow}</p>
               <h2 id="about-title">
-                Ekrandan
-                <em> çalışan sisteme.</em>
+                {dict.about.title}
+                <em>{dict.about.titleEm}</em>
               </h2>
             </div>
 
@@ -76,21 +80,21 @@ export function PortfolioSections() {
             </div>
           </div>
 
-          <dl className={styles.profileFacts} data-motion="line" aria-label="Kısa profil bilgileri">
+          <dl className={styles.profileFacts} data-motion="line" aria-label={dict.about.facts.label}>
             <div data-motion="slide" data-motion-index={0}>
-              <dt>Rol</dt>
+              <dt>{dict.about.facts.role}</dt>
               <dd>{profile.role}</dd>
             </div>
             <div data-motion="slide" data-motion-index={1}>
-              <dt>Konum</dt>
+              <dt>{dict.about.facts.location}</dt>
               <dd>{profile.location}</dd>
             </div>
             <div data-motion="slide" data-motion-index={2}>
-              <dt>Eğitim</dt>
+              <dt>{dict.about.facts.education}</dt>
               <dd>{profile.education}</dd>
             </div>
             <div data-motion="slide" data-motion-index={3}>
-              <dt>Durum</dt>
+              <dt>{dict.about.facts.status}</dt>
               <dd className={styles.available}>{profile.availability}</dd>
             </div>
           </dl>
@@ -100,15 +104,17 @@ export function PortfolioSections() {
       <section className={`${styles.section} ${styles.projectsSection}`} id="projects" aria-labelledby="projects-title">
         <div className={styles.shell}>
           <div className={`${styles.sectionRail} ${styles.sectionRailDark}`} data-motion="line">
-            <span>02 / Selected Projects</span>
-            <Link href="/projects">Tüm projeler <span aria-hidden="true">→</span></Link>
+            <span>02 / {dict.projects.rail}</span>
+            <Link href={withLocale(locale, "/projects")}>
+              {dict.nav.allProjects} <span aria-hidden="true">→</span>
+            </Link>
           </div>
 
           <header className={styles.projectsHeading} data-motion="reveal">
-            <p className={styles.eyebrow}>Gerçek süreçler. Çalışan ürünler.</p>
+            <p className={styles.eyebrow}>{dict.projects.eyebrow}</p>
             <h2 id="projects-title">
-              İşin görünen yüzü
-              <em> kadar altyapısı da.</em>
+              {dict.projects.title}
+              <em>{dict.projects.titleEm}</em>
             </h2>
           </header>
 
@@ -134,12 +140,13 @@ export function PortfolioSections() {
                     label={project.visual.label}
                     layout={index % 4}
                     tone={project.visual.tone}
+                    altPrefix={dict.projects.artworkAlt}
                   />
 
                   <div className={styles.projectContent}>
                     <div className={styles.projectTopline} data-motion="line">
                       <span>{project.category}</span>
-                      <span>{project.role ?? project.year ?? "Case study"}</span>
+                      <span>{project.role ?? project.year ?? dict.common.caseStudy}</span>
                     </div>
 
                     <h3 id={`project-${project.slug}`}>{project.title}</h3>
@@ -147,13 +154,13 @@ export function PortfolioSections() {
 
                     {project.technicalFocus ? (
                       <p className={styles.technicalFocus}>
-                        <span>Teknik odak</span>
+                        <span>{dict.projects.technicalFocus}</span>
                         {project.technicalFocus}
                       </p>
                     ) : null}
 
                     <div className={styles.projectFooter}>
-                      <ul className={styles.technologyList} aria-label={`${project.title} teknolojileri`}>
+                      <ul className={styles.technologyList} aria-label={`${project.title} ${dict.common.technologies}`}>
                         {project.technologies.slice(0, isFeatured ? 6 : 4).map((technology) => (
                           <li key={technology}>{technology}</li>
                         ))}
@@ -162,16 +169,16 @@ export function PortfolioSections() {
                       <div className={styles.projectLinks}>
                         {project.links.demo ? (
                           <a href={project.links.demo} target="_blank" rel="noreferrer">
-                            Canlı <span aria-hidden="true">↗</span>
+                            {dict.common.live} <span aria-hidden="true">↗</span>
                           </a>
                         ) : null}
                         {project.links.github ? (
                           <a href={project.links.github} target="_blank" rel="noreferrer">
-                            GitHub <span aria-hidden="true">↗</span>
+                            {dict.common.github} <span aria-hidden="true">↗</span>
                           </a>
                         ) : null}
-                        <Link href={`/projects/${project.slug}`}>
-                          İncele <span aria-hidden="true">→</span>
+                        <Link href={withLocale(locale, `/projects/${project.slug}`)}>
+                          {dict.common.review} <span aria-hidden="true">→</span>
                         </Link>
                       </div>
                     </div>
@@ -186,21 +193,18 @@ export function PortfolioSections() {
       <section className={`${styles.section} ${styles.processSection}`} id="process" aria-labelledby="process-title">
         <div className={styles.shell}>
           <div className={styles.sectionRail} data-motion="line">
-            <span>03 / Yaklaşım</span>
-            <span>Fikir → canlı ortam</span>
+            <span>03 / {dict.process.rail}</span>
+            <span>{dict.process.railRight}</span>
           </div>
 
           <div className={styles.processGrid}>
             <header className={styles.processHeading} data-motion="reveal">
-              <p className={styles.eyebrow}>Koddan önce bağlam.</p>
+              <p className={styles.eyebrow}>{dict.process.eyebrow}</p>
               <h2 id="process-title">
-                Önce sistemi
-                <em> doğru kurarım.</em>
+                {dict.process.title}
+                <em>{dict.process.titleEm}</em>
               </h2>
-              <p>
-                Bir özelliği tek başına değil, ürünün geri kalanı ve onu kullanacak insanların gerçek akışı içinde ele
-                alırım.
-              </p>
+              <p>{dict.process.intro}</p>
             </header>
 
             <ol className={styles.processList}>
@@ -219,15 +223,15 @@ export function PortfolioSections() {
       <section className={`${styles.section} ${styles.stackSection}`} id="stack" aria-labelledby="stack-title">
         <div className={styles.shell}>
           <div className={styles.sectionRail} data-motion="line">
-            <span>04 / Stack</span>
-            <span>Araç değil, kullanım biçimi</span>
+            <span>04 / {dict.stack.rail}</span>
+            <span>{dict.stack.railRight}</span>
           </div>
 
           <header className={styles.stackHeading} data-motion="reveal">
-            <p className={styles.eyebrow}>Teknik repertuvar.</p>
+            <p className={styles.eyebrow}>{dict.stack.eyebrow}</p>
             <h2 id="stack-title">
-              Doğru katmanda,
-              <em> doğru araç.</em>
+              {dict.stack.title}
+              <em>{dict.stack.titleEm}</em>
             </h2>
           </header>
 
@@ -245,12 +249,12 @@ export function PortfolioSections() {
                 </dt>
                 <dd className={styles.stackDescription}>{group.description}</dd>
                 <dd>
-                  <ul className={styles.stackTechnologies} aria-label={`${group.title} teknolojileri`}>
+                  <ul className={styles.stackTechnologies} aria-label={`${group.title} ${dict.common.technologies}`}>
                     {group.technologies.map((technology) => {
                       const href = techHref(technology);
                       return (
                         <li key={technology}>
-                          {href ? <Link href={href}>{technology}</Link> : technology}
+                          {href ? <Link href={withLocale(locale, href)}>{technology}</Link> : technology}
                         </li>
                       );
                     })}
@@ -269,17 +273,17 @@ export function PortfolioSections() {
       >
         <div className={styles.shell}>
           <div className={`${styles.sectionRail} ${styles.sectionRailDark}`} data-motion="line">
-            <span>05 / Geçmiş</span>
-            <span>Deneyim + Eğitim</span>
+            <span>05 / {dict.history.rail}</span>
+            <span>{dict.history.railRight}</span>
           </div>
 
           <div className={styles.historyGrid}>
             <div>
               <header className={styles.historyHeading} data-motion="reveal">
-                <p className={styles.eyebrow}>Deneyim.</p>
+                <p className={styles.eyebrow}>{dict.history.experienceEyebrow}</p>
                 <h2 id="experience-title">
-                  Öğrenirken
-                  <em> üretmek.</em>
+                  {dict.history.experienceTitle}
+                  <em>{dict.history.experienceTitleEm}</em>
                 </h2>
               </header>
 
@@ -303,8 +307,8 @@ export function PortfolioSections() {
             </div>
 
             <aside className={styles.educationBlock} data-motion="slide" aria-labelledby="education-title">
-              <p className={styles.eyebrow}>Eğitim.</p>
-              <h2 id="education-title">Temel.</h2>
+              <p className={styles.eyebrow}>{dict.history.educationEyebrow}</p>
+              <h2 id="education-title">{dict.history.educationTitle}</h2>
               {education.map((item, index) => (
                 <article
                   data-motion="line reveal"
@@ -315,11 +319,11 @@ export function PortfolioSections() {
                   <p>{item.degree}</p>
                   <dl>
                     <div>
-                      <dt>Mezuniyet</dt>
+                      <dt>{dict.history.graduation}</dt>
                       <dd>{item.graduation}</dd>
                     </div>
                     <div>
-                      <dt>GPA</dt>
+                      <dt>{dict.history.gpa}</dt>
                       <dd>{item.gpa}</dd>
                     </div>
                   </dl>
@@ -335,10 +339,10 @@ export function PortfolioSections() {
           <div className={styles.nowLayout}>
             <header className={styles.nowHeading} data-motion="reveal">
               <div className={styles.nowPulse} aria-hidden="true" />
-              <p className={styles.eyebrow}>Şu anda.</p>
+              <p className={styles.eyebrow}>{dict.now.eyebrow}</p>
               <h2 id="now-title">
-                Odağımda
-                <em> ne var?</em>
+                {dict.now.title}
+                <em>{dict.now.titleEm}</em>
               </h2>
             </header>
 
@@ -361,41 +365,38 @@ export function PortfolioSections() {
         <div className={styles.contactOrb} data-motion="parallax scale" aria-hidden="true" />
         <div className={styles.shell}>
           <div className={`${styles.sectionRail} ${styles.sectionRailDark}`} data-motion="line">
-            <span>06 / Contact</span>
+            <span>06 / {dict.contact.rail}</span>
             <span>{profile.availability}</span>
           </div>
 
           <div className={styles.contactGrid}>
             <div data-motion="reveal">
-              <p className={styles.eyebrow}>Yeni bir şey üzerinde mi düşünüyorsun?</p>
+              <p className={styles.eyebrow}>{dict.contact.eyebrow}</p>
               <h2 id="contact-title">
-                Konuşarak
-                <em> netleştirelim.</em>
+                {dict.contact.title}
+                <em>{dict.contact.titleEm}</em>
               </h2>
             </div>
 
             <div className={styles.contactDetails} data-motion="slide">
-              <p>
-                Yeni projeler, freelance çalışmalar, full-time pozisyonlar ve teknik iş birlikleri için iletişime
-                açığım.
-              </p>
+              <p>{dict.contact.blurb}</p>
               <a className={styles.emailLink} href={profile.links.email}>
                 {profile.email}
                 <span aria-hidden="true">→</span>
               </a>
-              <nav className={styles.socialLinks} aria-label="Sosyal ve belge bağlantıları">
+              <nav className={styles.socialLinks} aria-label={dict.contact.socialLabel}>
                 <a href={profile.links.github} target="_blank" rel="noreferrer">
-                  GitHub / {profile.githubUsername} <span aria-hidden="true">↗</span>
+                  {dict.common.github} / {profile.githubUsername} <span aria-hidden="true">↗</span>
                 </a>
                 {profile.links.linkedin ? (
                   <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
-                    LinkedIn <span aria-hidden="true">↗</span>
+                    {dict.contact.linkedin} <span aria-hidden="true">↗</span>
                   </a>
                 ) : null}
                 {profile.links.cv ? (
-                  <a href={profile.links.cv}>CV <span aria-hidden="true">↓</span></a>
+                  <a href={profile.links.cv}>{dict.contact.cv} <span aria-hidden="true">↓</span></a>
                 ) : (
-                  <span aria-disabled="true">CV / yakında</span>
+                  <span aria-disabled="true">{dict.contact.cvSoon}</span>
                 )}
               </nav>
             </div>
@@ -410,18 +411,18 @@ export function PortfolioSections() {
               <strong>{profile.name}</strong>
               <span>{profile.role}</span>
             </div>
-            <nav aria-label="Footer navigation">
-              <a href="#about">About</a>
-              <a href="#projects">Projects</a>
-              <Link href="/projects">Project archive</Link>
-              <a href="#experience">Experience</a>
-              <a href="#contact">Contact</a>
+            <nav aria-label={dict.footer.navLabel}>
+              <a href="#about">{dict.nav.about}</a>
+              <a href="#projects">{dict.nav.projects}</a>
+              <Link href={withLocale(locale, "/projects")}>{dict.footer.projectArchive}</Link>
+              <a href="#experience">{dict.nav.experience}</a>
+              <a href="#contact">{dict.nav.contact}</a>
             </nav>
           </div>
           <div className={styles.footerBottom} data-motion="reveal">
             <span>© {currentYear} {profile.shortName}</span>
-            <span>Next.js + TypeScript</span>
-            <a href="#hero-scene">Yukarı dön <span aria-hidden="true">↑</span></a>
+            <span>{dict.common.builtWith}</span>
+            <a href="#hero-scene">{dict.common.backToTop} <span aria-hidden="true">↑</span></a>
           </div>
         </div>
       </footer>

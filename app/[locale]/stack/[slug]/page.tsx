@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { LiquidGlassCursor } from "../../../components/LiquidGlassCursor";
-import { profile, projectsUsingTech, techItems } from "../../../data/portfolio";
-import { getSiteUrl } from "../../../lib/site";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
+import { profile, projectsUsingTech, techItems } from "@/data/portfolio";
+import { isLocale, withLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/get-dictionary";
+import { getSiteUrl } from "@/lib/site";
 import styles from "./StackDetail.module.css";
 
 type StackPageProps = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 export const dynamicParams = false;
@@ -17,35 +20,32 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: StackPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { locale, slug } = await params;
   const tech = techItems.find((item) => item.slug === slug);
 
-  if (!tech) {
+  if (!isLocale(locale) || !tech) {
     return {};
   }
 
-  const description =
-    tech.summary ?? `${tech.name} — ${profile.name}'un kullandığı teknolojiler ve deneyim notları.`;
+  const dict = getDictionary(locale);
+  const description = tech.summary ?? `${tech.name} ${dict.stackDetail.metaFallbackSuffix}`;
 
   return {
     title: `${tech.name} — Stack`,
     description,
     alternates: {
-      canonical: `/stack/${tech.slug}`,
+      canonical: `/${locale}/stack/${tech.slug}`,
+      languages: {
+        tr: `/tr/stack/${tech.slug}`,
+        en: `/en/stack/${tech.slug}`,
+      },
     },
     openGraph: {
       title: `${tech.name} | ${profile.name}`,
       description,
       type: "article",
-      url: `/stack/${tech.slug}`,
-      images: [
-        {
-          url: "/opengraph-image",
-          width: 1200,
-          height: 630,
-          alt: "Yunus Emre Koyun — Full-stack Developer",
-        },
-      ],
+      url: `/${locale}/stack/${tech.slug}`,
+      images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: dict.meta.ogAlt }],
     },
     twitter: {
       card: "summary_large_image",
@@ -57,7 +57,14 @@ export async function generateMetadata({ params }: StackPageProps): Promise<Meta
 }
 
 export default async function StackDetailPage({ params }: StackPageProps) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+
+  if (!isLocale(locale)) {
+    notFound();
+  }
+
+  const dict = getDictionary(locale);
+  const detail = dict.stackDetail;
   const index = techItems.findIndex((item) => item.slug === slug);
 
   if (index < 0) {
@@ -76,7 +83,8 @@ export default async function StackDetailPage({ params }: StackPageProps) {
     "@type": "TechArticle",
     name: tech.name,
     about: tech.name,
-    url: `${getSiteUrl()}/stack/${tech.slug}`,
+    inLanguage: locale === "tr" ? "tr-TR" : "en-US",
+    url: `${getSiteUrl()}/${locale}/stack/${tech.slug}`,
     ...(tech.summary ? { description: tech.summary } : {}),
     author: { "@type": "Person", name: profile.name },
   };
@@ -90,17 +98,18 @@ export default async function StackDetailPage({ params }: StackPageProps) {
         />
 
         <a className={styles.skipLink} href="#tech">
-          İçeriğe geç
+          {dict.common.skipToContent}
         </a>
 
         <header className={styles.siteHeader}>
-          <Link className={styles.mark} href="/" aria-label="Ana sayfa" />
-          <nav className={styles.nav} aria-label="Ana navigasyon">
-            <Link href="/#stack">Stack</Link>
-            <Link href="/projects">Projeler</Link>
+          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home} />
+          <nav className={styles.nav} aria-label={dict.nav.primaryNav}>
+            <Link href={withLocale(locale, "/#stack")}>{dict.nav.stack}</Link>
+            <Link href={withLocale(locale, "/projects")}>{dict.nav.projects}</Link>
             <a className={styles.navPill} href={profile.links.email}>
-              İletişim <span aria-hidden="true">→</span>
+              {dict.nav.contact} <span aria-hidden="true">→</span>
             </a>
+            <LanguageSwitcher locale={locale} />
           </nav>
         </header>
 
@@ -108,7 +117,7 @@ export default async function StackDetailPage({ params }: StackPageProps) {
           <article>
             <header className={styles.hero}>
               <div className={styles.breadcrumb}>
-                <Link href="/#stack">Stack</Link>
+                <Link href={withLocale(locale, "/#stack")}>{detail.breadcrumb}</Link>
                 <span aria-hidden="true">/</span>
                 <span>{tech.category}</span>
               </div>
@@ -125,23 +134,23 @@ export default async function StackDetailPage({ params }: StackPageProps) {
               <div className={styles.body}>
                 {tech.summary ? (
                   <section className={styles.textSection}>
-                    <p className={styles.sectionLabel}>01 / Nedir</p>
-                    <h2>Kısaca</h2>
+                    <p className={styles.sectionLabel}>{detail.whatLabel}</p>
+                    <h2>{detail.whatTitle}</h2>
                     <p>{tech.summary}</p>
                   </section>
                 ) : null}
 
                 {tech.experience ? (
                   <section className={styles.textSection}>
-                    <p className={styles.sectionLabel}>02 / Deneyim</p>
-                    <h2>Nasıl kullanıyorum</h2>
+                    <p className={styles.sectionLabel}>{detail.experienceLabel}</p>
+                    <h2>{detail.experienceTitle}</h2>
                     <p>{tech.experience}</p>
                   </section>
                 ) : null}
 
                 {tech.highlights.length > 0 ? (
                   <section className={styles.highlightsSection}>
-                    <p className={styles.sectionLabel}>03 / Öne çıkanlar</p>
+                    <p className={styles.sectionLabel}>{detail.highlightsLabel}</p>
                     <ul className={styles.highlightList}>
                       {tech.highlights.map((item, itemIndex) => (
                         <li key={item}>
@@ -154,15 +163,15 @@ export default async function StackDetailPage({ params }: StackPageProps) {
                 ) : null}
 
                 {usedIn.length > 0 ? (
-                  <section className={styles.usedInSection} aria-label="Bu teknolojiyi kullandığım projeler">
-                    <p className={styles.sectionLabel}>Kullandığım projeler</p>
+                  <section className={styles.usedInSection} aria-label={detail.usedInLabel}>
+                    <p className={styles.sectionLabel}>{detail.usedIn}</p>
                     <ul className={styles.usedInList}>
-                      {usedIn.map((project) => (
-                        <li key={project.slug}>
-                          <Link href={`/projects/${project.slug}`}>
-                            <span className={styles.usedInIndex}>{project.index}</span>
-                            <span className={styles.usedInTitle}>{project.title}</span>
-                            <span className={styles.usedInCategory}>{project.category}</span>
+                      {usedIn.map((usedProject) => (
+                        <li key={usedProject.slug}>
+                          <Link href={withLocale(locale, `/projects/${usedProject.slug}`)}>
+                            <span className={styles.usedInIndex}>{usedProject.index}</span>
+                            <span className={styles.usedInTitle}>{usedProject.title}</span>
+                            <span className={styles.usedInCategory}>{usedProject.category}</span>
                             <span aria-hidden="true" className={styles.usedInArrow}>
                               →
                             </span>
@@ -174,25 +183,25 @@ export default async function StackDetailPage({ params }: StackPageProps) {
                 ) : null}
 
                 {tech.link ? (
-                  <section className={styles.externalLinks} aria-label="Teknoloji bağlantısı">
+                  <section className={styles.externalLinks} aria-label={detail.officialLinkLabel}>
                     <a href={tech.link} target="_blank" rel="noreferrer">
-                      Resmi site <span aria-hidden="true">↗</span>
+                      {detail.officialSite} <span aria-hidden="true">↗</span>
                     </a>
                   </section>
                 ) : null}
               </div>
             ) : (
-              <p className={styles.emptyNote}>Bu teknolojiyle ilgili notlar yakında.</p>
+              <p className={styles.emptyNote}>{detail.emptyNote}</p>
             )}
           </article>
 
-          <nav className={styles.techNavigation} aria-label="Diğer teknolojiler">
-            <Link href={`/stack/${previousTech.slug}`}>
-              <span>Önceki</span>
+          <nav className={styles.techNavigation} aria-label={detail.otherTech}>
+            <Link href={withLocale(locale, `/stack/${previousTech.slug}`)}>
+              <span>{dict.common.previous}</span>
               <strong>{previousTech.name}</strong>
             </Link>
-            <Link href={`/stack/${nextTech.slug}`}>
-              <span>Sonraki</span>
+            <Link href={withLocale(locale, `/stack/${nextTech.slug}`)}>
+              <span>{dict.common.next}</span>
               <strong>{nextTech.name}</strong>
             </Link>
           </nav>
@@ -203,8 +212,8 @@ export default async function StackDetailPage({ params }: StackPageProps) {
             <strong>{profile.name}</strong>
             <span>{profile.role}</span>
           </div>
-          <Link href="/#stack">Stack</Link>
-          <Link href="/projects">Projeler</Link>
+          <Link href={withLocale(locale, "/#stack")}>{dict.nav.stack}</Link>
+          <Link href={withLocale(locale, "/projects")}>{dict.nav.projects}</Link>
           <span>© {new Date().getFullYear()}</span>
         </footer>
       </div>
