@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { projects, techItems } from "@/data/portfolio";
+import { getProjectSlugs, getTechSlugs } from "@/data/portfolio";
 import { locales } from "@/i18n/config";
 import { getSiteUrl } from "@/lib/site";
 
@@ -18,14 +18,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     });
-    for (const { slug } of projects) {
+    for (const slug of getProjectSlugs()) {
       entries.push({
         url: `${siteUrl}/${locale}/projects/${slug}`,
         changeFrequency: "monthly",
         priority: 0.8,
       });
     }
-    for (const { slug } of techItems) {
+    for (const slug of getTechSlugs()) {
       entries.push({
         url: `${siteUrl}/${locale}/stack/${slug}`,
         changeFrequency: "monthly",

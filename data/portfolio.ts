@@ -1,8 +1,11 @@
 // Content source of truth lives in ./content/*.json — those files are the
-// "database". Edit the JSON to change copy, swap dummy data for real data, or
-// add a project (append to content/projects.json), then rebuild. This module
-// only loads that JSON and applies the types below; components never change.
+// "database". Translatable fields are stored as { "tr": "...", "en": "..." }
+// (plain strings mean "same in every language"). Edit the JSON to change copy
+// or add a project (append to content/projects.json), then rebuild.
+// This module loads that JSON, resolves the requested locale (falling back to
+// Turkish), and applies the types below; components never change.
 
+import type { Locale } from "@/i18n/config";
 import educationData from "./content/education.json";
 import experienceData from "./content/experience.json";
 import nowData from "./content/now.json";
@@ -127,27 +130,82 @@ export type Profile = {
   };
 };
 
-export const profile = profileData as Profile;
-export const projects = projectsData as readonly PortfolioProject[];
-export const stackGroups = stackData as readonly StackGroup[];
-export const experiences = experienceData as readonly Experience[];
-export const education = educationData as readonly Education[];
-export const processSteps = processData as readonly ProcessStep[];
-export const nowItems = nowData as readonly NowItem[];
+// ---------------------------------------------------------------------------
+// Locale resolution
+// ---------------------------------------------------------------------------
 
-export type ProjectSlug = (typeof projects)[number]["slug"];
+/** A translated leaf: { tr: "...", en: "..." }. Nothing else uses these keys. */
+function isLocalizedLeaf(value: object): value is { tr: unknown; en?: unknown } {
+  const keys = Object.keys(value);
+  return keys.length > 0 && keys.every((key) => key === "tr" || key === "en") && "tr" in value;
+}
 
-export const projectBySlug = Object.fromEntries(
-  projects.map((project) => [project.slug, project]),
-) as Readonly<Record<ProjectSlug, PortfolioProject>>;
+/** Deep-resolve {tr,en} leaves to the requested locale, falling back to tr. */
+function localize<T>(value: unknown, locale: Locale): T {
+  if (Array.isArray(value)) {
+    return value.map((item) => localize(item, locale)) as T;
+  }
+  if (value !== null && typeof value === "object") {
+    if (isLocalizedLeaf(value)) {
+      return ((value as Record<string, unknown>)[locale] ?? value.tr) as T;
+    }
+    const out: Record<string, unknown> = {};
+    for (const [key, entry] of Object.entries(value)) {
+      out[key] = localize(entry, locale);
+    }
+    return out as T;
+  }
+  return value as T;
+}
 
-export const techItems = techData as readonly TechItem[];
+const cache = new Map<Locale, ReturnType<typeof buildContent>>();
 
-export const techBySlug = Object.fromEntries(
-  techItems.map((tech) => [tech.slug, tech]),
-) as Readonly<Record<string, TechItem>>;
+function buildContent(locale: Locale) {
+  return {
+    profile: localize<Profile>(profileData, locale),
+    projects: localize<readonly PortfolioProject[]>(projectsData, locale),
+    stackGroups: localize<readonly StackGroup[]>(stackData, locale),
+    experiences: localize<readonly Experience[]>(experienceData, locale),
+    education: localize<readonly Education[]>(educationData, locale),
+    processSteps: localize<readonly ProcessStep[]>(processData, locale),
+    nowItems: localize<readonly NowItem[]>(nowData, locale),
+    techItems: localize<readonly TechItem[]>(techData, locale),
+  };
+}
 
-const techSlugByName = new Map(techItems.map((tech) => [tech.name, tech.slug]));
+export function getContent(locale: Locale) {
+  let content = cache.get(locale);
+  if (!content) {
+    content = buildContent(locale);
+    cache.set(locale, content);
+  }
+  return content;
+}
+
+export const getProfile = (locale: Locale) => getContent(locale).profile;
+export const getProjects = (locale: Locale) => getContent(locale).projects;
+export const getStackGroups = (locale: Locale) => getContent(locale).stackGroups;
+export const getExperiences = (locale: Locale) => getContent(locale).experiences;
+export const getEducation = (locale: Locale) => getContent(locale).education;
+export const getProcessSteps = (locale: Locale) => getContent(locale).processSteps;
+export const getNowItems = (locale: Locale) => getContent(locale).nowItems;
+export const getTechItems = (locale: Locale) => getContent(locale).techItems;
+
+// ---------------------------------------------------------------------------
+// Locale-independent helpers (slugs and names are never translated)
+// ---------------------------------------------------------------------------
+
+export function getProjectSlugs(): readonly string[] {
+  return (projectsData as readonly { slug: string }[]).map((project) => project.slug);
+}
+
+export function getTechSlugs(): readonly string[] {
+  return (techData as readonly { slug: string }[]).map((tech) => tech.slug);
+}
+
+const techSlugByName = new Map(
+  (techData as readonly { name: string; slug: string }[]).map((tech) => [tech.name, tech.slug]),
+);
 
 /** Detail-page href for a technology name, or null if it has no page. */
 export function techHref(name: string): string | null {
@@ -156,6 +214,6 @@ export function techHref(name: string): string | null {
 }
 
 /** Projects whose technology list includes this technology name. */
-export function projectsUsingTech(name: string): readonly PortfolioProject[] {
-  return projects.filter((project) => project.technologies.includes(name));
+export function projectsUsingTech(locale: Locale, name: string): readonly PortfolioProject[] {
+  return getProjects(locale).filter((project) => project.technologies.includes(name));
 }

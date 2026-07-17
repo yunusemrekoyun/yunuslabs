@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
-import { profile, projectsUsingTech, techItems } from "@/data/portfolio";
+import { getProfile, getTechItems, getTechSlugs, projectsUsingTech } from "@/data/portfolio";
 import { isLocale, withLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getSiteUrl } from "@/lib/site";
@@ -16,14 +16,20 @@ type StackPageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return techItems.map((tech) => ({ slug: tech.slug }));
+  return getTechSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: StackPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const tech = techItems.find((item) => item.slug === slug);
 
-  if (!isLocale(locale) || !tech) {
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const tech = getTechItems(locale).find((item) => item.slug === slug);
+  const profile = getProfile(locale);
+
+  if (!tech) {
     return {};
   }
 
@@ -65,6 +71,8 @@ export default async function StackDetailPage({ params }: StackPageProps) {
 
   const dict = getDictionary(locale);
   const detail = dict.stackDetail;
+  const profile = getProfile(locale);
+  const techItems = getTechItems(locale);
   const index = techItems.findIndex((item) => item.slug === slug);
 
   if (index < 0) {
@@ -72,7 +80,7 @@ export default async function StackDetailPage({ params }: StackPageProps) {
   }
 
   const tech = techItems[index];
-  const usedIn = projectsUsingTech(tech.name);
+  const usedIn = projectsUsingTech(locale, tech.name);
   const previousTech = techItems[(index - 1 + techItems.length) % techItems.length];
   const nextTech = techItems[(index + 1) % techItems.length];
   const hasNotes = Boolean(tech.summary || tech.experience || tech.highlights.length);

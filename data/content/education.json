@@ -1,8 +1,14 @@
 [
   {
     "institution": "Amasya Üniversitesi",
-    "degree": "Bilgisayar Mühendisliği",
-    "graduation": "Ocak 2025",
+    "degree": {
+      "tr": "Bilgisayar Mühendisliği",
+      "en": "Computer Engineering"
+    },
+    "graduation": {
+      "tr": "Ocak 2025",
+      "en": "January 2025"
+    },
     "gpa": "3.08 / 4.00"
   }
 ]

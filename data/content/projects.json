@@ -1,164 +1,1238 @@
 [
   {
-    "slug": "disksync",
+    "slug": "oldsocks",
     "index": "01",
-    "title": "DiskSync",
-    "category": "Native macOS utility",
-    "summary": "MacBook çentiğini yedekleme, medya kontrolleri ve sistem araçları için küçük bir kontrol merkezine dönüştüren native macOS ürünü.",
-    "problem": "Gün içinde sık kullanılan dosya, medya ve sistem araçları farklı yüzeylere dağılıyor. Harici diske güvenli yedek alma süreci de bu dağınık akışın ayrı bir parçası olarak kalıyor.",
-    "approach": "DiskSync, tek yönlü ve dosya silmeyen klasör eşitlemesini MacBook çentiğine yerleşen kompakt bir araç setiyle bir araya getiriyor. Ürün, yedeklemeyi tek işlev olarak değil macOS içindeki günlük akışın bir parçası olarak ele alıyor.",
-    "role": null,
-    "period": null,
-    "year": null,
-    "technologies": [],
-    "technicalFocus": "Güvenli tek yönlü eşitleme ile sistem araçlarını aynı native yüzeyde toplamak.",
+    "title": "OldSocks",
+    "category": {
+      "tr": "E-ticaret Platformu",
+      "en": "E-commerce Platform"
+    },
+    "summary": {
+      "tr": "Instagram odaklı bir butik erkek giyim markasının dijital kimliğini koruyarak e-ticarete geçmesini sağlayan modern satış platformu.",
+      "en": "A modern commerce platform that enabled an Instagram-first boutique menswear brand to move into e-commerce without losing its digital identity."
+    },
+    "problem": {
+      "tr": "Marka, Instagram'daki premium görünümünü ve yüksek kaliteli ürün anlatımını kaybetmeden kendi e-ticaret sitesine geçmek istiyordu. Hazır mağaza kalıpları bu kimliği web'e taşımakta yetersiz kalıyordu.",
+      "en": "The brand wanted its own e-commerce site without sacrificing the premium look and high-quality product storytelling it had built on Instagram. Off-the-shelf store templates fell short of carrying that identity to the web."
+    },
+    "approach": {
+      "tr": "Instagram hissini koruyan minimal bir arayüz kurdum; ürün kartlarında yüksek kaliteli hover videoları kullandım. Medya hacmi büyüdüğünde Cloudinary altyapısını özel VPS medya servisine taşıyıp Cloudflare cache ile hızlandırdım.",
+      "en": "I built a minimal interface that preserves the Instagram feel, using high-quality hover videos on the product cards. As the media volume grew, I migrated from Cloudinary to a custom VPS media service and accelerated delivery with Cloudflare cache."
+    },
+    "role": "Solo Developer",
+    "period": "2025",
+    "year": "2025",
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Cloudinary",
+      "Cloudflare",
+      "Nginx"
+    ],
+    "technicalFocus": {
+      "tr": "Yüksek kaliteli ürün videolarını özel VPS medya servisi ve Cloudflare cache ile hızlı sunmak.",
+      "en": "Serving high-quality product videos fast through a custom VPS media service and Cloudflare cache."
+    },
     "architecture": [
       {
-        "title": "Safe sync",
-        "description": "Harici diske tek yönlü, mirror benzeri fakat kaynakta bulunmayan dosyaları silmeyen eşitleme akışı."
+        "title": "Storefront",
+        "description": {
+          "tr": "React ve Tailwind CSS ile geliştirilen minimal, mobil uyumlu mağaza deneyimi.",
+          "en": "A minimal, mobile-friendly store experience built with React and Tailwind CSS."
+        }
       },
       {
-        "title": "System surface",
-        "description": "Now Playing, pil ve CPU/GPU/RAM bilgilerini çentik çevresinde erişilebilir tutan native arayüz."
+        "title": "Commerce API",
+        "description": {
+          "tr": "Express.js REST API ve MongoDB üzerinde ürün, kategori, kampanya ve mağaza verileri.",
+          "en": "Product, category, campaign, and store data served by an Express.js REST API on MongoDB."
+        }
       },
       {
-        "title": "Daily utilities",
-        "description": "Uygulama başlatıcı, clipboard, file shelf ve AirDrop işlemlerini aynı ürün dili içinde birleştiren araç seti."
+        "title": "Media delivery",
+        "description": {
+          "tr": "VPS üzerinde saklanan medya dosyalarının Nginx ve Cloudflare cache üzerinden dağıtılması.",
+          "en": "Media files stored on a VPS and distributed through Nginx and Cloudflare cache."
+        }
       }
     ],
     "features": [
-      "Harici diske tek yönlü klasör yedekleme",
-      "Dosya silmeden güvenli eşitleme",
-      "Now Playing kontrolleri ve pil detayları",
-      "Uygulama başlatıcı, clipboard ve file shelf",
-      "AirDrop işlemleri",
-      "CPU, GPU ve RAM görünümü"
+      {
+        "tr": "Hover ile oynayan yüksek kaliteli ürün videoları",
+        "en": "High-quality product videos that play on hover"
+      },
+      {
+        "tr": "Instagram kimliğini koruyan minimal arayüz",
+        "en": "Minimal interface that preserves the brand's Instagram identity"
+      },
+      {
+        "tr": "Ürün, kategori ve kampanya yönetimi",
+        "en": "Product, category, and campaign management"
+      },
+      {
+        "tr": "Özel hero ve medya yönetimi",
+        "en": "Custom hero and media management"
+      },
+      {
+        "tr": "Mobil uyumlu alışveriş deneyimi",
+        "en": "Mobile-friendly shopping experience"
+      },
+      {
+        "tr": "VPS tabanlı medya bakım araçları",
+        "en": "VPS-based media maintenance tools"
+      }
     ],
-    "outcome": null,
+    "outcome": {
+      "tr": "Tamamlanan ürünün en çok öne çıkan tarafı sade ve akıcı kullanıcı deneyimi oldu. Proje GitHub'da arşiv olarak korunuyor.",
+      "en": "The standout quality of the finished product was its clean, fluid user experience. The project is now archived on GitHub."
+    },
     "links": {
       "demo": null,
       "github": null
     },
     "visual": {
-      "tone": "mint",
-      "label": "Notch / Sync / System"
+      "tone": "sand",
+      "label": "Commerce / Video / Minimal"
     },
-    "gallery": [],
-    "contentTodos": [
+    "gallery": [
       {
-        "field": "role",
-        "note": "Projede üstlenilen rolü doğrula."
+        "src": "/images/projects/oldsocks/home-hero.jpg",
+        "alt": {
+          "tr": "OldSocks ana sayfa hero alanı",
+          "en": "OldSocks homepage hero section"
+        },
+        "caption": {
+          "tr": "Markanın premium ve minimal mağaza vitrini.",
+          "en": "The brand's premium, minimal storefront."
+        }
       },
       {
-        "field": "technologies",
-        "note": "Kesin native teknoloji setini doğrula."
+        "src": "/images/projects/oldsocks/product-video-grid.jpg",
+        "alt": {
+          "tr": "Video destekli OldSocks ürün kartları",
+          "en": "Video-enabled OldSocks product cards"
+        },
+        "caption": {
+          "tr": "Ürün kartlarında hover ile çalışan yüksek kaliteli video deneyimi.",
+          "en": "The high-quality video experience triggered on hover in the product cards."
+        }
       },
       {
-        "field": "period",
-        "note": "Geliştirme tarihini doğrula."
+        "src": "/images/projects/oldsocks/shop-grid.jpg",
+        "alt": {
+          "tr": "OldSocks mağaza ürün listesi",
+          "en": "OldSocks store product listing"
+        },
+        "caption": {
+          "tr": "Sade ürün keşfi ve mobil uyumlu mağaza ızgarası.",
+          "en": "Clean product discovery and a mobile-friendly store grid."
+        }
       },
       {
-        "field": "links",
-        "note": "Yayın veya repository bağlantısı varsa ekle."
+        "src": "/images/projects/oldsocks/product-detail.jpg",
+        "alt": {
+          "tr": "OldSocks ürün detay sayfası",
+          "en": "OldSocks product detail page"
+        },
+        "caption": {
+          "tr": "Ürün medyası ve satın alma akışını birleştiren detay ekranı.",
+          "en": "A detail screen that brings product media and the purchase flow together."
+        }
       },
       {
-        "field": "gallery",
-        "note": "Gerçek uygulama ekranlarını ekle."
+        "src": "/images/projects/oldsocks/admin-products.jpg",
+        "alt": {
+          "tr": "OldSocks ürün yönetim paneli",
+          "en": "OldSocks product management panel"
+        },
+        "caption": {
+          "tr": "Ürünlerin kod gerektirmeden yönetildiği admin alanı.",
+          "en": "The admin area where products are managed without writing code."
+        }
       },
       {
-        "field": "outcome",
-        "note": "Doğrulanabilir sonuç veya yayın durumunu ekle."
+        "src": "/images/projects/oldsocks/admin-media-maintenance.jpg",
+        "alt": {
+          "tr": "OldSocks medya bakım ekranı",
+          "en": "OldSocks media maintenance screen"
+        },
+        "caption": {
+          "tr": "VPS üzerindeki mağaza medyasını yöneten bakım araçları.",
+          "en": "Maintenance tools that manage the store's media on the VPS."
+        }
       }
-    ]
+    ],
+    "contentTodos": []
   },
   {
-    "slug": "hotel-operations",
+    "slug": "babil-yalitim",
     "index": "02",
-    "title": "Otel Operasyon Sistemi",
-    "category": "Operations platform",
-    "summary": "Rezervasyondan muhasebeye, oda operasyonundan KBS süreçlerine kadar gerçek otel işleyişini tek sistemde buluşturan kapsamlı platform.",
-    "problem": "Otel operasyonları müşteri rezervasyonu, personel rolleri, oda durumu, ödeme ve resmi bildirim süreçleri arasında kesintisiz veri akışı gerektiriyor.",
-    "approach": "Sistem, müşteri tarafındaki rezervasyon akışı ile yönetim ve saha operasyonlarını rol bazlı ekranlar üzerinden aynı ürün mimarisinde bir araya getiriyor.",
-    "role": null,
-    "period": null,
-    "year": null,
+    "title": "Babil Yalıtım",
+    "category": {
+      "tr": "Kurumsal Web Sitesi ve Özel CMS",
+      "en": "Corporate Website & Custom CMS"
+    },
+    "summary": {
+      "tr": "Karmaşık WordPress yönetimini sade bir içerik paneliyle değiştiren; 4K medya, yüksek performans ve kalıcı SEO odağını birleştiren kurumsal platform.",
+      "en": "A corporate platform that replaces an unwieldy WordPress admin with a clean content panel, combining 4K media, high performance, and a lasting SEO focus."
+    },
+    "problem": {
+      "tr": "Firmanın mevcut sitesi hızlı ve estetikti fakat teknik bilgisi olmayan ekip için WordPress paneli yönetilemez durumdaydı. İçerik güncellemek, uyarılar ve karmaşık menüler nedeniyle sürekli dış desteğe ihtiyaç duyuyordu.",
+      "en": "The company's existing site was fast and visually polished, but its WordPress panel was unmanageable for a non-technical team. Every content update meant navigating warnings and convoluted menus, forcing constant reliance on outside support."
+    },
+    "approach": {
+      "tr": "İçerik ve SEO alanlarını tek akışta yöneten sade bir özel panel geliştirdim. 4K hero medyasını VPS'te saklayıp Cloudflare üzerinden cache'ledim; mobilde kare hızını ve medya davranışını cihaz koşullarına göre optimize ettim.",
+      "en": "I built a clean custom panel that manages content and SEO fields in a single flow. I stored the 4K hero media on a VPS and cached it through Cloudflare, and on mobile I optimized frame rate and media behavior to match device conditions."
+    },
+    "role": "Solo Developer",
+    "period": {
+      "tr": "2025 — Ocak 2026",
+      "en": "2025 — January 2026"
+    },
+    "year": "2026",
     "technologies": [
-      "Docker"
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Docker",
+      "Nginx",
+      "Cloudflare"
     ],
-    "technicalFocus": "Birbirine bağlı rezervasyon, oda, ödeme ve personel süreçlerini operasyonel bir bütün olarak modellemek.",
+    "technicalFocus": {
+      "tr": "4K arka plan medyasını mobil optimizasyon ve yoğun cache kullanımıyla hızdan ödün vermeden sunmak; SEO'yu içerik girişine gömmek.",
+      "en": "Using mobile optimization and aggressive cache usage to serve 4K background media without sacrificing speed; embedding SEO directly into content entry."
+    },
     "architecture": [
       {
-        "title": "Guest flow",
-        "description": "Müşteri rezervasyon akışı, oda seçimi ve ödeme adımlarının aynı süreç içinde yönetilmesi."
+        "title": "Corporate frontend",
+        "description": {
+          "tr": "React tabanlı hızlı, responsive ve animasyonlu kurumsal arayüz.",
+          "en": "A fast, responsive, animated corporate interface built on React."
+        }
       },
       {
-        "title": "Role-based operations",
-        "description": "Yönetim, personel ve oda görevlisi ekranlarının görev alanlarına göre ayrılması."
+        "title": "Manageable CMS",
+        "description": {
+          "tr": "Teknik bilgisi olmayan kullanıcılar için sadeleştirilmiş içerik ve SEO yönetimi.",
+          "en": "Simplified content and SEO management designed for non-technical users."
+        }
       },
       {
-        "title": "Deployment",
-        "description": "Uygulama bileşenlerinin Docker tabanlı canlı ortam yapısında çalıştırılması."
+        "title": "Media infrastructure",
+        "description": {
+          "tr": "Docker ve Nginx arkasında çalışan VPS medya alanı ile Cloudflare cache katmanı.",
+          "en": "A VPS media store running behind Docker and Nginx, with a Cloudflare cache layer on top."
+        }
       }
     ],
     "features": [
-      "Yönetim paneli ve personel rolleri",
-      "Müşteri rezervasyon akışı",
-      "Oda ve rezervasyon yönetimi",
-      "Muhasebe işlemleri",
-      "Oda görevlisi ekranları",
-      "KBS süreçleri ve ödeme entegrasyonu",
-      "Docker tabanlı deployment"
+      {
+        "tr": "Basit ve anlaşılır özel yönetim paneli",
+        "en": "Simple, intuitive custom admin panel"
+      },
+      {
+        "tr": "İçerik girişine entegre SEO alanları",
+        "en": "SEO fields integrated into content entry"
+      },
+      {
+        "tr": "4K hero video desteği",
+        "en": "4K hero video support"
+      },
+      {
+        "tr": "Mobilde 24 kareye uyarlanmış video",
+        "en": "Video adapted to 24 fps on mobile"
+      },
+      {
+        "tr": "Hizmet ve blog içerik yönetimi",
+        "en": "Service and blog content management"
+      },
+      {
+        "tr": "Cloudflare cache ile hızlı medya dağıtımı",
+        "en": "Fast media delivery via Cloudflare cache"
+      }
     ],
-    "outcome": null,
+    "outcome": {
+      "tr": "Firma içeriklerini bağımsız biçimde yönetebilir hâle geldi. Site yüksek medya kalitesini korurken hızlı çalışıyor ve yalnızca temel indeksleme sonrasında Google aramalarında görünürlük kazanıyor.",
+      "en": "The company now manages its content independently. The site stays fast while preserving high media quality, and it is already gaining visibility in Google searches after only basic indexing."
+    },
+    "links": {
+      "demo": "https://babilyalitim.com",
+      "github": null
+    },
+    "visual": {
+      "tone": "stone",
+      "label": "CMS / SEO / 4K Media"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/babil-yalitim/hero-desktop.jpg",
+        "alt": {
+          "tr": "Babil Yalıtım ana sayfası",
+          "en": "Babil Yalıtım homepage"
+        },
+        "caption": {
+          "tr": "4K video destekli kurumsal ana sayfa.",
+          "en": "Corporate homepage with 4K video support."
+        }
+      },
+      {
+        "src": "/images/projects/babil-yalitim/services-desktop.jpg",
+        "alt": {
+          "tr": "Babil Yalıtım hizmetler alanı",
+          "en": "Babil Yalıtım services section"
+        },
+        "caption": {
+          "tr": "Hizmetlerin yönetilebilir biçimde sunulduğu içerik alanı.",
+          "en": "Content area presenting services in a manageable format."
+        }
+      },
+      {
+        "src": "/images/projects/babil-yalitim/blog-desktop.jpg",
+        "alt": {
+          "tr": "Babil Yalıtım blog sayfası",
+          "en": "Babil Yalıtım blog page"
+        },
+        "caption": {
+          "tr": "Organik erişimi destekleyen içerik ve blog yapısı.",
+          "en": "Content and blog structure built to support organic reach."
+        }
+      },
+      {
+        "src": "/images/projects/babil-yalitim/dashboard-light.jpg",
+        "alt": {
+          "tr": "Babil Yalıtım yönetim paneli",
+          "en": "Babil Yalıtım admin panel"
+        },
+        "caption": {
+          "tr": "Teknik bilgisi olmayan ekip için sade içerik paneli.",
+          "en": "Clean content panel designed for a non-technical team."
+        }
+      }
+    ],
+    "contentTodos": []
+  },
+  {
+    "slug": "ceplife",
+    "index": "03",
+    "title": "CepLife",
+    "category": {
+      "tr": "E-ticaret ve Operasyon Platformu",
+      "en": "E-commerce & Operations Platform"
+    },
+    "summary": {
+      "tr": "Pazaryeri komisyonlarına alternatif olarak satış, varyant, stok, kargo, medya, müşteri ve baskı operasyonlarını tek üründe birleştiren özel e-ticaret sistemi.",
+      "en": "A custom e-commerce system built as an alternative to marketplace commissions, unifying sales, variants, stock, shipping, media, customers, and print operations in a single product."
+    },
+    "problem": {
+      "tr": "Berkay GSM, pazaryerlerinin komisyon ve iade politikalarından bağımsızlaşmak istiyordu. Bunun için yalnızca bir mağaza değil; stoktan kargoya ve sipariş çıktısına kadar pazaryerlerindeki operasyonel kolaylıkları kendi sisteminde karşılayan bir ürün gerekiyordu.",
+      "en": "Berkay GSM wanted to break free from marketplace commissions and return policies. That called for more than just a storefront — a product that replicated the operational conveniences of marketplaces in its own system, from stock management to shipping and order printouts."
+    },
+    "approach": {
+      "tr": "Üç parametreli varyant ve stok motoru, üç kademeli kategori ağacı, otomatik SEO, özel MNG/DHL kargo entegrasyonu ve VPS medya hattını sıfırdan geliştirdim. Siparişleri fiziksel mağazaya bağlayan bağımsız Windows yazıcı worker'ı oluşturdum.",
+      "en": "I built a three-parameter variant and stock engine, a three-level category tree, automated SEO, custom MNG/DHL shipping integrations, and a VPS media pipeline from scratch. I also created a standalone Windows printer worker that connects orders to the physical store."
+    },
+    "role": "Solo Developer",
+    "period": {
+      "tr": "Şubat 2026 — Nisan 2026",
+      "en": "February 2026 — April 2026"
+    },
+    "year": "2026",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "JWT",
+      "Docker",
+      "Nginx",
+      "Cloudflare",
+      "Paynet API",
+      "MNG Kargo API"
+    ],
+    "technicalFocus": {
+      "tr": "Kombinasyon bazlı stok motoru ile parçalı MNG/DHL servislerini ve fiziksel mağaza yazıcısını aynı sipariş yaşam döngüsünde buluşturmak.",
+      "en": "Bringing a combination-based stock engine, fragmented MNG/DHL services, and the physical store printer together in the same order lifecycle."
+    },
+    "architecture": [
+      {
+        "title": "Commerce core",
+        "description": {
+          "tr": "Next.js ve MongoDB üzerinde ürün, kategori, varyant, stok, sipariş ve kullanıcı yönetimi.",
+          "en": "Product, category, variant, stock, order, and user management on Next.js and MongoDB."
+        }
+      },
+      {
+        "title": "External operations",
+        "description": {
+          "tr": "Paynet ödeme ve MNG/DHL kargo servisleriyle özel API entegrasyonları.",
+          "en": "Custom API integrations with Paynet payments and MNG/DHL shipping services."
+        }
+      },
+      {
+        "title": "Store worker",
+        "description": {
+          "tr": "Sipariş düştüğünde iki farklı çıktı üreten Node.js tabanlı standalone Windows yazıcı worker'ı.",
+          "en": "A Node.js-based standalone Windows printer worker that produces two different printouts the moment an order comes in."
+        }
+      },
+      {
+        "title": "Media delivery",
+        "description": {
+          "tr": "Özel optimizasyon algoritması, VPS depolama, Nginx ve Cloudflare dağıtım katmanı.",
+          "en": "A custom optimization algorithm, VPS storage, and an Nginx and Cloudflare delivery layer."
+        }
+      }
+    ],
+    "features": [
+      {
+        "tr": "Üç parametreli dinamik varyant ve stok sistemi",
+        "en": "Dynamic three-parameter variant and stock system"
+      },
+      {
+        "tr": "Siparişle otomatik azalan stok",
+        "en": "Stock that decrements automatically with each order"
+      },
+      {
+        "tr": "Üç kademeli kategori ağacı ve otomatik SEO",
+        "en": "Three-level category tree and automated SEO"
+      },
+      {
+        "tr": "MNG/DHL kargo kaydı ve takip entegrasyonu",
+        "en": "MNG/DHL shipment registration and tracking integration"
+      },
+      {
+        "tr": "Paynet ödeme entegrasyonu",
+        "en": "Paynet payment integration"
+      },
+      {
+        "tr": "Session ve refresh token tabanlı hesap yönetimi",
+        "en": "Session and refresh token based account management"
+      },
+      {
+        "tr": "Kullanılmayan medyayı VPS'ten temizleme",
+        "en": "Cleanup of unused media from the VPS"
+      },
+      {
+        "tr": "Otomatik sipariş fişi ve kargo çıktısı",
+        "en": "Automatic order receipt and shipping label printouts"
+      }
+    ],
+    "outcome": {
+      "tr": "Özel e-ticaret sisteminin devreye alınmasının ardından işletmenin mevcut cirosu yaklaşık 20 kat arttı. Günlük satış ve mağaza operasyonları tek yönetim alanında toplandı.",
+      "en": "After the custom e-commerce system went live, the business's revenue grew roughly 20x. Daily sales and store operations were consolidated into a single management area."
+    },
+    "links": {
+      "demo": "https://ceplife.com",
+      "github": null
+    },
+    "visual": {
+      "tone": "teal",
+      "label": "Commerce / Stock / Logistics"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/ceplife/shop-desktop.jpg",
+        "alt": {
+          "tr": "CepLife mağaza arayüzü",
+          "en": "CepLife storefront interface"
+        },
+        "caption": {
+          "tr": "Mobil cihaz ve aksesuar satışına özel mağaza deneyimi.",
+          "en": "A store experience tailored to selling mobile devices and accessories."
+        }
+      },
+      {
+        "src": "/images/projects/ceplife/admin-products.jpg",
+        "alt": {
+          "tr": "CepLife ürün yönetimi",
+          "en": "CepLife product management"
+        },
+        "caption": {
+          "tr": "Ürün, kategori ve satış verilerini birleştiren admin alanı.",
+          "en": "An admin area that brings together product, category, and sales data."
+        }
+      },
+      {
+        "src": "/images/projects/ceplife/admin-variant-stock.jpg",
+        "alt": {
+          "tr": "CepLife varyant stok yönetimi",
+          "en": "CepLife variant stock management"
+        },
+        "caption": {
+          "tr": "Cihaz, renk ve ürüne özel üçüncü parametreden varyant üreten stok sistemi.",
+          "en": "A stock system that generates variants from device, color, and a product-specific third parameter."
+        }
+      },
+      {
+        "src": "/images/projects/ceplife/admin-media-library.jpg",
+        "alt": {
+          "tr": "CepLife medya kütüphanesi",
+          "en": "CepLife media library"
+        },
+        "caption": {
+          "tr": "VPS medya optimizasyonu ve kullanılmayan dosya temizliği.",
+          "en": "VPS media optimization and cleanup of unused files."
+        }
+      },
+      {
+        "src": "/images/projects/ceplife/admin-analytics.jpg",
+        "alt": {
+          "tr": "CepLife satış analitiği",
+          "en": "CepLife sales analytics"
+        },
+        "caption": {
+          "tr": "Satış ve operasyon metriklerini bir araya getiren analitik görünüm.",
+          "en": "An analytics view that consolidates sales and operations metrics."
+        }
+      }
+    ],
+    "contentTodos": []
+  },
+  {
+    "slug": "sv-hukuk",
+    "index": "04",
+    "title": "SV Hukuk ve Danışmanlık",
+    "category": {
+      "tr": "Kurumsal Hukuk Sitesi",
+      "en": "Corporate Law Firm Website"
+    },
+    "summary": {
+      "tr": "Bir hukuk ofisinin uzmanlık alanlarını, yayınlarını ve iletişim kanallarını güven veren responsive bir kurumsal deneyimde birleştiren web sitesi.",
+      "en": "A website that brings a law firm's practice areas, publications, and contact channels together in a trustworthy, responsive corporate experience."
+    },
+    "problem": {
+      "tr": "Yeni hukuk ofisinin uzmanlığını profesyonel biçimde anlatabileceği, potansiyel müvekkillerin hizmet alanlarını kolayca inceleyebileceği güvenilir bir dijital yüzeye ihtiyacı vardı.",
+      "en": "The newly established law firm needed a credible digital presence to present its expertise professionally and let potential clients easily explore its practice areas."
+    },
+    "approach": {
+      "tr": "Müşterinin sağladığı görsel tasarımı responsive bir full-stack ürüne dönüştürdüm; uzmanlık alanları, makaleler ve Yargıtay kararları için yönetilebilir içerik yapısı kurdum.",
+      "en": "I turned the visual design the client provided into a responsive full-stack product and built a manageable content structure for practice areas, articles, and Court of Cassation (Yargıtay) rulings."
+    },
+    "role": "Full-stack Developer",
+    "period": {
+      "tr": "Mart 2025 — Nisan 2025",
+      "en": "March 2025 — April 2025"
+    },
+    "year": "2025",
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS"
+    ],
+    "technicalFocus": {
+      "tr": "Müşterinin tasarım dilini koruyarak güven veren, hızlı ve yönetilebilir bir kurumsal deneyim oluşturmak.",
+      "en": "Building a fast, manageable corporate experience that inspires trust while preserving the client's design language."
+    },
+    "architecture": [
+      {
+        "title": "Public experience",
+        "description": {
+          "tr": "Hizmetleri, süreçleri ve kurumsal kimliği anlatan responsive React arayüzü.",
+          "en": "Responsive React interface presenting the firm's services, processes, and corporate identity."
+        }
+      },
+      {
+        "title": "Content API",
+        "description": {
+          "tr": "Makaleler ve hukuk kararları için Express.js ile MongoDB tabanlı içerik katmanı.",
+          "en": "MongoDB-backed content layer built with Express.js for articles and court rulings."
+        }
+      },
+      {
+        "title": "Direct contact",
+        "description": {
+          "tr": "Form, WhatsApp ve harita bağlantılarıyla erişilebilir iletişim akışı.",
+          "en": "Accessible contact flow with a form, WhatsApp, and map links."
+        }
+      }
+    ],
+    "features": [
+      {
+        "tr": "Uzmanlık alanları",
+        "en": "Practice areas"
+      },
+      {
+        "tr": "Makaleler ve yayınlar",
+        "en": "Articles and publications"
+      },
+      {
+        "tr": "Yargıtay kararları",
+        "en": "Court of Cassation rulings"
+      },
+      {
+        "tr": "Sık sorulan sorular",
+        "en": "Frequently asked questions"
+      },
+      {
+        "tr": "İletişim formu",
+        "en": "Contact form"
+      },
+      {
+        "tr": "WhatsApp ve harita bağlantıları",
+        "en": "WhatsApp and map links"
+      }
+    ],
+    "outcome": {
+      "tr": "Hukuk ofisinin uzmanlıklarını profesyonel ve erişilebilir biçimde sunan kurumsal web sitesi canlıya alındı.",
+      "en": "The corporate website went live, presenting the law firm's expertise in a professional and accessible way."
+    },
+    "links": {
+      "demo": "https://svhukukvedanismanlik.com",
+      "github": null
+    },
+    "visual": {
+      "tone": "ink",
+      "label": "Legal / Content / Trust"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/sv-hukuk/practice-areas-desktop.jpg",
+        "alt": {
+          "tr": "SV Hukuk uzmanlık alanları",
+          "en": "SV Hukuk practice areas"
+        },
+        "caption": {
+          "tr": "Hukuki hizmetlerin açık bir içerik hiyerarşisiyle sunumu.",
+          "en": "Legal services presented with a clear content hierarchy."
+        }
+      }
+    ],
+    "contentTodos": []
+  },
+  {
+    "slug": "kutahya-satilik",
+    "index": "05",
+    "title": "Kütahya Satılık",
+    "category": {
+      "tr": "PropTech — Web ve Mobil",
+      "en": "PropTech — Web & Mobile"
+    },
+    "summary": {
+      "tr": "İlan yönetimi, harita keşfi, bölge ve fiyat analizi, ön değerleme, talep eşleştirme ve mesajlaşmayı birleştiren Kütahya odaklı dijital gayrimenkul pazarı.",
+      "en": "A Kütahya-focused digital real estate marketplace that brings together listing management, map-based discovery, district and price analytics, pre-valuation, demand matching, and messaging."
+    },
+    "problem": {
+      "tr": "Kütahya'daki gayrimenkul deneyimi ulusal portallarda dağınık ve yerel veriden yoksundu. Alıcı, satıcı ve danışmanların bölgesel bilgi etrafında buluşabileceği yerel bir ürün gerekiyordu.",
+      "en": "The real estate experience in Kütahya was scattered across national portals and lacked local data. Buyers, sellers, and agents needed a local product that could bring them together around regional insight."
+    },
+    "approach": {
+      "tr": "BahaLabs iş geliştirme ve müşteri ilişkilerini yürütürken ürünün UI/UX, web, backend, veritabanı, mobil istemci ve canlı ortam altyapısının tamamını geliştirdim. Web ve mobil için ortak iş kuralları üzerinde iki kimlik modeli kurdum.",
+      "en": "While BahaLabs handled business development and client relations, I built the entire product: UI/UX, web, backend, database, mobile client, and production infrastructure. I built two identity models for web and mobile on top of shared business rules."
+    },
+    "role": {
+      "tr": "Teknik Ürün Sahibi ve Solo Developer",
+      "en": "Technical Product Owner & Solo Developer"
+    },
+    "period": {
+      "tr": "Haziran 2026 — Devam ediyor",
+      "en": "June 2026 — Ongoing"
+    },
+    "year": "2026",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Supabase",
+      "React Native",
+      "Expo",
+      "NativeWind",
+      "Redis",
+      "Nginx",
+      "Cloudflare",
+      "FFmpeg"
+    ],
+    "technicalFocus": {
+      "tr": "Cookie tabanlı web oturumları ile Bearer JWT kullanan mobil istemciyi aynı backend ve iş kuralları üzerinde güvenle çalıştırmak.",
+      "en": "Running cookie-based web sessions and a Bearer JWT mobile client safely on the same backend and business rules."
+    },
+    "architecture": [
+      {
+        "title": "Shared product core",
+        "description": {
+          "tr": "Web ve mobilin ortak Next.js API, Prisma iş kuralları ve PostgreSQL verisini kullanması.",
+          "en": "Web and mobile share the same Next.js API, Prisma business rules, and PostgreSQL data."
+        }
+      },
+      {
+        "title": "Dual authentication",
+        "description": {
+          "tr": "Web için ayrı cookie siloları; React Native istemci için Bearer JWT ve SecureStore.",
+          "en": "Separate cookie silos for the web; Bearer JWT with SecureStore for the React Native client."
+        }
+      },
+      {
+        "title": "Media pipeline",
+        "description": {
+          "tr": "Sharp ve FFmpeg ile işlenen medyanın VPS, Nginx ve Cloudflare üzerinden sunulması.",
+          "en": "Media processed with Sharp and FFmpeg, served through a VPS, Nginx, and Cloudflare."
+        }
+      },
+      {
+        "title": "Mobile client",
+        "description": {
+          "tr": "Expo ve NativeWind ile ortak ürün ekosistemini native harita ve cihaz akışlarına taşıyan istemci.",
+          "en": "An Expo and NativeWind client that extends the shared product ecosystem to native maps and device flows."
+        }
+      }
+    ],
+    "features": [
+      {
+        "tr": "Gelişmiş ilan arama, filtreleme ve harita keşfi",
+        "en": "Advanced listing search, filtering, and map-based discovery"
+      },
+      {
+        "tr": "Veri destekli bölge analizi ve deterministik ön değerleme",
+        "en": "Data-driven district analytics and deterministic pre-valuation"
+      },
+      {
+        "tr": "Satıcı talebi ve dört aşamalı süreç takibi",
+        "en": "Seller requests with four-stage process tracking"
+      },
+      {
+        "tr": "İlan bazlı mesajlaşma, teklif ve karşı teklif",
+        "en": "Per-listing messaging with offers and counteroffers"
+      },
+      {
+        "tr": "Danışman paneli ve portföy fırsatları",
+        "en": "Agent dashboard and portfolio opportunities"
+      },
+      {
+        "tr": "Admin moderasyonu, analitik ve içerik yönetimi",
+        "en": "Admin moderation, analytics, and content management"
+      },
+      {
+        "tr": "Kayıtlı arama ve eşleşme bildirimleri",
+        "en": "Saved searches and match notifications"
+      },
+      {
+        "tr": "Aynı backend'i kullanan React Native/Expo mobil istemci",
+        "en": "React Native/Expo mobile client running on the same backend"
+      }
+    ],
+    "outcome": {
+      "tr": "Web platformunda alıcı, satıcı, danışman ve yönetici rollerinin çekirdek akışları canlı çalışıyor. Mobil istemci aynı veri ve iş kurallarıyla ürün deneyimini web dışına genişletiyor.",
+      "en": "The core flows for buyer, seller, agent, and admin roles are live on the web platform. The mobile client extends the product experience beyond the web with the same data and business rules."
+    },
+    "links": {
+      "demo": "https://kutahyasatilik.com",
+      "github": null
+    },
+    "visual": {
+      "tone": "mint",
+      "label": "PropTech / Web / Mobile"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/kutahya-satilik/valuation-mobile.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık değerleme başlangıcı",
+          "en": "Kütahya Satılık valuation start screen"
+        },
+        "caption": {
+          "tr": "Ücretsiz online ön değerleme deneyimi.",
+          "en": "The free online pre-valuation experience."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik/valuation-form-mobile.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık değerleme formu",
+          "en": "Kütahya Satılık valuation form"
+        },
+        "caption": {
+          "tr": "İlçe, mülk türü ve alana göre çalışan deterministik değerleme formu.",
+          "en": "A deterministic valuation form driven by district, property type, and area."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik/admin-dashboard.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık admin paneli",
+          "en": "Kütahya Satılık admin dashboard"
+        },
+        "caption": {
+          "tr": "İlan, talep, dönüşüm ve görüntülenme metrikleri.",
+          "en": "Listing, request, conversion, and view metrics."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik/agent-dashboard.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık danışman paneli",
+          "en": "Kütahya Satılık agent dashboard"
+        },
+        "caption": {
+          "tr": "Danışmanın portföy ve performans çalışma alanı.",
+          "en": "The agent's portfolio and performance workspace."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik/agent-new-listing.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık yeni ilan ekranı",
+          "en": "Kütahya Satılık new listing screen"
+        },
+        "caption": {
+          "tr": "Medya ve konum destekli, onaya bağlı ilan oluşturma akışı.",
+          "en": "An approval-gated listing creation flow with media and location support."
+        }
+      }
+    ],
+    "contentTodos": []
+  },
+  {
+    "slug": "kutahya-satilik-tarla",
+    "index": "06",
+    "title": "Kütahya Satılık Tarla",
+    "category": {
+      "tr": "Yerel Arazi İlan Pazaryeri",
+      "en": "Local Land Listing Marketplace"
+    },
+    "summary": {
+      "tr": "Kütahya'daki arazi alım-satımını ekip moderasyonu, yapısal ilan verileri, gelişmiş filtreleme ve harita üzerinde bölge çizerek keşif altında birleştiren web platformu.",
+      "en": "A web platform that unifies land buying and selling in Kütahya through team moderation, structured listing data, advanced filtering, and map-based discovery by drawing custom regions."
+    },
+    "problem": {
+      "tr": "Yerel tarla ve arsa ilanları farklı kanallara dağılmış, doğrulanması zor ve standart bilgi yapısından yoksundu. Fiyat, imar, tapu, yol, su ve elektrik gibi kritik bilgiler tutarlı sunulmuyordu.",
+      "en": "Local farmland and plot listings were scattered across different channels, hard to verify, and lacked a standard information structure. Critical details such as price, zoning, title deed, road access, water, and electricity were not presented consistently."
+    },
+    "approach": {
+      "tr": "BahaLabs ürünün yerel konumlandırmasını yürütürken tüm yazılım, tasarım ve altyapıyı geliştirdim. İlanları doğrudan yayımlamak yerine başvuru, ekip incelemesi, çekim ve onay yaşam döngüsüyle yapılandırdım.",
+      "en": "While BahaLabs handled the product's local positioning, I built all of the software, design, and infrastructure. Instead of publishing listings directly, I structured them around an application, team review, photo shoot, and approval lifecycle."
+    },
+    "role": {
+      "tr": "Teknik Ürün Sahibi ve Solo Developer",
+      "en": "Technical Product Owner & Solo Developer"
+    },
+    "period": {
+      "tr": "Haziran 2026 — Devam ediyor",
+      "en": "June 2026 — Ongoing"
+    },
+    "year": "2026",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Better Auth",
+      "Redis",
+      "BullMQ",
+      "Leaflet",
+      "Sharp",
+      "FFmpeg",
+      "Docker",
+      "Nginx"
+    ],
+    "technicalFocus": {
+      "tr": "BullMQ medya worker'ı ile Next.js ISR cache'ini tutarlı çalıştırmak ve sinematik tasarımı her yaş için anlaşılır tutmak.",
+      "en": "Keeping the BullMQ media worker and the Next.js ISR cache consistent with each other, and keeping the cinematic design easy to understand for users of all ages."
+    },
+    "architecture": [
+      {
+        "title": "Search and discovery",
+        "description": {
+          "tr": "Sunucu tarafı filtreler, facet sayaçları, ISR ve harita üzerinde poligon çizerek keşif.",
+          "en": "Server-side filters, facet counters, ISR, and map discovery via polygon drawing."
+        }
+      },
+      {
+        "title": "Moderated marketplace",
+        "description": {
+          "tr": "Başvurudan çekime ve yayına uzanan ekip onaylı ilan yaşam döngüsü.",
+          "en": "A team-approved listing lifecycle running from application through photo shoot to publication."
+        }
+      },
+      {
+        "title": "Async media",
+        "description": {
+          "tr": "Sharp ve FFmpeg işlemlerini yürüten BullMQ worker ile hedefli cache yenileme.",
+          "en": "A BullMQ worker running Sharp and FFmpeg jobs, with targeted cache revalidation."
+        }
+      },
+      {
+        "title": "Production stack",
+        "description": {
+          "tr": "Next.js app, worker, PostgreSQL ve Redis servislerinden oluşan Docker dağıtımı.",
+          "en": "A Docker deployment composed of the Next.js app, worker, PostgreSQL, and Redis services."
+        }
+      }
+    ],
+    "features": [
+      {
+        "tr": "Yapılandırılmış arazi bilgileri ve gelişmiş filtreler",
+        "en": "Structured land data and advanced filters"
+      },
+      {
+        "tr": "Haritada poligon çizerek bölge arama",
+        "en": "Region search by drawing polygons on the map"
+      },
+      {
+        "tr": "Ekip onaylı ilan ve fiyat değişikliği moderasyonu",
+        "en": "Team-approved moderation of listings and price changes"
+      },
+      {
+        "tr": "Favoriler, kayıtlı aramalar ve günlük yeni ilan özeti",
+        "en": "Favorites, saved searches, and a daily digest of new listings"
+      },
+      {
+        "tr": "Platform içi gizlilik odaklı mesajlaşma",
+        "en": "Privacy-focused in-platform messaging"
+      },
+      {
+        "tr": "Admin CRM ve içerik yönetimi",
+        "en": "Admin CRM and content management"
+      },
+      {
+        "tr": "Responsive, kaydırmaya duyarlı animasyon sistemi",
+        "en": "Responsive, scroll-aware animation system"
+      },
+      {
+        "tr": "Yüklenebilir PWA deneyimi",
+        "en": "Installable PWA experience"
+      }
+    ],
+    "outcome": {
+      "tr": "Uçtan uca çalışan demo; ilan başvurusu, moderasyon, arama, harita, mesajlaşma, bildirim ve medya işleme kapsamını bir araya getiriyor. Arayüz, hareketli yapısına rağmen her yaştan kullanıcı için basit kalacak biçimde tasarlandı.",
+      "en": "An end-to-end working demo covering listing applications, moderation, search, maps, messaging, notifications, and media processing. Despite its motion-rich design, the interface was built to stay simple for users of all ages."
+    },
+    "links": {
+      "demo": "https://demo.kutahyasatiliktarla.com",
+      "github": "https://github.com/yunusemrekoyun/kutahyasatiliktarla"
+    },
+    "visual": {
+      "tone": "sand",
+      "label": "Land / Map / Moderation"
+    },
+    "gallery": [
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/home-hero.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık Tarla ana sayfası",
+          "en": "Kütahya Satılık Tarla homepage"
+        },
+        "caption": {
+          "tr": "Kaydırmaya duyarlı yerel arazi platformu anlatımı.",
+          "en": "Scroll-aware storytelling for a local land platform."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/listings-filtered.jpg",
+        "alt": {
+          "tr": "Filtrelenmiş tarla ilanları",
+          "en": "Filtered land listings"
+        },
+        "caption": {
+          "tr": "İlçe ve yapısal arazi özelliklerine göre ilan keşfi.",
+          "en": "Listing discovery by district and structured land attributes."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/listing-detail.jpg",
+        "alt": {
+          "tr": "Arazi ilan detay sayfası",
+          "en": "Land listing detail page"
+        },
+        "caption": {
+          "tr": "Yapılandırılmış arazi bilgileri ve iletişim akışları.",
+          "en": "Structured land data and contact flows."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/map-exploration.jpg",
+        "alt": {
+          "tr": "Harita üzerinde arazi keşfi",
+          "en": "Land discovery on the map"
+        },
+        "caption": {
+          "tr": "Fiyat işaretçileri ve özel bölge çizme aracı.",
+          "en": "Price markers and a custom region drawing tool."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/account-dashboard.jpg",
+        "alt": {
+          "tr": "Kullanıcı hesap paneli",
+          "en": "User account dashboard"
+        },
+        "caption": {
+          "tr": "İlan, mesaj, favori ve kayıtlı aramaların ortak çalışma alanı.",
+          "en": "A shared workspace for listings, messages, favorites, and saved searches."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/admin-dashboard.jpg",
+        "alt": {
+          "tr": "Tarla platformu admin paneli",
+          "en": "Land platform admin dashboard"
+        },
+        "caption": {
+          "tr": "Başvuru, inceleme, çekim ve yayın durumları.",
+          "en": "Application, review, photo shoot, and publication statuses."
+        }
+      },
+      {
+        "src": "/images/projects/kutahya-satilik-tarla/admin-content.jpg",
+        "alt": {
+          "tr": "Tarla platformu içerik paneli",
+          "en": "Land platform content dashboard"
+        },
+        "caption": {
+          "tr": "Marka ve sayfa içeriklerinin kod gerektirmeden yönetimi.",
+          "en": "Managing brand and page content without touching code."
+        }
+      }
+    ],
+    "contentTodos": []
+  },
+  {
+    "slug": "fitness-paneli",
+    "index": "07",
+    "title": "Fitness Paneli",
+    "category": {
+      "tr": "Spor Salonu Yönetim Platformu",
+      "en": "Gym Management Platform"
+    },
+    "summary": {
+      "tr": "Spor salonu operasyonlarını, eğitmen süreçlerini ve üyelerin kişisel gelişim deneyimini işletmeye özel bağımsız kurulumlarda birleştiren yönetim sistemi.",
+      "en": "A management system that brings gym operations, trainer workflows, and members' personal progress experience together in independent, per-business deployments."
+    },
+    "problem": {
+      "tr": "Üyelik, ödeme, yoklama, ders, randevu ve antrenman süreçleri salonlarda farklı araçlarla veya manuel kayıtlarla yürütülüyor; gelişim takibi büyük ölçüde antrenörün kişisel emeğine kalıyordu.",
+      "en": "Gyms ran memberships, payments, attendance, classes, appointments, and training workflows through separate tools or manual records, and progress tracking was left largely to the trainer's personal effort."
+    },
+    "approach": {
+      "tr": "Her salonun kendi alan adı, marka görünümü, uygulaması ve veritabanıyla bağımsız kullanacağı ortak bir ürün altyapısı tasarladım. Üyenin ölçüm ve fotoğraflarını girdiği; antrenörün grafikler üzerinden yorumladığı gelişim sistemi kurdum.",
+      "en": "I designed a shared product infrastructure that every gym runs independently with its own domain, branding, application, and database. I built a progress system where members log their measurements and photos, and trainers interpret them through charts."
+    },
+    "role": {
+      "tr": "Ürün Sahibi ve Solo Developer",
+      "en": "Product Owner & Solo Developer"
+    },
+    "period": {
+      "tr": "Mayıs 2026 — Devam ediyor",
+      "en": "May 2026 — Ongoing"
+    },
+    "year": "2026",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Node.js",
+      "JWT",
+      "Docker",
+      "Nginx",
+      "Sharp",
+      "Recharts",
+      "Framer Motion"
+    ],
+    "technicalFocus": {
+      "tr": "Üye verilerini kişisel gelişim grafiklerine dönüştürerek antrenörün manuel takip yükünü azaltmak.",
+      "en": "Turning member data into personal progress charts to reduce the trainer's manual tracking workload."
+    },
+    "architecture": [
+      {
+        "title": "Independent deployment",
+        "description": {
+          "tr": "Her salon için ayrı alan adı, uygulama kurulumu ve PostgreSQL veritabanı.",
+          "en": "A separate domain, application deployment, and PostgreSQL database for each gym."
+        }
+      },
+      {
+        "title": "Role workspaces",
+        "description": {
+          "tr": "Yönetici, personel, eğitmen ve üyeye özel yetki ve çalışma alanları.",
+          "en": "Dedicated permissions and workspaces for admins, staff, trainers, and members."
+        }
+      },
+      {
+        "title": "Member intelligence",
+        "description": {
+          "tr": "Ölçüm, fotoğraf, antrenman ve antrenör yorumlarını zaman çizelgesinde birleştiren analiz katmanı.",
+          "en": "An analytics layer that merges measurements, photos, workouts, and trainer feedback into a single timeline."
+        }
+      },
+      {
+        "title": "Operations",
+        "description": {
+          "tr": "Docker içinde çalışan standalone Next.js uygulaması ve kalıcı VPS medya alanı.",
+          "en": "A standalone Next.js application running in Docker with persistent media storage on the VPS."
+        }
+      }
+    ],
+    "features": [
+      {
+        "tr": "Üyelik planı, ödeme ve şube yönetimi",
+        "en": "Membership plans, payments, and branch management"
+      },
+      {
+        "tr": "QR ile salon girişi ve ders bileti",
+        "en": "QR-based gym check-in and class tickets"
+      },
+      {
+        "tr": "Eğitmen uygunluğu ve randevu takibi",
+        "en": "Trainer availability and appointment tracking"
+      },
+      {
+        "tr": "Grup dersi ve rezervasyon sistemi",
+        "en": "Group classes and reservations"
+      },
+      {
+        "tr": "Kişisel antrenman programları",
+        "en": "Personal workout programs"
+      },
+      {
+        "tr": "Ölçüm, ilerleme fotoğrafı ve gelişim grafikleri",
+        "en": "Measurements, progress photos, and progress charts"
+      },
+      {
+        "tr": "Antrenör değerlendirmeleri",
+        "en": "Trainer assessments"
+      },
+      {
+        "tr": "Raporlama ve CSV dışa aktarma",
+        "en": "Reporting and CSV export"
+      }
+    ],
+    "outcome": {
+      "tr": "Ortak ürün altyapısı; bağımsız salonlardan kişisel antrenörlere ve çok şubeli işletmelere uyarlanabilecek geniş bir yönetim kapsamını, her müşteri için bağımsız kurulum modeliyle sunuyor.",
+      "en": "A shared product infrastructure that delivers a broad management scope — adaptable from independent gyms to personal trainers and multi-branch businesses — with an independent deployment model for every customer."
+    },
     "links": {
       "demo": null,
       "github": null
     },
     "visual": {
       "tone": "ink",
-      "label": "Booking / Roles / Operations"
+      "label": "Fitness / Progress / Operations"
     },
-    "gallery": [],
-    "contentTodos": [
+    "gallery": [
       {
-        "field": "role",
-        "note": "Projede üstlenilen rolü doğrula."
+        "src": "/images/projects/fitness-paneli/home-hero.jpg",
+        "alt": {
+          "tr": "Fitness Paneli ana sayfası",
+          "en": "Fitness Paneli homepage"
+        },
+        "caption": {
+          "tr": "İşletmeye özel fitness vitrini ve değer önerisi.",
+          "en": "Business-specific fitness storefront and value proposition."
+        }
       },
       {
-        "field": "period",
-        "note": "Proje tarihini doğrula."
+        "src": "/images/projects/fitness-paneli/membership-plans.jpg",
+        "alt": {
+          "tr": "Fitness üyelik planları",
+          "en": "Fitness membership plans"
+        },
+        "caption": {
+          "tr": "Dinamik üyelik planları ve fiyatlandırma deneyimi.",
+          "en": "Dynamic membership plans and pricing experience."
+        }
       },
       {
-        "field": "technologies",
-        "note": "Docker dışındaki kesin teknoloji setini ekle."
+        "src": "/images/projects/fitness-paneli/admin-dashboard.jpg",
+        "alt": {
+          "tr": "Fitness yönetici paneli",
+          "en": "Fitness admin dashboard"
+        },
+        "caption": {
+          "tr": "Üye, şube, gelir, yenileme ve check-in özeti.",
+          "en": "Overview of members, branches, revenue, renewals, and check-ins."
+        }
       },
       {
-        "field": "links",
-        "note": "Paylaşılabilir demo veya repository bağlantısını ekle."
+        "src": "/images/projects/fitness-paneli/admin-reports.jpg",
+        "alt": {
+          "tr": "Fitness raporlama ekranı",
+          "en": "Fitness reporting screen"
+        },
+        "caption": {
+          "tr": "Ciro, üye ve yoklama verilerinin dönemsel raporları.",
+          "en": "Periodic reports on revenue, members, and attendance data."
+        }
       },
       {
-        "field": "gallery",
-        "note": "Gerçek yönetim ve operasyon ekranlarını ekle."
+        "src": "/images/projects/fitness-paneli/member-progress-dashboard.jpg",
+        "alt": {
+          "tr": "Üye gelişim paneli",
+          "en": "Member progress dashboard"
+        },
+        "caption": {
+          "tr": "Kilo, yağ, kas ve check-in gelişiminin kişisel takibi.",
+          "en": "Personal tracking of weight, body fat, muscle, and check-in progress."
+        }
       },
       {
-        "field": "outcome",
-        "note": "Doğrulanabilir operasyonel sonucu ekle."
+        "src": "/images/projects/fitness-paneli/member-workout-program.jpg",
+        "alt": {
+          "tr": "Üye antrenman programı",
+          "en": "Member workout program"
+        },
+        "caption": {
+          "tr": "Antrenör tarafından atanan haftalık kişisel program.",
+          "en": "Weekly personal program assigned by the trainer."
+        }
+      },
+      {
+        "src": "/images/projects/fitness-paneli/trainer-dashboard.jpg",
+        "alt": {
+          "tr": "Fitness eğitmen paneli",
+          "en": "Fitness trainer dashboard"
+        },
+        "caption": {
+          "tr": "Üye, aktif program ve yaklaşan randevu yönetimi.",
+          "en": "Managing members, active programs, and upcoming appointments."
+        }
       }
-    ]
+    ],
+    "contentTodos": []
   },
   {
     "slug": "zumra-akademi",
-    "index": "03",
+    "index": "08",
     "title": "Zümra Akademi",
-    "category": "Education CRM",
-    "summary": "Adaydan kayda, ödeme planından güvenlik altyapısına kadar bir eğitim kurumunun öğrenci yaşam döngüsünü yöneten CRM ürünü.",
-    "problem": "Aday, randevu, kayıt, danışmanlık ve finans süreçleri ayrı araçlarda yürüdüğünde öğrenci yolculuğunun takibi ve yetki kontrolü zorlaşıyor.",
-    "approach": "Aday yönetiminden öğrenci kaydına uzanan akış; rol bazlı yetkilendirme, audit log, ödeme ve medya süreçleriyle tek bir yönetim sistemi içinde modelleniyor.",
-    "role": null,
-    "period": null,
-    "year": null,
+    "category": {
+      "tr": "Eğitim Yönetimi ve CRM",
+      "en": "Education Management & CRM"
+    },
+    "summary": {
+      "tr": "Online bir akademinin aday kazanımından kayıt ve tahsilata, derslerden ödev ve başarı takibine kadar tüm süreçlerini tek platformda birleştiren çok rollü yönetim sistemi.",
+      "en": "A multi-role management system that unifies an online academy's entire operation on a single platform — from lead acquisition through enrollment and payment collection to lessons, homework, and achievement tracking."
+    },
+    "problem": {
+      "tr": "WordPress CRM, Excel dosyaları ve ayrı ödeme araçlarına dağılan süreçler öğrenci yolculuğunu görünmez, operasyonu karmaşık ve yazılım maliyetini yüksek hâle getiriyordu.",
+      "en": "Processes scattered across a WordPress CRM, Excel files, and separate payment tools left the student journey invisible, made operations complicated, and drove up software costs."
+    },
+    "approach": {
+      "tr": "Adaydan öğrenciye, programdan derse ve ödevden başarıya uzanan tüm veri modelini tek üründe kurdum. Admin, danışman, öğretmen ve öğrenci için yalnızca ihtiyaç duydukları akışları gösteren sade çalışma alanları tasarladım.",
+      "en": "I built the full data model — from lead to student, program to lesson, homework to achievement — in a single product. I designed clean workspaces for admins, advisors, teachers, and students that surface only the flows each role needs."
+    },
+    "role": "Solo Product Developer",
+    "period": {
+      "tr": "Haziran 2026 — Eylül 2026",
+      "en": "June 2026 — September 2026"
+    },
+    "year": "2026",
     "technologies": [
       "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
       "PostgreSQL",
       "Drizzle ORM",
       "Better Auth",
@@ -168,204 +1242,614 @@
       "Docker",
       "Nginx"
     ],
-    "technicalFocus": "Kurumun kayıt ve finans süreçlerini kuyruk, medya işleme, audit ve yedekleme katmanlarıyla birlikte tasarlamak.",
+    "technicalFocus": {
+      "tr": "Google Meet katılımcı hareketlerini ders ve yoklama kayıtlarıyla eşleştirip toplam katılım süresini dayanıklı arka plan işleriyle hesaplamak.",
+      "en": "Matching Google Meet participant events with lesson and attendance records, and computing total attendance time with durable background jobs."
+    },
     "architecture": [
       {
-        "title": "Core data",
-        "description": "Aday, başvuru, randevu, danışman, öğrenci ve ödeme verilerinin PostgreSQL ve Drizzle ORM üzerinde modellenmesi."
+        "title": "Public and CRM",
+        "description": {
+          "tr": "Marka sitesi, seviye testi, aday havuzu, kayıt ve tahsilat akışları.",
+          "en": "Brand site, placement test, lead pool, enrollment, and payment collection flows."
+        }
       },
       {
-        "title": "Background work",
-        "description": "Redis ve BullMQ ile arka plan işlerinin; FFmpeg ile medya işleme süreçlerinin ayrıştırılması."
+        "title": "Role workspaces",
+        "description": {
+          "tr": "Admin, danışman, öğretmen ve öğrenci için ayrı bilgi mimarileri.",
+          "en": "Separate information architectures for admins, advisors, teachers, and students."
+        }
       },
       {
-        "title": "Access & operations",
-        "description": "Better Auth, rol bazlı yetkilendirme ve audit log ile izlenebilir erişim; Docker ve Nginx ile canlı ortam yapısı."
+        "title": "Academic core",
+        "description": {
+          "tr": "Program, ders, Google Meet yoklaması, ödev, notlandırma ve ilerleme yönetimi.",
+          "en": "Program, lesson, Google Meet attendance, homework, grading, and progress management."
+        }
+      },
+      {
+        "title": "Async operations",
+        "description": {
+          "tr": "Redis ve BullMQ üzerinde Meet, bildirim ve medya işlerini yürüten worker servisleri.",
+          "en": "Worker services on Redis and BullMQ handling Meet, notification, and media jobs."
+        }
       }
     ],
     "features": [
-      "Aday, başvuru ve randevu yönetimi",
-      "Danışman atama ve öğrenci kayıt süreçleri",
-      "Ödeme planı ve senet yönetimi",
-      "Rol bazlı yetkilendirme ve audit log",
-      "Medya işleme",
-      "Yedekleme ve güvenlik altyapısı"
+      {
+        "tr": "Aday havuzu, danışman görevleri ve kayıt dönüşümü",
+        "en": "Lead pool, advisor tasks, and enrollment conversion"
+      },
+      {
+        "tr": "Tahsilat ve kalan borç takibi",
+        "en": "Payment collection and outstanding balance tracking"
+      },
+      {
+        "tr": "Program, grup, kapasite ve ders takvimi",
+        "en": "Programs, groups, capacity, and lesson scheduling"
+      },
+      {
+        "tr": "Google Meet bağlantılı otomatik yoklama taslağı",
+        "en": "Automatic attendance drafts linked to Google Meet"
+      },
+      {
+        "tr": "Ödev, teslim, notlandırma ve başarı takibi",
+        "en": "Homework, submissions, grading, and achievement tracking"
+      },
+      {
+        "tr": "Dosya ve ses kaydı destekli mesajlaşma",
+        "en": "Messaging with file and voice recording support"
+      },
+      {
+        "tr": "Geçmiş CRM ve Excel verisine uyumlu veri modeli",
+        "en": "A data model compatible with legacy CRM and Excel data"
+      },
+      {
+        "tr": "Rol bazlı sade çalışma alanları",
+        "en": "Clean role-based workspaces"
+      }
     ],
-    "outcome": null,
+    "outcome": {
+      "tr": "Devasa akademik ve operasyonel kapsam, her rol için anlaşılır çalışma alanlarına dönüştürüldü. Çalışan demo; aday, kayıt, program, ders, ödev, mesajlaşma ve ilerleme süreçlerini aynı sistemde gösteriyor.",
+      "en": "The massive academic and operational scope was distilled into clear workspaces for every role. The working demo shows leads, enrollment, programs, lessons, homework, messaging, and progress running in one system."
+    },
     "links": {
-      "demo": null,
+      "demo": "https://yunusemrekoyun.tech/tr",
       "github": null
     },
     "visual": {
       "tone": "teal",
-      "label": "CRM / Queue / Media"
+      "label": "Education / CRM / Meet"
     },
-    "gallery": [],
-    "contentTodos": [
+    "gallery": [
       {
-        "field": "role",
-        "note": "Projede üstlenilen rolü doğrula."
+        "src": "/images/projects/zumra-akademi/home-redesign-hero.jpg",
+        "alt": {
+          "tr": "Zümra Akademi yeni ana sayfası",
+          "en": "Zümra Akademi redesigned homepage"
+        },
+        "caption": {
+          "tr": "Yeni marka anlatımı ve public deneyim.",
+          "en": "The new brand narrative and public experience."
+        }
       },
       {
-        "field": "period",
-        "note": "Proje tarihini doğrula."
+        "src": "/images/projects/zumra-akademi/learning-process.jpg",
+        "alt": {
+          "tr": "Zümra Akademi eğitim süreci",
+          "en": "Zümra Akademi learning process"
+        },
+        "caption": {
+          "tr": "Eğitim yolculuğunu sadeleştiren dört adımlı süreç.",
+          "en": "A four-step process that simplifies the learning journey."
+        }
       },
       {
-        "field": "links",
-        "note": "Paylaşılabilir demo veya repository bağlantısını ekle."
+        "src": "/images/projects/zumra-akademi/admin-dashboard.jpg",
+        "alt": {
+          "tr": "Zümra Akademi admin paneli",
+          "en": "Zümra Akademi admin dashboard"
+        },
+        "caption": {
+          "tr": "Öğrenci, aday, dönüşüm ve günlük program özeti.",
+          "en": "Overview of students, leads, conversions, and the daily schedule."
+        }
       },
       {
-        "field": "gallery",
-        "note": "Gerçek CRM ekranlarını ekle."
+        "src": "/images/projects/zumra-akademi/admin-leads.jpg",
+        "alt": {
+          "tr": "Zümra Akademi aday havuzu",
+          "en": "Zümra Akademi lead pool"
+        },
+        "caption": {
+          "tr": "Seviye testi ve CRM aşamalarıyla aday yönetimi.",
+          "en": "Lead management with placement tests and CRM stages."
+        }
       },
       {
-        "field": "outcome",
-        "note": "Doğrulanabilir ürün sonucunu ekle."
+        "src": "/images/projects/zumra-akademi/admin-calendar.jpg",
+        "alt": {
+          "tr": "Zümra Akademi takvimi",
+          "en": "Zümra Akademi calendar"
+        },
+        "caption": {
+          "tr": "Grup dersi, özel ders, görüşme ve Meet durumları.",
+          "en": "Group lessons, private lessons, meetings, and Meet statuses."
+        }
+      },
+      {
+        "src": "/images/projects/zumra-akademi/teacher-dashboard.jpg",
+        "alt": {
+          "tr": "Zümra Akademi öğretmen paneli",
+          "en": "Zümra Akademi teacher dashboard"
+        },
+        "caption": {
+          "tr": "Eğitmene atanmış öğrenci, şube ve ders modelleri.",
+          "en": "Students, branches, and lesson models assigned to the teacher."
+        }
+      },
+      {
+        "src": "/images/projects/zumra-akademi/teacher-grading.jpg",
+        "alt": {
+          "tr": "Zümra Akademi ödev notlandırma",
+          "en": "Zümra Akademi homework grading"
+        },
+        "caption": {
+          "tr": "Teslim, puan ve öğretmen geri bildirimi akışı.",
+          "en": "The submission, scoring, and teacher feedback flow."
+        }
+      },
+      {
+        "src": "/images/projects/zumra-akademi/student-dashboard.jpg",
+        "alt": {
+          "tr": "Zümra Akademi öğrenci paneli",
+          "en": "Zümra Akademi student dashboard"
+        },
+        "caption": {
+          "tr": "Program, yaklaşan ders ve Google bağlantısı.",
+          "en": "Schedule, upcoming lessons, and the Google connection."
+        }
+      },
+      {
+        "src": "/images/projects/zumra-akademi/student-progress.jpg",
+        "alt": {
+          "tr": "Zümra Akademi öğrenci ilerlemesi",
+          "en": "Zümra Akademi student progress"
+        },
+        "caption": {
+          "tr": "Ders, ödev, devam ve seviye ilerleme metrikleri.",
+          "en": "Lesson, homework, attendance, and level progression metrics."
+        }
+      },
+      {
+        "src": "/images/projects/zumra-akademi/advisor-dashboard.jpg",
+        "alt": {
+          "tr": "Zümra Akademi danışman paneli",
+          "en": "Zümra Akademi advisor dashboard"
+        },
+        "caption": {
+          "tr": "Aday hunisi, görevler ve yaklaşan görüşmeler.",
+          "en": "Lead funnel, tasks, and upcoming meetings."
+        }
+      },
+      {
+        "src": "/images/projects/zumra-akademi/advisor-meetings.jpg",
+        "alt": {
+          "tr": "Zümra Akademi danışman görüşmeleri",
+          "en": "Zümra Akademi advisor meetings"
+        },
+        "caption": {
+          "tr": "Planlanan ve geçmiş görüşmeler ile sonuç notları.",
+          "en": "Scheduled and past meetings with outcome notes."
+        }
       }
-    ]
+    ],
+    "contentTodos": []
   },
   {
-    "slug": "kutahya-satilik",
-    "index": "04",
-    "title": "Kütahya Satılık",
-    "category": "Real-estate platform",
-    "summary": "Arama, filtreleme ve ilan keşfini mobil uyumlu; SEO ve performans odaklı bir yapıda sunan modern emlak platformu.",
-    "problem": "İlan sayısı büyüdükçe kullanıcıların doğru mülke ulaşması, filtrelerini paylaşabilmesi ve detay sayfalarını arama motorlarından keşfedebilmesi kritik hâle geliyor.",
-    "approach": "Filtre durumu URL üzerinde taşınarak aranabilir ve paylaşılabilir keşif akışları oluşturuluyor; ilan detayları mobil kullanım ve organik erişim odağında düzenleniyor.",
-    "role": null,
-    "period": null,
-    "year": null,
-    "technologies": [],
-    "technicalFocus": "URL tabanlı filtreleme ile SEO, performans ve mobil ilan keşfini aynı ürün akışında buluşturmak.",
+    "slug": "garden-otel",
+    "index": "09",
+    "title": "Garden Otel Operasyon Sistemi",
+    "category": {
+      "tr": "Konaklama Yönetim Platformu",
+      "en": "Hospitality Management Platform"
+    },
+    "summary": {
+      "tr": "Rezervasyondan check-in'e; oda, personel, temizlik, muhasebe ve resmi bildirim süreçlerine kadar otel operasyonunu tek platformda birleştiren sistem.",
+      "en": "A system that unifies hotel operations on a single platform — from reservations and check-in to rooms, staff, housekeeping, accounting, and official guest reporting."
+    },
+    "problem": {
+      "tr": "Garden Otel'in rezervasyon, müşteri, operasyon ve finans süreçleri birbirinden kopuk, yüksek maliyetli sistemlere dağılmıştı. Günlük işin tek veri akışında yönetilmesi gerekiyordu.",
+      "en": "Garden Otel's reservation, customer, operations, and finance processes were scattered across disconnected, high-cost systems. Day-to-day work needed to be managed in a single data flow."
+    },
+    "approach": {
+      "tr": "Otel ekibinin ihtiyaçlarını ürün akışlarına dönüştürerek public rezervasyon deneyimi ile rol bazlı operasyon panellerini sıfırdan tasarladım. Sistem Garden Otel'e göre şekillenirken başka konaklama işletmelerine uyarlanabilir kuruldu.",
+      "en": "I turned the hotel team's needs into product flows, designing the public booking experience and role-based operations panels from scratch. While the system was shaped around Garden Otel, it was built to be adaptable to other hospitality businesses."
+    },
+    "role": "Solo Product Developer",
+    "period": {
+      "tr": "Mayıs 2026 — Eylül 2026",
+      "en": "May 2026 — September 2026"
+    },
+    "year": "2026",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Prisma ORM",
+      "Node.js",
+      "JWT",
+      "iyzico",
+      "Sharp",
+      "Docker",
+      "Nginx"
+    ],
+    "technicalFocus": {
+      "tr": "Rezervasyon, KBS bildirimi, ödeme, oda ve personel süreçlerini hata dayanıklı tek bir operasyon yaşam döngüsünde modellemek.",
+      "en": "Modeling reservation, official guest reporting (KBS), payment, room, and staff processes as a single fault-tolerant operations lifecycle."
+    },
     "architecture": [
       {
-        "title": "Search state",
-        "description": "Arama ve filtre tercihlerinin URL ile temsil edilerek sonuçların paylaşılabilir ve geri dönülebilir tutulması."
+        "title": "Guest journey",
+        "description": {
+          "tr": "Müsaitlik, oda seçimi, rezervasyon, ödeme ve müşteri hesabı akışları.",
+          "en": "Availability, room selection, booking, payment, and customer account flows."
+        }
       },
       {
-        "title": "Listing detail",
-        "description": "İlan bilgilerinin mobil uyumlu detay sayfalarında açık bir içerik hiyerarşisiyle sunulması."
+        "title": "Hotel operations",
+        "description": {
+          "tr": "Check-in, misafir, temizlik, bakım, kayıp eşya ve personel çalışma alanları.",
+          "en": "Check-in, guest, housekeeping, maintenance, lost-and-found, and staff workspaces."
+        }
       },
       {
-        "title": "Manageable inventory",
-        "description": "İlanların yönetilebilir bir sistem üzerinden güncel tutulması."
+        "title": "Finance and loyalty",
+        "description": {
+          "tr": "Tahsilat, iade, müşteri kredisi, puan ve kupon yönetimi.",
+          "en": "Payment collection, refunds, customer credit, points, and coupon management."
+        }
+      },
+      {
+        "title": "Compliance",
+        "description": {
+          "tr": "EGM ve Jandarma KBS servislerine uygun, arka planda çalışan giriş–çıkış bildirimleri.",
+          "en": "Check-in and check-out reporting that runs in the background, compliant with EGM and Jandarma KBS services."
+        }
       }
     ],
     "features": [
-      "Gelişmiş arama ve filtreleme",
-      "URL tabanlı filtre sistemi",
-      "İlan detay sayfaları",
-      "Mobil uyumlu kullanım",
-      "SEO ve performans odaklı yapı",
-      "Yönetilebilir ilan sistemi"
+      {
+        "tr": "Oda tipi, müsaitlik ve rezervasyon yönetimi",
+        "en": "Room type, availability, and reservation management"
+      },
+      {
+        "tr": "QR destekli check-in ve misafir kayıtları",
+        "en": "QR-assisted check-in and guest records"
+      },
+      {
+        "tr": "KBS giriş–çıkış bildirim entegrasyonu",
+        "en": "KBS check-in/check-out reporting integration"
+      },
+      {
+        "tr": "Temizlik, bakım ve kayıp eşya süreçleri",
+        "en": "Housekeeping, maintenance, and lost-and-found workflows"
+      },
+      {
+        "tr": "iyzico ödeme ve iade akışları",
+        "en": "iyzico payment and refund flows"
+      },
+      {
+        "tr": "Muhasebe ve gelir raporları",
+        "en": "Accounting and revenue reports"
+      },
+      {
+        "tr": "Sadakat, kredi ve kupon sistemi",
+        "en": "Loyalty, credit, and coupon system"
+      },
+      {
+        "tr": "Rol bazlı yönetici ve personel panelleri",
+        "en": "Role-based admin and staff panels"
+      }
     ],
-    "outcome": null,
+    "outcome": {
+      "tr": "Çalışan sistem; rezervasyon, müşteri, check-in, kamu bildirimi, oda operasyonları, temizlik, bakım ve finans süreçlerini tek ürün altında topluyor. Mimari farklı otellere uyarlanabilecek biçimde kuruldu.",
+      "en": "The system is live, bringing reservations, customers, check-in, government reporting, room operations, housekeeping, maintenance, and finance together in a single product. The architecture was built to be adaptable to other hotels."
+    },
     "links": {
-      "demo": null,
-      "github": null
+      "demo": "https://aswel.tech",
+      "github": "https://github.com/yunusemrekoyun/Otel-Rezervasyon"
     },
     "visual": {
       "tone": "stone",
-      "label": "Search / URL / Listings"
+      "label": "Hotel / Booking / Operations"
     },
-    "gallery": [],
-    "contentTodos": [
+    "gallery": [
       {
-        "field": "role",
-        "note": "Projede üstlenilen rolü doğrula."
+        "src": "/images/projects/garden-otel/home-hero.jpg",
+        "alt": {
+          "tr": "Garden Otel ana sayfası",
+          "en": "Garden Otel homepage"
+        },
+        "caption": {
+          "tr": "Otel kimliği ve merkezi konum anlatımı.",
+          "en": "Presenting the hotel's identity and central location."
+        }
       },
       {
-        "field": "period",
-        "note": "Proje tarihini doğrula."
+        "src": "/images/projects/garden-otel/rooms.jpg",
+        "alt": {
+          "tr": "Garden Otel oda seçimi",
+          "en": "Garden Otel room selection"
+        },
+        "caption": {
+          "tr": "Müsaitlik ve gecelik fiyatla oda seçimi.",
+          "en": "Room selection with availability and nightly rates."
+        }
       },
       {
-        "field": "technologies",
-        "note": "Kesin teknoloji setini ekle."
+        "src": "/images/projects/garden-otel/reservation.jpg",
+        "alt": {
+          "tr": "Garden Otel rezervasyon akışı",
+          "en": "Garden Otel booking flow"
+        },
+        "caption": {
+          "tr": "Dört aşamalı rezervasyon deneyimi.",
+          "en": "A four-step booking experience."
+        }
       },
       {
-        "field": "links",
-        "note": "Canlı site veya repository bağlantısını doğrula."
+        "src": "/images/projects/garden-otel/admin-overview.jpg",
+        "alt": {
+          "tr": "Garden Otel yönetici paneli",
+          "en": "Garden Otel admin panel"
+        },
+        "caption": {
+          "tr": "Doluluk, rezervasyon, giriş–çıkış ve tahsilat özeti.",
+          "en": "Occupancy, reservations, check-in/check-out, and collections at a glance."
+        }
       },
       {
-        "field": "gallery",
-        "note": "Gerçek liste ve detay ekranlarını ekle."
+        "src": "/images/projects/garden-otel/admin-reservations.jpg",
+        "alt": {
+          "tr": "Garden Otel rezervasyon yönetimi",
+          "en": "Garden Otel reservation management"
+        },
+        "caption": {
+          "tr": "Doluluk takvimi ve rezervasyon durumları.",
+          "en": "Occupancy calendar and reservation statuses."
+        }
       },
       {
-        "field": "outcome",
-        "note": "Doğrulanabilir performans veya ürün sonucunu ekle."
+        "src": "/images/projects/garden-otel/admin-room-management.jpg",
+        "alt": {
+          "tr": "Garden Otel oda yönetimi",
+          "en": "Garden Otel room management"
+        },
+        "caption": {
+          "tr": "Oda çeşidi, medya ve imkân yönetimi.",
+          "en": "Managing room types, media, and amenities."
+        }
+      },
+      {
+        "src": "/images/projects/garden-otel/admin-checkin-terminal.jpg",
+        "alt": {
+          "tr": "Garden Otel check-in terminali",
+          "en": "Garden Otel check-in terminal"
+        },
+        "caption": {
+          "tr": "Rezervasyon kodu ve QR destekli giriş–çıkış.",
+          "en": "Check-in and check-out via reservation code and QR."
+        }
+      },
+      {
+        "src": "/images/projects/garden-otel/admin-payments-revenue.jpg",
+        "alt": {
+          "tr": "Garden Otel ödeme yönetimi",
+          "en": "Garden Otel payment management"
+        },
+        "caption": {
+          "tr": "Tahsilat, iade ve gelir çalışma alanı.",
+          "en": "Collections, refunds, and revenue workspace."
+        }
       }
-    ]
+    ],
+    "contentTodos": []
   },
   {
-    "slug": "fitness-panel",
-    "index": "05",
-    "title": "Fitness Paneli",
-    "category": "Tracking dashboard",
-    "summary": "Kullanıcıların antrenman ve fitness süreçlerini düzenli bir web arayüzü üzerinden takip etmesi için geliştirilen panel.",
-    "problem": null,
-    "approach": null,
-    "role": null,
-    "period": null,
-    "year": null,
-    "technologies": [],
-    "technicalFocus": null,
-    "architecture": [],
-    "features": [],
-    "outcome": null,
+    "slug": "professor-notch",
+    "index": "10",
+    "title": "ProfessorNotch",
+    "category": "Native macOS Utility",
+    "summary": {
+      "tr": "MacBook çentiğini güvenli yerel yedekleme, medya ve sistem kontrolleriyle günlük üretkenlik araçlarını birleştiren native bir kontrol merkezine dönüştüren açık kaynak uygulama.",
+      "en": "An open-source app that turns the MacBook notch into a native control center, combining safe local backup, media and system controls, and everyday productivity tools."
+    },
+    "problem": {
+      "tr": "DiskSync başlangıçta yalnızca harici diske güvenli yedek alma ihtiyacını çözüyordu. Menü çubuğundaki sıradan konumu, aracı daha erişilebilir bir kısayola ve ardından çentiğin kendisinde yaşayan kapsamlı bir ürüne dönüştürme fikrini doğurdu.",
+      "en": "DiskSync originally solved a single need: making safe backups to an external drive. Its unremarkable spot in the menu bar sparked the idea of turning the tool into a more accessible shortcut — and then into a full-fledged product living in the notch itself."
+    },
+    "approach": {
+      "tr": "Swift 6, SwiftUI ve AppKit ile üçüncü taraf bağımlılık olmadan tamamen native geliştirdim. Offline çalışma ve düşük kaynak tüketimi vaadini koruyarak macOS servislerini doğrudan entegre ettim; yoğun işlevleri küçük notch alanına yerleştirdim.",
+      "en": "I built it fully native with Swift 6, SwiftUI, and AppKit, with no third-party dependencies. I integrated macOS services directly while keeping the promise of offline operation and low resource usage, fitting dense functionality into the small notch area."
+    },
+    "role": {
+      "tr": "Solo Developer ve Açık Kaynak Maintainer",
+      "en": "Solo Developer & Open-Source Maintainer"
+    },
+    "period": "2026",
+    "year": "2026",
+    "technologies": [
+      "Swift 6",
+      "SwiftUI",
+      "AppKit",
+      "FSEvents",
+      "SQLite3",
+      "CoreAudio",
+      "CoreWLAN",
+      "IOKit",
+      "AppleScript",
+      "Xcode"
+    ],
+    "technicalFocus": {
+      "tr": "Offline çalışma, düşük kaynak tüketimi ve küçük alanda yüksek işlev yoğunluğunu native macOS entegrasyonlarıyla dengelemek.",
+      "en": "Balancing offline operation, low resource usage, and high functional density in a small space through native macOS integrations."
+    },
+    "architecture": [
+      {
+        "title": "Notch HUD",
+        "description": {
+          "tr": "Ekran geometrisine yerleşen, hover ve dosya sürükleme davranışlarını yöneten özel NSPanel katmanları.",
+          "en": "Custom NSPanel layers that anchor to the screen geometry and handle hover and file-drag behavior."
+        }
+      },
+      {
+        "title": "DiskSync engine",
+        "description": {
+          "tr": "FSEvents, actor tabanlı seri işler, güvenli additive sync ve geri alınabilir Mirror arşivi.",
+          "en": "FSEvents, actor-based serial jobs, safe additive sync, and a recoverable Mirror archive."
+        }
+      },
+      {
+        "title": "System services",
+        "description": {
+          "tr": "Ses, ekran, Wi-Fi, Bluetooth, batarya ve sistem metriklerini native servislerle yöneten modüller.",
+          "en": "Modules that manage audio, display, Wi-Fi, Bluetooth, battery, and system metrics through native services."
+        }
+      },
+      {
+        "title": "Local data",
+        "description": {
+          "tr": "Ayar, sync, arşiv ve kullanım verilerini cihazda tutan SQLite3 katmanı; telemetri bulunmuyor.",
+          "en": "A SQLite3 layer that keeps settings, sync, archive, and usage data on-device; there is no telemetry."
+        }
+      }
+    ],
+    "features": [
+      {
+        "tr": "Harici diske güvenli yerel yedekleme ve artımlı sync",
+        "en": "Safe local backup to an external drive with incremental sync"
+      },
+      {
+        "tr": "Geri alınabilir Mirror arşivi",
+        "en": "Recoverable Mirror archive"
+      },
+      {
+        "tr": "Medya, ses, parlaklık, Wi-Fi ve Bluetooth kontrolleri",
+        "en": "Media, volume, brightness, Wi-Fi, and Bluetooth controls"
+      },
+      {
+        "tr": "Batarya sağlığı ve canlı aktiviteler",
+        "en": "Battery health and live activities"
+      },
+      {
+        "tr": "Uygulama başlatıcı, file shelf ve pano geçmişi",
+        "en": "App launcher, file shelf, and clipboard history"
+      },
+      {
+        "tr": "CPU, bellek, disk ve ağ izleme",
+        "en": "CPU, memory, disk, and network monitoring"
+      },
+      {
+        "tr": "Notch içine yerleşen hızlı zamanlayıcı",
+        "en": "Quick timer built into the notch"
+      },
+      {
+        "tr": "Ücretsiz, açık kaynak ve telemetrisiz kullanım",
+        "en": "Free, open source, and telemetry-free"
+      }
+    ],
+    "outcome": {
+      "tr": "ProfessorNotch günlük kullanımda aktif ve stabil çalışıyor; MIT lisansıyla tamamen ücretsiz ve açık kaynak sunuluyor. Apple imzalama, notarization ve Mac App Store uyumluluk çalışmaları tamamlandıktan sonra son kullanıcı sürümü yayımlanacak.",
+      "en": "ProfessorNotch is in active daily use and runs stably; it is fully free and open source under the MIT license. The end-user release will ship once Apple signing, notarization, and Mac App Store compliance work is complete."
+    },
     "links": {
       "demo": null,
-      "github": null
+      "github": "https://github.com/yunusemrekoyun/ProfessorNotch"
     },
     "visual": {
-      "tone": "sand",
-      "label": "Training / Progress / Routine"
+      "tone": "mint",
+      "label": "macOS / Notch / Local Sync"
     },
-    "gallery": [],
-    "contentTodos": [
+    "gallery": [
       {
-        "field": "role",
-        "note": "Projede üstlenilen rolü doğrula."
+        "src": "/images/projects/professor-notch/control-center.png",
+        "alt": {
+          "tr": "ProfessorNotch kontrol merkezi",
+          "en": "ProfessorNotch control center"
+        },
+        "caption": {
+          "tr": "Medya, ses, parlaklık, bağlantı ve ekran kontrolleri.",
+          "en": "Media, volume, brightness, connectivity, and display controls."
+        }
       },
       {
-        "field": "problem",
-        "note": "Çözülen problemi doğrulanmış içerikle ekle."
+        "src": "/images/projects/professor-notch/sync-engine.png",
+        "alt": {
+          "tr": "ProfessorNotch DiskSync motoru",
+          "en": "ProfessorNotch DiskSync engine"
+        },
+        "caption": {
+          "tr": "Harici disk, hedef klasör ve sync durumu.",
+          "en": "External drive, target folder, and sync status."
+        }
       },
       {
-        "field": "approach",
-        "note": "Yaklaşım ve kullanıcı akışını doğrulanmış içerikle ekle."
+        "src": "/images/projects/professor-notch/battery-health.png",
+        "alt": {
+          "tr": "ProfessorNotch batarya sağlığı",
+          "en": "ProfessorNotch battery health"
+        },
+        "caption": {
+          "tr": "Şarj, pil sağlığı, döngü sayısı ve güç modu.",
+          "en": "Charge, battery health, cycle count, and power mode."
+        }
       },
       {
-        "field": "technicalFocus",
-        "note": "Teknik odağı doğrulanmış içerikle ekle."
+        "src": "/images/projects/professor-notch/app-launcher.png",
+        "alt": {
+          "tr": "ProfessorNotch uygulama başlatıcı",
+          "en": "ProfessorNotch app launcher"
+        },
+        "caption": {
+          "tr": "Kullanım sıklığına göre çalışan yerel uygulama başlatıcı.",
+          "en": "A local app launcher driven by usage frequency."
+        }
       },
       {
-        "field": "period",
-        "note": "Proje tarihini doğrula."
+        "src": "/images/projects/professor-notch/shelf-drop.png",
+        "alt": "ProfessorNotch file shelf",
+        "caption": {
+          "tr": "Dosya bırakma ve Command-sürükleme ile AirDrop akışı.",
+          "en": "File drop and Command-drag AirDrop flow."
+        }
       },
       {
-        "field": "technologies",
-        "note": "Kesin teknoloji setini ekle."
+        "src": "/images/projects/professor-notch/system-monitor.png",
+        "alt": {
+          "tr": "ProfessorNotch sistem izleme",
+          "en": "ProfessorNotch system monitoring"
+        },
+        "caption": {
+          "tr": "CPU, bellek, disk ve anlık ağ trafiği.",
+          "en": "CPU, memory, disk, and live network traffic."
+        }
       },
       {
-        "field": "architecture",
-        "note": "Doğrulanmış teknik mimari notlarını ekle."
-      },
-      {
-        "field": "features",
-        "note": "Doğrulanmış özellik listesini ekle."
-      },
-      {
-        "field": "links",
-        "note": "Demo veya repository bağlantısını doğrula."
-      },
-      {
-        "field": "gallery",
-        "note": "Gerçek panel ekranlarını ekle."
-      },
-      {
-        "field": "outcome",
-        "note": "Doğrulanabilir ürün sonucunu ekle."
+        "src": "/images/projects/professor-notch/timer.png",
+        "alt": {
+          "tr": "ProfessorNotch zamanlayıcı",
+          "en": "ProfessorNotch timer"
+        },
+        "caption": {
+          "tr": "Notch içine yerleştirilen hızlı zamanlayıcı.",
+          "en": "A quick timer built into the notch."
+        }
       }
-    ]
+    ],
+    "contentTodos": []
   }
 ]

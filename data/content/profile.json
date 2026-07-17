@@ -1,22 +1,43 @@
 {
   "name": "Yunus Emre Koyun",
   "shortName": "Yunus Emre",
-  "role": "Full-stack Developer",
-  "location": "Kütahya, Türkiye",
-  "education": "Bilgisayar Mühendisliği mezunu",
-  "availability": "Yeni projelere ve iş fırsatlarına açık",
-  "intro": "Arayüzden veritabanına, sunucudan canlı ortama kadar ürünün tamamıyla ilgileniyorum.",
+  "role": "Full-stack Software Developer",
+  "location": {
+    "tr": "Türkiye",
+    "en": "Turkey"
+  },
+  "education": {
+    "tr": "Bilgisayar Mühendisliği",
+    "en": "Computer Engineering"
+  },
+  "availability": {
+    "tr": "Yeni projelere ve iş fırsatlarına açık",
+    "en": "Open to new projects and job opportunities"
+  },
+  "intro": {
+    "tr": "Tasarımdan canlı ortama kadar uçtan uca yazılım geliştiriyorum.",
+    "en": "I build software end to end, from design to production."
+  },
   "about": [
-    "İş süreçlerini yalnızca çalışan ekranlara değil, sürdürülebilir ürünlere dönüştürüyorum.",
-    "Full-stack ürün geliştirme, backend mimarisi, veritabanı tasarımı ve deployment süreçlerine birlikte bakıyorum.",
-    "Web ürünlerinin yanında native macOS araçları ve oyun geliştirme çalışmalarına da alan açıyorum."
+    {
+      "tr": "Performansı ve ölçeklenebilirliği ön planda tutarım; temiz, sürdürülebilir ve okunabilir kod yazmaya önem veririm.",
+      "en": "I put performance and scalability first, and I care about writing clean, maintainable, readable code."
+    },
+    {
+      "tr": "Bir fikri tasarımdan canlı ortama kadar uçtan uca hayata geçirir, kullanıcı deneyimi kadar altyapının da güçlü olmasını gözetirim.",
+      "en": "I take an idea all the way from design to production, making sure the infrastructure is as solid as the user experience."
+    },
+    {
+      "tr": "JavaScript ve TypeScript ekosisteminin yanında CRM, stok, e-ticaret, mobil uygulama, SEO, performans ve ölçeklenebilir backend mimarileri üzerine çalışıyorum.",
+      "en": "Alongside the JavaScript and TypeScript ecosystem, I work on CRM, inventory, e-commerce, mobile apps, SEO, performance, and scalable backend architectures."
+    }
   ],
   "email": "yunusemrekoyun26@gmail.com",
   "githubUsername": "yunusemrekoyun",
   "links": {
     "email": "mailto:yunusemrekoyun26@gmail.com",
     "github": "https://github.com/yunusemrekoyun",
-    "linkedin": null,
+    "linkedin": "https://www.linkedin.com/in/yunussemrekoyun/",
     "cv": null
   }
 }

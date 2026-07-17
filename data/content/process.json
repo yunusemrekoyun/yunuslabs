@@ -1,32 +1,68 @@
 [
   {
     "index": "01",
-    "title": "Problemi anlama",
-    "description": "İş sürecini, kullanıcıları ve ürünün gerçekten çözmesi gereken noktayı netleştiririm."
+    "title": {
+      "tr": "Problemi anlama",
+      "en": "Understanding the problem"
+    },
+    "description": {
+      "tr": "İş sürecini, kullanıcıları ve ürünün gerçekten çözmesi gereken noktayı netleştiririm.",
+      "en": "I clarify the business process, the users, and what the product actually needs to solve."
+    }
   },
   {
     "index": "02",
-    "title": "Sistem kurgusu",
-    "description": "Ürün akışını, veri modelini ve sistem sınırlarını geliştirmeye başlamadan önce kurarım."
+    "title": {
+      "tr": "Sistem kurgusu",
+      "en": "System design"
+    },
+    "description": {
+      "tr": "Ürün akışını, veri modelini ve sistem sınırlarını geliştirmeye başlamadan önce kurarım.",
+      "en": "I lay out the product flow, the data model, and the system boundaries before writing any code."
+    }
   },
   {
     "index": "03",
-    "title": "Arayüz ve akış",
-    "description": "Karmaşık süreçleri kullanıcı için açık, erişilebilir ve tutarlı etkileşimlere dönüştürürüm."
+    "title": {
+      "tr": "Arayüz ve akış",
+      "en": "Interface & flow"
+    },
+    "description": {
+      "tr": "Karmaşık süreçleri kullanıcı için açık, erişilebilir ve tutarlı etkileşimlere dönüştürürüm.",
+      "en": "I turn complex processes into clear, accessible, and consistent interactions for the user."
+    }
   },
   {
     "index": "04",
-    "title": "Backend ve veri",
-    "description": "İş kurallarını API, veritabanı ve gereken arka plan süreçleriyle güvenilir hâle getiririm."
+    "title": {
+      "tr": "Backend ve veri",
+      "en": "Backend & data"
+    },
+    "description": {
+      "tr": "İş kurallarını API, veritabanı ve gereken arka plan süreçleriyle güvenilir hâle getiririm.",
+      "en": "I make business rules reliable through the API, the database, and the background processes they require."
+    }
   },
   {
     "index": "05",
-    "title": "Kalite katmanı",
-    "description": "Test, güvenlik ve performansı son kontrol değil geliştirme sürecinin bir parçası olarak ele alırım."
+    "title": {
+      "tr": "Kalite katmanı",
+      "en": "Quality layer"
+    },
+    "description": {
+      "tr": "Test, güvenlik ve performansı son kontrol değil geliştirme sürecinin bir parçası olarak ele alırım.",
+      "en": "I treat testing, security, and performance as part of the development process, not a final checkpoint."
+    }
   },
   {
     "index": "06",
-    "title": "Canlı ortam",
-    "description": "Container, proxy ve deployment yapılarını kurar; ürünün canlıdaki davranışını takip ederim."
+    "title": {
+      "tr": "Canlı ortam",
+      "en": "Production"
+    },
+    "description": {
+      "tr": "Container, proxy ve deployment yapılarını kurar; ürünün canlıdaki davranışını takip ederim.",
+      "en": "I set up the container, proxy, and deployment layers, and keep monitoring how the product behaves live."
+    }
   }
 ]

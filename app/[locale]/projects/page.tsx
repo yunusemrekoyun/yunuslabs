@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
-import { profile, projects } from "@/data/portfolio";
+import { getProfile, getProjects } from "@/data/portfolio";
 import { isLocale, withLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import styles from "./ProjectsPage.module.css";
@@ -44,6 +45,8 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
+  const profile = getProfile(locale);
+  const projects = getProjects(locale);
 
   return (
     <>
@@ -118,7 +121,19 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                   >
                     <span className={styles.visualLabel}>{project.visual.label}</span>
                     <span className={styles.visualRail} data-motion="line" />
-                    <span className={styles.visualPanel} data-motion="parallax" />
+                    <span className={styles.visualPanel} data-motion="parallax">
+                      {project.gallery[0] ? (
+                        <span className={styles.visualImageFrame}>
+                          <Image
+                            alt=""
+                            fill
+                            loading="lazy"
+                            sizes="(max-width: 900px) 92vw, 56vw"
+                            src={project.gallery[0].src}
+                          />
+                        </span>
+                      ) : null}
+                    </span>
                     <span className={styles.visualNode} />
                     <span className={styles.visualLine} />
                   </div>

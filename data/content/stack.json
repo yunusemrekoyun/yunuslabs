@@ -2,61 +2,88 @@
   {
     "id": "frontend",
     "title": "Frontend",
-    "description": "Ürün akışlarını erişilebilir, hızlı ve farklı ekranlarda doğal çalışan arayüzlere dönüştürüyorum.",
+    "description": {
+      "tr": "Ürün akışlarını erişilebilir, hızlı ve farklı ekranlarda doğal çalışan arayüzlere dönüştürüyorum.",
+      "en": "I turn product flows into interfaces that are accessible, fast, and work naturally across different screens."
+    },
     "technologies": [
       "React.js",
       "Next.js",
       "TypeScript",
       "JavaScript",
-      "Tailwind CSS"
+      "Tailwind CSS",
+      "React Native",
+      "Expo"
     ]
   },
   {
     "id": "backend",
     "title": "Backend",
-    "description": "API geliştirme, iş kuralları, arka plan işleri ve gerçek dünya süreçlerinin modellenmesine odaklanıyorum.",
+    "description": {
+      "tr": "API geliştirme, iş kuralları, arka plan işleri ve gerçek dünya süreçlerinin modellenmesine odaklanıyorum.",
+      "en": "I focus on API development, business rules, background jobs, and modeling real-world processes."
+    },
     "technologies": [
       "Node.js",
       "Express.js",
       ".NET 8 Web API",
       "Redis",
-      "BullMQ"
+      "BullMQ",
+      "Better Auth",
+      "FFmpeg"
     ]
   },
   {
     "id": "databases",
     "title": "Databases",
-    "description": "İlişkisel ve doküman tabanlı veriyi sorgu ihtiyaçları, tutarlılık ve sürdürülebilir şema yapısıyla ele alıyorum.",
+    "description": {
+      "tr": "İlişkisel ve doküman tabanlı veriyi sorgu ihtiyaçları, tutarlılık ve sürdürülebilir şema yapısıyla ele alıyorum.",
+      "en": "I handle relational and document-based data with query needs, consistency, and a maintainable schema design in mind."
+    },
     "technologies": [
       "PostgreSQL",
       "MSSQL",
       "MongoDB",
       "Supabase",
+      "Prisma ORM",
       "Drizzle ORM"
     ]
   },
   {
     "id": "infrastructure",
     "title": "Infrastructure",
-    "description": "Uygulamayı geliştirme ortamından canlıya taşıyan container, proxy ve deployment katmanlarını kuruyorum.",
+    "description": {
+      "tr": "Uygulamayı geliştirme ortamından canlıya taşıyan container, proxy ve deployment katmanlarını kuruyorum.",
+      "en": "I build the container, proxy, and deployment layers that take an application from development to production."
+    },
     "technologies": [
       "Docker",
-      "Nginx"
+      "Nginx",
+      "Cloudflare",
+      "VPS"
     ]
   },
   {
     "id": "native-game",
     "title": "Native & Game Development",
-    "description": "Web dışındaki ürün fikirlerini native macOS arayüzleri ve oyun prototipleri üzerinden araştırıyorum.",
+    "description": {
+      "tr": "Web dışındaki ürün fikirlerini native macOS arayüzleri ve oyun prototipleri üzerinden araştırıyorum.",
+      "en": "I explore product ideas beyond the web through native macOS interfaces and game prototypes."
+    },
     "technologies": [
+      "Swift",
       "SwiftUI",
+      "AppKit",
       "Unity"
     ]
   },
   {
     "id": "tools",
     "title": "Tools",
-    "description": "Kod geçmişini, ekip içi akışı ve farklı geliştirme ihtiyaçlarını izlenebilir tutan araçları kullanıyorum.",
+    "description": {
+      "tr": "Kod geçmişini, ekip içi akışı ve farklı geliştirme ihtiyaçlarını izlenebilir tutan araçları kullanıyorum.",
+      "en": "I use tools that keep code history, team workflows, and varied development needs traceable."
+    },
     "technologies": [
       "Git",
       "GitHub",

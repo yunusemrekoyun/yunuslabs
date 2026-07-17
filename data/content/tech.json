@@ -3,576 +3,756 @@
     "slug": "react",
     "name": "React.js",
     "category": "Frontend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Karmaşık ürün akışları için esnek arayüz katmanı.",
+      "en": "A flexible UI layer for complex product flows."
+    },
+    "summary": {
+      "tr": "React'i yalnızca sayfa üretmek için değil, farklı rollerin ve yoğun etkileşimlerin bulunduğu ürünleri anlaşılır bileşenlere bölmek için kullanıyorum.",
+      "en": "I use React not just to build pages, but to break products with multiple roles and heavy interaction into understandable components."
+    },
+    "experience": {
+      "tr": "OldSocks, Babil Yalıtım, Kütahya Satılık, Fitness Paneli, Zümra Akademi ve Garden Otel gibi mağaza, CRM ve operasyon ürünlerinin kullanıcı arayüzlerini geliştirdim.",
+      "en": "I built the user interfaces for storefront, CRM, and operations products such as OldSocks, Babil Yalıtım, Kütahya Satılık, Fitness Paneli, Zümra Akademi, and Garden Otel."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Rol bazlı paneller",
+        "en": "Role-based dashboards"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Responsive ürün arayüzleri",
+        "en": "Responsive product interfaces"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Yeniden kullanılabilir bileşen sistemleri",
+        "en": "Reusable component systems"
       }
-    ]
+    ],
+    "link": "https://react.dev",
+    "contentTodos": []
   },
   {
     "slug": "nextjs",
     "name": "Next.js",
     "category": "Frontend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Arayüz, backend ve canlı ortamı aynı ürün mimarisinde buluşturuyor.",
+      "en": "Brings the UI, backend, and production environment together in one product architecture."
+    },
+    "summary": {
+      "tr": "SEO, sunucu render'ı, API katmanı ve deployment ihtiyaçlarını tek çatı altında çözebildiğim için kapsamlı web ürünlerinde temel tercihlerimden biri.",
+      "en": "One of my core choices for full-scale web products, since it lets me handle SEO, server rendering, the API layer, and deployment under one roof."
+    },
+    "experience": {
+      "tr": "CepLife, Kütahya Satılık, Kütahya Satılık Tarla, Fitness Paneli, Zümra Akademi ve Garden Otel'de App Router, Route Handlers, Server Actions, ISR ve standalone deployment kullandım.",
+      "en": "I used App Router, Route Handlers, Server Actions, ISR, and standalone deployment on CepLife, Kütahya Satılık, Kütahya Satılık Tarla, Fitness Paneli, Zümra Akademi, and Garden Otel."
+    },
+    "highlights": [
+      "App Router",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Server Actions ve Route Handlers",
+        "en": "Server Actions and Route Handlers"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "ISR ve hedefli cache yenileme",
+        "en": "ISR and targeted cache revalidation"
       }
-    ]
+    ],
+    "link": "https://nextjs.org",
+    "contentTodos": []
   },
   {
     "slug": "typescript",
     "name": "TypeScript",
     "category": "Frontend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Büyüyen ürünlerde veri sözleşmesini görünür tutar.",
+      "en": "Keeps the data contract visible as products grow."
+    },
+    "summary": {
+      "tr": "Frontend, API ve worker katmanları arasında değişen veriyi erken aşamada doğrulamak ve refactor maliyetini azaltmak için kullanıyorum.",
+      "en": "I use it to validate data flowing between the frontend, API, and worker layers early, and to lower the cost of refactoring."
+    },
+    "experience": {
+      "tr": "Yeni nesil Next.js projelerimde, React Native istemcilerinde ve rol bazlı yönetim panellerinde strict tiplerle çalışıyorum.",
+      "en": "I work with strict types across my newer Next.js projects, React Native clients, and role-based admin panels."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Uçtan uca veri tipleri",
+        "en": "End-to-end data types"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Güvenli refactor",
+        "en": "Safe refactoring"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Web ve mobil sözleşme paylaşımı",
+        "en": "Shared contracts across web and mobile"
       }
-    ]
+    ],
+    "link": "https://www.typescriptlang.org",
+    "contentTodos": []
   },
   {
     "slug": "javascript",
     "name": "JavaScript",
     "category": "Frontend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Web ekosistemindeki ürün geliştirme pratiğimin temeli.",
+      "en": "The foundation of my product development practice in the web ecosystem."
+    },
+    "summary": {
+      "tr": "Arayüz etkileşimlerinden iş kurallarına ve bağımsız worker uygulamalarına kadar ürünün farklı katmanlarında kullandığım ana dil.",
+      "en": "My primary language across the different layers of a product, from UI interactions to business rules and standalone worker applications."
+    },
+    "experience": {
+      "tr": "CepLife varyant hesaplama motorunu, OldSocks mağaza deneyimini ve Windows sipariş yazıcı worker'ını JavaScript ekosistemiyle geliştirdim.",
+      "en": "I built the CepLife variant calculation engine, the OldSocks storefront experience, and the Windows order-printing worker with the JavaScript ecosystem."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Ürün iş kuralları",
+        "en": "Product business rules"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Node.js servisleri",
+        "en": "Node.js services"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Etkileşim ve animasyon",
+        "en": "Interaction and animation"
       }
-    ]
+    ],
+    "link": "https://developer.mozilla.org/docs/Web/JavaScript",
+    "contentTodos": []
   },
   {
     "slug": "tailwind",
     "name": "Tailwind CSS",
     "category": "Frontend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Tutarlı arayüzleri hızlı kurmak için pratik bir tasarım katmanı.",
+      "en": "A practical design layer for building consistent interfaces fast."
+    },
+    "summary": {
+      "tr": "Tasarım kararlarını bileşene yakın tutarak responsive davranışları, durum varyantlarını ve ürün genelindeki görsel tutarlılığı hızla yönetmemi sağlıyor.",
+      "en": "By keeping design decisions close to the component, it lets me quickly manage responsive behavior, state variants, and visual consistency across the product."
+    },
+    "experience": {
+      "tr": "OldSocks'tan Zümra Akademi ve Garden Otel'e kadar mağaza, kurumsal site ve yönetim paneli tasarımlarında kullandım.",
+      "en": "I used it across storefront, corporate site, and admin panel designs, from OldSocks to Zümra Akademi and Garden Otel."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Responsive tasarım",
+        "en": "Responsive design"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Tasarım sistemi",
+        "en": "Design system"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Hızlı prototipleme",
+        "en": "Rapid prototyping"
       }
-    ]
+    ],
+    "link": "https://tailwindcss.com",
+    "contentTodos": []
   },
   {
     "slug": "nodejs",
     "name": "Node.js",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "API, worker ve medya süreçleri için ortak çalışma ortamı.",
+      "en": "A shared runtime for APIs, workers, and media pipelines."
+    },
+    "summary": {
+      "tr": "Web ürünlerinin backend katmanını, arka plan işlerini ve bağımsız işletme araçlarını aynı ekosistemde geliştirmemi sağlıyor.",
+      "en": "It lets me build the backend layer of web products, background jobs, and standalone business tools within the same ecosystem."
+    },
+    "experience": {
+      "tr": "Express API'leri, BullMQ worker'ları, CepLife sipariş yazıcısı ve Next.js standalone servislerinde kullandım.",
+      "en": "I used it for Express APIs, BullMQ workers, the CepLife order printer, and Next.js standalone services."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "REST API",
+        "en": "REST APIs"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Background worker",
+        "en": "Background workers"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Standalone işletme araçları",
+        "en": "Standalone business tools"
       }
-    ]
+    ],
+    "link": "https://nodejs.org",
+    "contentTodos": []
   },
   {
     "slug": "express",
     "name": "Express.js",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "İhtiyaca göre şekillenen sade REST API katmanı.",
+      "en": "A lean REST API layer shaped around each project's needs."
+    },
+    "summary": {
+      "tr": "Kapsamı net projelerde minimum çatıyla özel iş kuralları ve yönetim API'leri geliştirmek için kullandığım backend aracı.",
+      "en": "My backend tool for well-scoped projects, where I build custom business rules and admin APIs with minimal framework overhead."
+    },
+    "experience": {
+      "tr": "OldSocks, Babil Yalıtım, CepLife ve SV Hukuk projelerinde ürün, içerik, kullanıcı ve medya servisleri geliştirdim.",
+      "en": "I built product, content, user, and media services for OldSocks, Babil Yalıtım, CepLife, and SV Hukuk."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "REST API tasarımı",
+        "en": "REST API design"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "JWT oturumları",
+        "en": "JWT sessions"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Medya servisleri",
+        "en": "Media services"
       }
-    ]
+    ],
+    "link": "https://expressjs.com",
+    "contentTodos": []
   },
   {
     "slug": "dotnet",
     "name": ".NET 8 Web API",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Kurumsal backend geliştirme yaklaşımını öğrendiğim ekosistem.",
+      "en": "The ecosystem where I learned enterprise backend development."
+    },
+    "summary": {
+      "tr": ".NET; tip güvenli API tasarımı, katmanlı mimari ve kurumsal yazılım süreçleri konusunda temelimi güçlendirdi.",
+      "en": ".NET strengthened my foundation in type-safe API design, layered architecture, and enterprise software practices."
+    },
+    "experience": {
+      "tr": "Ziraat Teknoloji stajında .NET ve MSSQL ekosistemiyle çalıştım; Belsis'te .NET Framework'ten Core'a taşınan modüllerin modernizasyonuna destek verdim.",
+      "en": "I worked with the .NET and MSSQL ecosystem during my internship at Ziraat Teknoloji, and at Belsis I helped modernize modules being migrated from .NET Framework to Core."
+    },
+    "highlights": [
+      "Web API",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Kurumsal mimari",
+        "en": "Enterprise architecture"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Framework modernizasyonu",
+        "en": "Framework modernization"
       }
-    ]
+    ],
+    "link": "https://dotnet.microsoft.com",
+    "contentTodos": []
   },
   {
     "slug": "redis",
     "name": "Redis",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Geçici durum, hız ve kuyruk koordinasyonu için veri katmanı.",
+      "en": "The data layer for ephemeral state, speed, and queue coordination."
+    },
+    "summary": {
+      "tr": "Ana veritabanına ait olmayan hızlı durumları, rate limit sayaçlarını ve worker kuyruklarını yönetmek için kullanıyorum.",
+      "en": "I use it to manage fast-moving state that doesn't belong in the main database, along with rate limit counters and worker queues."
+    },
+    "experience": {
+      "tr": "Kütahya Satılık Tarla, Zümra Akademi ve diğer yoğun operasyon ürünlerinde rate limiting, cache ve BullMQ altyapısı kurdum.",
+      "en": "I set up rate limiting, cache, and BullMQ infrastructure for Kütahya Satılık Tarla, Zümra Akademi, and other operations-heavy products."
+    },
+    "highlights": [
+      "Rate limiting",
+      "Queue backend",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
-      },
-      {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Geçici cache",
+        "en": "Ephemeral cache"
       }
-    ]
+    ],
+    "link": "https://redis.io",
+    "contentTodos": []
   },
   {
     "slug": "bullmq",
     "name": "BullMQ",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Uzun süren işleri kullanıcı isteğinden ayıran güvenilir kuyruk.",
+      "en": "A reliable queue that decouples long-running work from user requests."
+    },
+    "summary": {
+      "tr": "Medya işleme, bildirim ve dış servis senkronizasyonu gibi görevleri yeniden denenebilir arka plan işlerine dönüştürüyorum.",
+      "en": "I turn tasks like media processing, notifications, and external service sync into retryable background jobs."
+    },
+    "experience": {
+      "tr": "Zümra Akademi'de Google Meet ve medya işlerinde; Kütahya Satılık Tarla'da Sharp, FFmpeg ve ISR yenileme hattında kullandım.",
+      "en": "I used it for Google Meet and media jobs at Zümra Akademi, and in the Sharp, FFmpeg, and ISR revalidation pipeline at Kütahya Satılık Tarla."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Retry ve uzlaştırma",
+        "en": "Retry and reconciliation"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Ayrı worker süreçleri",
+        "en": "Dedicated worker processes"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Zamanlanmış işler",
+        "en": "Scheduled jobs"
       }
-    ]
+    ],
+    "link": "https://docs.bullmq.io",
+    "contentTodos": []
   },
   {
     "slug": "postgresql",
     "name": "PostgreSQL",
     "category": "Databases",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "İlişkili iş süreçlerinde güvenilir veri omurgası.",
+      "en": "A dependable data backbone for interconnected business workflows."
+    },
+    "summary": {
+      "tr": "Rol, ödeme, rezervasyon, stok ve akademik süreçler gibi bağlantısı yoğun verilerde tutarlılık ve sorgulanabilirlik için öncelikli tercihim.",
+      "en": "My first choice for consistency and queryability in heavily connected data — roles, payments, reservations, inventory, and academic workflows."
+    },
+    "experience": {
+      "tr": "Kütahya Satılık, Tarla, Fitness Paneli, Zümra Akademi ve Garden Otel'in ilişkisel veri modellerini PostgreSQL üzerinde kurdum.",
+      "en": "I built the relational data models for Kütahya Satılık, Tarla, Fitness Paneli, Zümra Akademi, and Garden Otel on PostgreSQL."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "İlişkisel modelleme",
+        "en": "Relational modeling"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Transaction akışları",
+        "en": "Transaction flows"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "İndeksli sorgular",
+        "en": "Indexed queries"
       }
-    ]
+    ],
+    "link": "https://www.postgresql.org",
+    "contentTodos": []
   },
   {
     "slug": "mssql",
     "name": "MSSQL",
     "category": "Databases",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Kurumsal veri süreçleriyle tanıştığım ilişkisel veritabanı.",
+      "en": "The relational database that introduced me to enterprise data workflows."
+    },
+    "summary": {
+      "tr": "SQL, ilişkisel modelleme ve kurumsal uygulamalardaki veri erişim yaklaşımını öğrenirken kullandım.",
+      "en": "I used it while learning SQL, relational modeling, and how enterprise applications approach data access."
+    },
+    "experience": {
+      "tr": "Ziraat Teknoloji ve Belsis stajlarında .NET tabanlı kurumsal sistemlerin veri katmanını inceleyip geliştirme süreçlerine destek verdim.",
+      "en": "During my internships at Ziraat Teknoloji and Belsis, I studied the data layer of .NET-based enterprise systems and supported their development work."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "SQL sorguları",
+        "en": "SQL queries"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Kurumsal veri",
+        "en": "Enterprise data"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Bakım ve modernizasyon",
+        "en": "Maintenance and modernization"
       }
-    ]
+    ],
+    "link": "https://www.microsoft.com/sql-server",
+    "contentTodos": []
   },
   {
     "slug": "mongodb",
     "name": "MongoDB",
     "category": "Databases",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Esnek doküman yapısıyla hızlı ürün geliştirme.",
+      "en": "Fast product development with a flexible document structure."
+    },
+    "summary": {
+      "tr": "İçerik ve ürün yapısının hızlı değiştiği projelerde esnek şemayla ilerlememi sağlıyor; yoğun ilişkilerde sınırlarını gözeterek kullanıyorum.",
+      "en": "It lets me move quickly with a flexible schema on projects where content and product structures change quickly; where relationships get heavy, I use it with its limits in mind."
+    },
+    "experience": {
+      "tr": "OldSocks, Babil Yalıtım, CepLife ve SV Hukuk projelerinde mağaza, CMS ve kullanıcı verilerini yönettim.",
+      "en": "I managed store, CMS, and user data across the OldSocks, Babil Yalıtım, CepLife, and SV Hukuk projects."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Doküman modelleme",
+        "en": "Document modeling"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "E-ticaret katalogları",
+        "en": "E-commerce catalogs"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "CMS verisi",
+        "en": "CMS data"
       }
-    ]
+    ],
+    "link": "https://www.mongodb.com",
+    "contentTodos": []
   },
   {
     "slug": "supabase",
     "name": "Supabase",
     "category": "Databases",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Yönetilen PostgreSQL altyapısına hızlı erişim.",
+      "en": "Quick access to managed PostgreSQL infrastructure."
+    },
+    "summary": {
+      "tr": "Ürünün özel auth ve backend mimarisini korurken PostgreSQL'i yönetilen bir servis olarak çalıştırmak istediğim projelerde kullanıyorum.",
+      "en": "I use it on projects where I want to run PostgreSQL as a managed service while keeping the product's custom auth and backend architecture intact."
+    },
+    "experience": {
+      "tr": "Kütahya Satılık'ta Supabase'i yalnızca yönetilen PostgreSQL ve bağlantı havuzu olarak kullandım; yetkilendirmeyi uygulama katmanında geliştirdim.",
+      "en": "On Kütahya Satılık I used Supabase purely as managed PostgreSQL with connection pooling, and built authorization in the application layer."
+    },
+    "highlights": [
+      "Managed PostgreSQL",
+      "Connection pooling",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
-      },
-      {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Özel backend ile kullanım",
+        "en": "Paired with a custom backend"
       }
-    ]
+    ],
+    "link": "https://supabase.com",
+    "contentTodos": []
   },
   {
     "slug": "drizzle",
     "name": "Drizzle ORM",
     "category": "Databases",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "SQL'e yakın, tip güvenli veri erişimi.",
+      "en": "Type-safe data access that stays close to SQL."
+    },
+    "summary": {
+      "tr": "Şema ile TypeScript tiplerini birlikte tutarken sorguların SQL karakterini kaybetmemesini sevdiğim bir ORM.",
+      "en": "An ORM I value for keeping the schema and TypeScript types in sync while queries retain their SQL character."
+    },
+    "experience": {
+      "tr": "Zümra Akademi'nin aday, öğrenci, ders, tahsilat, ödev ve iletişim gibi geniş veri alanını PostgreSQL üzerinde modelledim.",
+      "en": "I modeled Zümra Akademi's broad data domain — prospects, students, lessons, payments, homework, and communication — on PostgreSQL."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Tip güvenli şema",
+        "en": "Type-safe schema"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Migration yönetimi",
+        "en": "Migration management"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "SQL'e yakın sorgular",
+        "en": "Queries close to SQL"
       }
-    ]
+    ],
+    "link": "https://orm.drizzle.team",
+    "contentTodos": []
   },
   {
     "slug": "docker",
     "name": "Docker",
     "category": "Infrastructure",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Geliştirme ve canlı ortamı aynı çalışma modelinde buluşturuyor.",
+      "en": "Brings development and production together under the same runtime model."
+    },
+    "summary": {
+      "tr": "Uygulama, worker, veritabanı ve yardımcı servisleri tekrar üretilebilir, izole dağıtım birimleri olarak kurmak için kullanıyorum.",
+      "en": "I use it to package the app, workers, database, and supporting services as reproducible, isolated deployment units."
+    },
+    "experience": {
+      "tr": "Babil Yalıtım, CepLife, Fitness Paneli, Zümra Akademi, Garden Otel ve Tarla platformunda multi-stage ve standalone dağıtımlar hazırladım.",
+      "en": "I built multi-stage and standalone deployments for Babil Yalıtım, CepLife, Fitness Paneli, Zümra Akademi, Garden Otel, and the Kütahya Satılık Tarla platform."
+    },
+    "highlights": [
+      "Multi-stage build",
+      "Docker Compose",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
-      },
-      {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "İzole worker servisleri",
+        "en": "Isolated worker services"
       }
-    ]
+    ],
+    "link": "https://www.docker.com",
+    "contentTodos": []
   },
   {
     "slug": "nginx",
     "name": "Nginx",
     "category": "Infrastructure",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Canlı ortamın yönlendirme ve medya dağıtım katmanı.",
+      "en": "Production's routing and media delivery layer."
+    },
+    "summary": {
+      "tr": "Uygulamaları reverse proxy arkasında çalıştırmak, güvenli trafik yönlendirmek ve büyük medya dosyalarını verimli sunmak için kullanıyorum.",
+      "en": "I use it to run applications behind a reverse proxy, route traffic securely, and serve large media files efficiently."
+    },
+    "experience": {
+      "tr": "Kurumsal sitelerden e-ticaret ve operasyon platformlarına kadar VPS deployment, cache header ve medya servislerini Nginx ile kurdum.",
+      "en": "From corporate sites to e-commerce and operations platforms, I set up VPS deployments, cache headers, and media serving with Nginx."
+    },
+    "highlights": [
+      "Reverse proxy",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "TLS ve güvenlik başlıkları",
+        "en": "TLS and security headers"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Statik medya dağıtımı",
+        "en": "Static media delivery"
       }
-    ]
+    ],
+    "link": "https://nginx.org",
+    "contentTodos": []
   },
   {
     "slug": "swiftui",
     "name": "SwiftUI",
     "category": "Native & Game Development",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "macOS için native ve hafif ürün arayüzleri.",
+      "en": "Native, lightweight product interfaces for macOS."
+    },
+    "summary": {
+      "tr": "Apple platformlarının davranışına doğal uyum gösteren arayüzleri sistem servisleriyle aynı dilde geliştirmemi sağlıyor.",
+      "en": "It lets me build interfaces that fit Apple platform behavior naturally, in the same language as the system services behind them."
+    },
+    "experience": {
+      "tr": "ProfessorNotch'ta AppKit ile birlikte özel notch HUD, kontrol merkezi, DiskSync, batarya ve sistem izleme ekranlarını geliştirdim.",
+      "en": "On ProfessorNotch I built the custom notch HUD, control center, DiskSync, battery, and system monitoring screens together with AppKit."
+    },
+    "highlights": [
+      "Native macOS UI",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "AppKit birlikte kullanımı",
+        "en": "AppKit interop"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Düşük kaynak tüketimi",
+        "en": "Low resource footprint"
       }
-    ]
+    ],
+    "link": "https://developer.apple.com/xcode/swiftui/",
+    "contentTodos": []
   },
   {
     "slug": "unity",
     "name": "Unity",
     "category": "Native & Game Development",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Etkileşim ve oyun fikirlerini hızla prototipleme alanı.",
+      "en": "A space for rapidly prototyping interaction and game ideas."
+    },
+    "summary": {
+      "tr": "Web ürünlerinin dışındaki etkileşim, fizik ve oyun sistemi fikirlerini deneyebildiğim geliştirme ortamı.",
+      "en": "The development environment where I experiment with interaction, physics, and game-system ideas outside my web products."
+    },
+    "experience": {
+      "tr": "Kişisel oyun prototiplerinde sahne, kullanıcı etkileşimi ve temel oyun mekaniği geliştirme çalışmalarında kullandım.",
+      "en": "I've used it in personal game prototypes to build scenes, user interaction, and core game mechanics."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Oyun prototipleme",
+        "en": "Game prototyping"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Sahne ve etkileşim",
+        "en": "Scenes and interaction"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "C# pratiği",
+        "en": "C# practice"
       }
-    ]
+    ],
+    "link": "https://unity.com",
+    "contentTodos": []
   },
   {
     "slug": "git",
     "name": "Git",
     "category": "Tools",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Ürün geliştirme geçmişini güvenli ve izlenebilir tutar.",
+      "en": "Keeps product development history safe and traceable."
+    },
+    "summary": {
+      "tr": "Tek başıma geliştirdiğim büyük projelerde dahi değişiklikleri küçük, anlamlı adımlara ayırmak ve geri dönüş güveni sağlamak için kullanıyorum.",
+      "en": "Even on large projects I build solo, I use it to break changes into small, meaningful steps and to have the confidence to roll back safely."
+    },
+    "experience": {
+      "tr": "Tüm aktif projelerimde özellik geliştirme, deneysel çalışma, sürüm hazırlığı ve canlı ortam düzeltmelerini Git geçmişiyle yönetiyorum.",
+      "en": "Across all my active projects, I manage feature development, experimental work, release preparation, and production hotfixes through Git history."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Anlamlı commit geçmişi",
+        "en": "Meaningful commit history"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Branch tabanlı geliştirme",
+        "en": "Branch-based development"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Güvenli geri dönüş",
+        "en": "Safe rollbacks"
       }
-    ]
+    ],
+    "link": "https://git-scm.com",
+    "contentTodos": []
   },
   {
     "slug": "github",
     "name": "GitHub",
     "category": "Tools",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Kod, işbirliği ve açık kaynak yayın alanı.",
+      "en": "The home for code, collaboration, and open-source publishing."
+    },
+    "summary": {
+      "tr": "Depoları, proje geçmişini ve açık kaynak ürünleri paylaşmak için kullandığım ana geliştirme platformu.",
+      "en": "My primary development platform for sharing repositories, project history, and open-source products."
+    },
+    "experience": {
+      "tr": "ProfessorNotch, Kütahya Satılık Tarla ve Garden Otel projelerini açık depolar üzerinden paylaşıyor; diğer ürünlerin sürüm geçmişini özel depolarda yönetiyorum.",
+      "en": "I share ProfessorNotch, Kütahya Satılık Tarla, and Garden Otel through public repositories, and manage the version history of my other products in private repos."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Açık kaynak yayın",
+        "en": "Open-source publishing"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Repository yönetimi",
+        "en": "Repository management"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Issue ve sürüm akışı",
+        "en": "Issue and release workflow"
       }
-    ]
+    ],
+    "link": "https://github.com",
+    "contentTodos": []
   },
   {
     "slug": "python",
     "name": "Python (temel)",
     "category": "Tools",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Veri dönüştürme ve yardımcı otomasyonlar için pratik araç.",
+      "en": "A practical tool for data transformation and helper automation."
+    },
+    "summary": {
+      "tr": "Ana ürün dilim değil; tekrarlayan veri işleri ve tek seferlik dönüşümleri hızlı çözmek için temel seviyede kullanıyorum.",
+      "en": "Not my primary product language; I use it at a basic level to quickly handle repetitive data tasks and one-off transformations."
+    },
+    "experience": {
+      "tr": "Veri temizleme, içerik dönüştürme ve proje geliştirme sürecindeki küçük yardımcı betiklerde yararlanıyorum.",
+      "en": "I rely on it for data cleaning, content conversion, and small helper scripts throughout the development process."
+    },
+    "highlights": [
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Veri dönüşümü",
+        "en": "Data transformation"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
+        "tr": "Tek seferlik otomasyon",
+        "en": "One-off automation"
       },
       {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Yardımcı betikler",
+        "en": "Helper scripts"
       }
-    ]
+    ],
+    "link": "https://www.python.org",
+    "contentTodos": []
   },
   {
     "slug": "better-auth",
     "name": "Better Auth",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Modern uygulamalar için genişletilebilir oturum altyapısı.",
+      "en": "Extensible session infrastructure for modern applications."
+    },
+    "summary": {
+      "tr": "Kullanıcı ve oturum yönetimini ürünün rol, güvenlik ve veri modeliyle birlikte şekillendirebildiğim auth katmanı.",
+      "en": "The auth layer that lets me shape user and session management together with the product's roles, security, and data model."
+    },
+    "experience": {
+      "tr": "Zümra Akademi ve Kütahya Satılık Tarla'da e-posta doğrulama, şifre sıfırlama, session ve rol bazlı erişim akışlarını kurdum.",
+      "en": "In Zümra Akademi and Kütahya Satılık Tarla, I built email verification, password reset, session handling, and role-based access flows."
+    },
+    "highlights": [
+      "Database session",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "E-posta doğrulama",
+        "en": "Email verification"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Rol bazlı erişim",
+        "en": "Role-based access"
       }
-    ]
+    ],
+    "link": "https://www.better-auth.com",
+    "contentTodos": []
   },
   {
     "slug": "ffmpeg",
     "name": "FFmpeg",
     "category": "Backend",
-    "tagline": null,
-    "summary": null,
-    "experience": null,
-    "highlights": [],
-    "link": null,
-    "contentTodos": [
+    "tagline": {
+      "tr": "Ürün içindeki videoyu dağıtıma hazır medyaya dönüştürür.",
+      "en": "Turns in-product video into distribution-ready media."
+    },
+    "summary": {
+      "tr": "Büyük video dosyalarını uygun codec ve boyutlara çevirmek, poster üretmek ve medya işlemlerini otomatikleştirmek için kullanıyorum.",
+      "en": "I use it to convert large video files into the right codecs and sizes, generate posters, and automate media processing."
+    },
+    "experience": {
+      "tr": "Kütahya Satılık'ta H.264/AAC dönüşümü ve poster; Tarla ile Zümra Akademi'de worker tabanlı güvenli medya işleme hatları geliştirdim.",
+      "en": "I built H.264/AAC conversion and poster generation for Kütahya Satılık, and worker-based, secure media processing pipelines for Kütahya Satılık Tarla and Zümra Akademi."
+    },
+    "highlights": [
+      "Video transcoding",
       {
-        "field": "summary",
-        "note": "Bu teknolojinin senin için ne olduğunu kendi cümlelerinle ekle."
+        "tr": "Poster üretimi",
+        "en": "Poster generation"
       },
       {
-        "field": "experience",
-        "note": "Nerelerde ve nasıl kullandığını, neyi çözdüğünü ekle."
-      },
-      {
-        "field": "link",
-        "note": "İstersen resmi site bağlantısını ekle."
+        "tr": "Worker tabanlı medya hattı",
+        "en": "Worker-based media pipeline"
       }
-    ]
+    ],
+    "link": "https://ffmpeg.org",
+    "contentTodos": []
   }
 ]

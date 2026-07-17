@@ -4,7 +4,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
-import { profile, projects, techHref, type PortfolioProject } from "@/data/portfolio";
+import {
+  getProfile,
+  getProjects,
+  getProjectSlugs,
+  techHref,
+  type PortfolioProject,
+} from "@/data/portfolio";
 import { isLocale, withLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { getSiteUrl } from "@/lib/site";
@@ -17,14 +23,19 @@ type ProjectPageProps = {
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return getProjectSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
-  const project = projects.find((item) => item.slug === slug);
 
-  if (!isLocale(locale) || !project) {
+  if (!isLocale(locale)) {
+    return {};
+  }
+
+  const project = getProjects(locale).find((item) => item.slug === slug);
+
+  if (!project) {
     return {};
   }
 
@@ -65,6 +76,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   const dict = getDictionary(locale);
   const detail = dict.projectDetail;
+  const profile = getProfile(locale);
+  const projects = getProjects(locale);
   const projectIndex = projects.findIndex((item) => item.slug === slug);
 
   if (projectIndex < 0) {
@@ -169,7 +182,19 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <div className={styles.coverSystem}>
                 <span className={styles.coverRail} data-motion="line" />
                 <span className={styles.coverBar} />
-                <span className={styles.coverPanel} />
+                <span className={styles.coverPanel}>
+                  {project.gallery[0] ? (
+                    <span className={styles.coverImageFrame}>
+                      <Image
+                        alt=""
+                        fill
+                        priority
+                        sizes="(max-width: 900px) 94vw, 72vw"
+                        src={project.gallery[0].src}
+                      />
+                    </span>
+                  ) : null}
+                </span>
                 <span className={styles.coverNode} />
               </div>
             </div>

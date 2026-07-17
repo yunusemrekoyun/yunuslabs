@@ -1,18 +1,42 @@
 [
   {
-    "title": "Native macOS araçları",
-    "description": "Masaüstündeki günlük işleri daha kısa akışlara dönüştüren küçük, odaklı ürünler."
+    "title": {
+      "tr": "Ölçeklenebilir kapsamlı projeler",
+      "en": "Scalable, comprehensive projects"
+    },
+    "description": {
+      "tr": "API, queue, cache ve veri katmanlarının birlikte güvenilir çalıştığı kapsamlı sistemler.",
+      "en": "Comprehensive systems where API, queue, cache, and data layers work reliably together."
+    }
   },
   {
-    "title": "İşletme yönetim panelleri",
-    "description": "Gerçek operasyonları rol, veri ve görev akışlarıyla bir araya getiren sistemler."
+    "title": {
+      "tr": "İşletme yönetim panelleri",
+      "en": "Business management panels"
+    },
+    "description": {
+      "tr": "Gerçek operasyonları rol, veri ve görev akışlarıyla bir araya getiren sistemler.",
+      "en": "Systems that bring real operations together through roles, data, and task flows."
+    }
   },
   {
-    "title": "Ölçeklenebilir backend mimarileri",
-    "description": "API, queue, cache ve veri katmanlarının birlikte güvenilir çalıştığı yapılar."
+    "title": {
+      "tr": "Ürünleştirme ve deployment",
+      "en": "Productization & deployment"
+    },
+    "description": {
+      "tr": "Fikirden çalışan ürüne ve canlı ortam takibine uzanan uçtan uca geliştirme süreci.",
+      "en": "An end-to-end development process, from idea to working product to live monitoring."
+    }
   },
   {
-    "title": "Ürünleştirme ve deployment",
-    "description": "Fikirden çalışan ürüne ve canlı ortam takibine uzanan uçtan uca geliştirme süreci."
+    "title": {
+      "tr": "Native uygulamalar ve oyun",
+      "en": "Native apps & games"
+    },
+    "description": {
+      "tr": "Masaüstü işlerini kısaltan native macOS araçları; Unity ile küçük oyun prototipleri.",
+      "en": "Native macOS tools that shorten desktop workflows, and small game prototypes in Unity."
+    }
   }
 ]

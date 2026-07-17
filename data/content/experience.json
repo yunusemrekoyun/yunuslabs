@@ -1,26 +1,34 @@
 [
   {
     "company": "Ziraat Teknoloji",
-    "role": "Stajyer Yazılım Geliştirici",
-    "period": "Eylül 2024 — Ocak 2025",
-    "description": null,
-    "contentTodos": [
-      {
-        "field": "description",
-        "note": "Üstlenilen görevleri ve kullanılan teknolojileri doğrulanmış bilgilerle ekle."
-      }
-    ]
+    "role": {
+      "tr": "Stajyer Bilgisayar Mühendisi",
+      "en": "Computer Engineering Intern"
+    },
+    "period": {
+      "tr": "Eylül 2024 — Ocak 2025",
+      "en": "September 2024 — January 2025"
+    },
+    "description": {
+      "tr": "Staj sürecimde .NET ekosistemi, MSSQL ve kurumsal yazılım geliştirme süreçleriyle tanıştım. Aynı dönemde React, PostgreSQL ve modern full-stack teknolojilerini kendi projelerim üzerinde derinleştirerek bugün kullandığım teknoloji altyapısının temellerini oluşturdum.",
+      "en": "During my internship I got hands-on with the .NET ecosystem, MSSQL, and enterprise software development practices. In the same period I deepened my knowledge of React, PostgreSQL, and modern full-stack technologies through my own projects, laying the foundations of the technology stack I use today."
+    },
+    "contentTodos": []
   },
   {
     "company": "Belsis Yazılım",
-    "role": "Stajyer Yazılım Geliştirici",
-    "period": "Temmuz 2022 — Eylül 2022",
-    "description": null,
-    "contentTodos": [
-      {
-        "field": "description",
-        "note": "Üstlenilen görevleri ve kullanılan teknolojileri doğrulanmış bilgilerle ekle."
-      }
-    ]
+    "role": {
+      "tr": "Stajyer Bilgisayar Mühendisi",
+      "en": "Computer Engineering Intern"
+    },
+    "period": {
+      "tr": "Temmuz 2022 — Eylül 2022",
+      "en": "July 2022 — September 2022"
+    },
+    "description": {
+      "tr": "React ile mevcut arayüzlerin geliştirilmesi ve iyileştirilmesinde görev aldım. .NET ve SQL tarafında bakım, düzenleme ve geliştirme süreçlerine destek verdim. Ayrıca mevcut uygulamaların .NET Framework'ten .NET Core'a taşınma sürecinde ekiple birlikte çalışarak modernizasyon çalışmalarına katkı sağladım.",
+      "en": "I worked on developing and improving existing interfaces with React, and supported maintenance, refinement, and development work on the .NET and SQL side. I also contributed to modernization efforts, working with the team on migrating existing applications from .NET Framework to .NET Core."
+    },
+    "contentTodos": []
   }
 ]

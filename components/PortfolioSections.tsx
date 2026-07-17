@@ -1,14 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import {
-  education,
-  experiences,
-  nowItems,
-  processSteps,
-  profile,
-  projects,
-  stackGroups,
-  techHref,
-} from "@/data/portfolio";
+import { getContent, techHref, type PortfolioProject } from "@/data/portfolio";
 import { withLocale, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import styles from "./PortfolioSections.module.css";
@@ -19,12 +11,18 @@ function ProjectArtwork({
   layout,
   tone,
   altPrefix,
+  image,
+  imageAlt,
+  featured,
 }: {
   index: number;
   label: string;
   layout: number;
-  tone: (typeof projects)[number]["visual"]["tone"];
+  tone: PortfolioProject["visual"]["tone"];
   altPrefix: string;
+  image: string | null;
+  imageAlt: string;
+  featured: boolean;
 }) {
   return (
     <div
@@ -33,13 +31,26 @@ function ProjectArtwork({
       data-motion="parallax scale"
       data-motion-index={index}
       data-tone={tone}
+      data-has-image={image ? "true" : undefined}
       role="img"
       aria-label={`${altPrefix}: ${label}`}
     >
       <span className={styles.artLabel}>{label}</span>
       <span className={styles.artTopbar} aria-hidden="true" />
       <span className={styles.artRail} aria-hidden="true" />
-      <span className={styles.artPanelMain} aria-hidden="true" />
+      <span className={styles.artPanelMain} aria-hidden="true">
+        {image ? (
+          <span className={styles.artImageFrame}>
+            <Image
+              alt={imageAlt}
+              fill
+              loading={featured ? "eager" : "lazy"}
+              sizes="(max-width: 760px) 92vw, (max-width: 1100px) 60vw, 40vw"
+              src={image}
+            />
+          </span>
+        ) : null}
+      </span>
       <span className={styles.artPanelSide} aria-hidden="true" />
       <span className={styles.artSignal} aria-hidden="true" />
       <span className={styles.artNotch} aria-hidden="true" />
@@ -48,6 +59,8 @@ function ProjectArtwork({
 }
 
 export function PortfolioSections({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  const { education, experiences, nowItems, processSteps, profile, projects, stackGroups } =
+    getContent(locale);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -141,6 +154,9 @@ export function PortfolioSections({ locale, dict }: { locale: Locale; dict: Dict
                     layout={index % 4}
                     tone={project.visual.tone}
                     altPrefix={dict.projects.artworkAlt}
+                    image={project.gallery[0]?.src ?? null}
+                    imageAlt={project.gallery[0]?.alt ?? project.title}
+                    featured={isFeatured}
                   />
 
                   <div className={styles.projectContent}>
