@@ -178,7 +178,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
           <section className={styles.closing} aria-labelledby="closing-title" data-motion="reveal">
             <p>{dict.projectsPage.closingLead}</p>
             <h2 id="closing-title">{dict.projectsPage.closingTitle}</h2>
-            <a href={profile.links.email}>
+            <a href={profile.links.email} lang="en">
               {profile.email} <span aria-hidden="true">↗</span>
             </a>
           </section>

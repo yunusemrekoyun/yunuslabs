@@ -81,7 +81,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--teal-ink);
   outline-offset: 4px;
 }
 
@@ -116,16 +116,6 @@ textarea {
   transform-origin: left center;
   transition: opacity 180ms ease;
   will-change: transform;
-}
-
-html.motion-ready [data-motion] {
-  opacity: var(--motion-opacity, 1);
-  translate: var(--motion-x, 0) var(--motion-y, 0);
-  scale: var(--motion-scale, 1);
-}
-
-html.motion-ready [data-motion~="line"] {
-  clip-path: inset(0 var(--motion-clip, 0%) 0 0);
 }
 
 html.motion-ready [data-motion].motion-active {

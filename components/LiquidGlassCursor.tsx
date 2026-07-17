@@ -141,6 +141,8 @@ export function LiquidGlassCursor() {
 
     let lensWidth = 84;
     let lensHeight = 58;
+    let hasPointer = false;
+    let lastFrame = 0;
     let frameId = 0;
     let isAnimating = false;
     let interactionEnabled = false;
@@ -188,11 +190,23 @@ export function LiquidGlassCursor() {
     const startAnimation = () => {
       if (interactionEnabled && !isAnimating) {
         isAnimating = true;
+        lastFrame = 0;
         frameId = window.requestAnimationFrame(animate);
       }
     };
 
     const moveTo = (event: PointerEvent) => {
+      if (!hasPointer) {
+        // Materialize at the real pointer position instead of a parked default.
+        hasPointer = true;
+        state.x = event.clientX;
+        state.y = event.clientY;
+        state.lastX = event.clientX;
+        state.lastY = event.clientY;
+        document.body.style.cursor = "none";
+        lens.style.opacity = "1";
+        cursor.style.opacity = "1";
+      }
       state.targetX = event.clientX;
       state.targetY = event.clientY;
 
@@ -204,15 +218,21 @@ export function LiquidGlassCursor() {
       startAnimation();
     };
 
-    const animate = () => {
+    const animate = (now: number) => {
       if (!interactionEnabled) {
         isAnimating = false;
         frameId = 0;
         return;
       }
 
-      state.x += (state.targetX - state.x) * LENS_FOLLOW;
-      state.y += (state.targetY - state.y) * LENS_FOLLOW;
+      // Normalize the follow/decay to real frame time so the feel is identical
+      // at 60Hz and 120Hz.
+      const dt = lastFrame ? Math.min(Math.max(now - lastFrame, 4), 64) : 16.7;
+      lastFrame = now;
+      const follow = 1 - Math.pow(1 - LENS_FOLLOW, dt / 16.7);
+
+      state.x += (state.targetX - state.x) * follow;
+      state.y += (state.targetY - state.y) * follow;
 
       const dx = state.targetX - state.x;
       const dy = state.targetY - state.y;
@@ -230,7 +250,7 @@ export function LiquidGlassCursor() {
       greenShift.setAttribute("scale", (14 + state.speed * 7).toFixed(2));
       blueShift.setAttribute("scale", (12 + state.speed * 6).toFixed(2));
 
-      state.speed *= 0.88;
+      state.speed *= Math.pow(0.88, dt / 16.7);
       const remainingDistance = Math.hypot(state.targetX - state.x, state.targetY - state.y);
 
       if (remainingDistance < 0.08 && state.speed < 0.001) {
@@ -258,7 +278,6 @@ export function LiquidGlassCursor() {
       }
 
       interactionEnabled = true;
-      document.body.style.cursor = "none";
       lens.style.removeProperty("display");
       cursor.style.removeProperty("display");
       ensureTexture();
@@ -266,13 +285,15 @@ export function LiquidGlassCursor() {
       window.addEventListener("pointermove", moveTo, { passive: true });
       window.addEventListener("pointerdown", moveTo, { passive: true });
       window.addEventListener("resize", syncBounds);
-      startAnimation();
     };
 
     const disableInteraction = () => {
       document.body.style.removeProperty("cursor");
       lens.style.display = "none";
       cursor.style.display = "none";
+      lens.style.opacity = "0";
+      cursor.style.opacity = "0";
+      hasPointer = false;
 
       if (!interactionEnabled) {
         return;

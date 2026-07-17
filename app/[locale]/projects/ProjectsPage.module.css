@@ -54,10 +54,6 @@
   height: 100%;
 }
 
-.mark:hover {
-  transform: scale(1.08);
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -92,7 +88,6 @@
   transition: transform 180ms ease;
 }
 
-.nav > a:not(.navPill):hover::after,
 .nav > .activeLink::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -109,12 +104,6 @@
   background: #050505;
   color: #f8f7f2;
   transition: background 200ms var(--ease-out), color 200ms var(--ease-out), transform 160ms var(--ease-out);
-}
-
-.navPill:hover {
-  background: #58bbb4;
-  color: #050505;
-  transform: translateY(-2px);
 }
 
 .navPill:active {
@@ -262,7 +251,7 @@
     linear-gradient(138deg, var(--visual-a), var(--visual-b));
   background-size: 34px 34px, 34px 34px, auto;
   box-shadow: 0 30px 84px rgba(5, 5, 5, 0.09);
-  transition: transform 420ms cubic-bezier(0.2, 0.75, 0.2, 1), box-shadow 420ms ease;
+  transition: transform 260ms cubic-bezier(0.2, 0.75, 0.2, 1), box-shadow 260ms var(--ease-out);
 }
 
 .project:nth-child(even) .projectVisual {
@@ -272,10 +261,13 @@
 .visualLabel {
   position: absolute;
   z-index: 3;
-  top: 20px;
-  left: 22px;
-  color: var(--visual-ink);
-  font-size: 0.72rem;
+  top: 16px;
+  left: 16px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(5, 5, 5, 0.55);
+  color: var(--paper, #f8f7f2);
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -290,7 +282,6 @@
   border: 1px solid rgba(255, 255, 255, 0.44);
   background: rgba(255, 255, 255, 0.24);
   box-shadow: 0 18px 60px rgba(5, 5, 5, 0.12);
-  backdrop-filter: blur(7px);
 }
 
 .visualRail {
@@ -434,15 +425,6 @@
   padding-top: 28px;
 }
 
-.projectLink:hover .projectVisual {
-  box-shadow: 0 38px 96px rgba(5, 5, 5, 0.15);
-  transform: translateY(-7px);
-}
-
-.projectLink:hover .projectCta span {
-  transform: translate(3px, -3px);
-}
-
 .projectCta span {
   transition: transform 180ms ease;
 }
@@ -562,6 +544,10 @@
 }
 
 @media (max-width: 620px) {
+  .visualImageFrame {
+    inset: 46px 8% 8%;
+  }
+
   .siteHeader {
     padding-top: 20px;
   }
@@ -656,5 +642,61 @@
   .projectLink:hover .projectVisual,
   .navPill:hover {
     transform: none;
+  }
+}
+
+/* --- Audit pass --- */
+@media (min-width: 621px) {
+  .projectTopline span:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .navPill {
+    min-height: 44px;
+  }
+}
+
+/* --- Audit pass: hover effects only for real pointers --- */
+@media (hover: hover) and (pointer: fine) {
+  .mark:hover {
+    transform: scale(1.08);
+  }
+
+  .nav > a:not(.navPill):hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .navPill:hover {
+    background: #58bbb4;
+    color: #050505;
+    transform: translateY(-2px);
+  }
+
+  .projectLink:hover .projectVisual {
+    box-shadow: 0 38px 96px rgba(5, 5, 5, 0.15);
+    transform: translateY(-7px);
+  }
+
+  .projectLink:hover .projectCta span {
+    transform: translate(3px, -3px);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 10px;
+    padding: 6px 6px 6px 12px;
+    font-size: 0.68rem;
+  }
+
+  .navPill {
+    padding: 0 11px;
+  }
+
+  .nav > a:not(.navPill) {
+    display: none;
   }
 }

@@ -177,10 +177,10 @@ export default async function StackDetailPage({ params }: StackPageProps) {
                   <section className={styles.usedInSection} aria-label={detail.usedInLabel}>
                     <p className={styles.sectionLabel}>{detail.usedIn}</p>
                     <ul className={styles.usedInList}>
-                      {usedIn.map((usedProject) => (
+                      {usedIn.map((usedProject, usedIndex) => (
                         <li key={usedProject.slug}>
                           <Link href={withLocale(locale, `/projects/${usedProject.slug}`)}>
-                            <span className={styles.usedInIndex}>{usedProject.index}</span>
+                            <span className={styles.usedInIndex}>{String(usedIndex + 1).padStart(2, "0")}</span>
                             <span className={styles.usedInTitle}>{usedProject.title}</span>
                             <span className={styles.usedInCategory}>{usedProject.category}</span>
                             <span aria-hidden="true" className={styles.usedInArrow}>

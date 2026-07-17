@@ -353,8 +353,10 @@ export function PortfolioSections({ locale, dict }: { locale: Locale; dict: Dict
         <div className={styles.shell}>
           <div className={styles.nowLayout}>
             <header className={styles.nowHeading} data-motion="reveal">
-              <div className={styles.nowPulse} aria-hidden="true" />
-              <p className={styles.eyebrow}>{dict.now.eyebrow}</p>
+              <p className={styles.eyebrow}>
+                <span className={styles.nowPulse} aria-hidden="true" />
+                {dict.now.eyebrow}
+              </p>
               <h2 id="now-title">
                 {dict.now.title}
                 <em>{dict.now.titleEm}</em>
@@ -399,7 +401,7 @@ export function PortfolioSections({ locale, dict }: { locale: Locale; dict: Dict
                 {profile.email}
                 <span aria-hidden="true">→</span>
               </a>
-              <nav className={styles.socialLinks} aria-label={dict.contact.socialLabel}>
+              <nav className={styles.socialLinks} aria-label={dict.contact.socialLabel} lang="en">
                 <a href={profile.links.github} target="_blank" rel="noreferrer">
                   {dict.common.github} / {profile.githubUsername} <span aria-hidden="true">↗</span>
                 </a>

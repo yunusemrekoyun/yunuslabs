@@ -89,23 +89,25 @@ function calculateMotion(
   };
 }
 
+// Write the resolved values straight onto the element. Custom properties
+// inherit, so setting them on large containers invalidated whole subtrees
+// every frame; direct translate/scale/opacity writes stay local and cheap.
 function writeMotion(target: MotionTarget, state: MotionState) {
-  target.element.style.setProperty("--motion-x", `${state.x.toFixed(2)}px`);
-  target.element.style.setProperty("--motion-y", `${state.y.toFixed(2)}px`);
-  target.element.style.setProperty("--motion-scale", state.scale.toFixed(4));
-  target.element.style.setProperty("--motion-opacity", state.opacity.toFixed(4));
-  target.element.style.setProperty("--motion-clip", `${state.clip.toFixed(2)}%`);
-  target.element.style.setProperty("--motion-progress", state.progress.toFixed(4));
+  const style = target.element.style;
+  style.setProperty("translate", `${state.x.toFixed(2)}px ${state.y.toFixed(2)}px`);
+  style.setProperty("scale", state.scale.toFixed(4));
+  style.setProperty("opacity", state.opacity.toFixed(4));
+  if (target.tokens.has("line")) {
+    style.setProperty("clip-path", `inset(0 ${state.clip.toFixed(2)}% 0 0)`);
+  }
 }
 
 function clearMotion(element: HTMLElement) {
   element.classList.remove("motion-active");
-  element.style.removeProperty("--motion-x");
-  element.style.removeProperty("--motion-y");
-  element.style.removeProperty("--motion-scale");
-  element.style.removeProperty("--motion-opacity");
-  element.style.removeProperty("--motion-clip");
-  element.style.removeProperty("--motion-progress");
+  element.style.removeProperty("translate");
+  element.style.removeProperty("scale");
+  element.style.removeProperty("opacity");
+  element.style.removeProperty("clip-path");
 }
 
 export function ScrollMotion() {

@@ -334,7 +334,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                       aria-label={detail.linksLabel}
                       data-motion="reveal"
                     >
-                      <p>{detail.openProject}</p>
+                      <p>{detail.linksLabel}</p>
                       <div>
                         {project.links.demo ? (
                           <a href={project.links.demo} target="_blank" rel="noreferrer">

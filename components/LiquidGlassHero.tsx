@@ -35,7 +35,7 @@ export function LiquidGlassHero({ children, locale, dict }: LiquidGlassHeroProps
                 <a href="#experience">{dict.nav.experience}</a>
                 <a href="#stack">{dict.nav.stack}</a>
                 <a className={styles.navPill} href="#contact">
-                  {dict.nav.contact} <span aria-hidden="true">-&gt;</span>
+                  {dict.nav.contact} <span aria-hidden="true">→</span>
                 </a>
                 <LanguageSwitcher locale={locale} />
               </nav>

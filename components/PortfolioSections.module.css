@@ -9,14 +9,14 @@
 
 .portfolioBody :where(a) {
   transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
+    color 180ms var(--ease-out),
+    background-color 180ms var(--ease-out),
+    border-color 180ms var(--ease-out),
+    transform 180ms var(--ease-out);
 }
 
 .portfolioBody :where(a):focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--teal-ink);
   outline-offset: 5px;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 clamp(24px, 2.4vw, 40px);
   color: var(--teal-ink);
   font-size: clamp(0.74rem, 0.85vw, 0.9rem);
   font-weight: 700;
@@ -171,7 +171,7 @@
 
 .profileFacts dt {
   margin-bottom: 20px;
-  color: rgba(5, 5, 5, 0.48);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -337,11 +337,14 @@
 
 .artLabel {
   position: absolute;
-  right: 22px;
-  bottom: 18px;
+  right: 14px;
+  bottom: 12px;
   z-index: 5;
-  color: color-mix(in srgb, var(--art-ink), transparent 20%);
-  font-size: 0.68rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(5, 5, 5, 0.55);
+  color: var(--paper);
+  font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -627,7 +630,7 @@
 .technicalFocus span {
   display: block;
   margin-bottom: 8px;
-  color: rgba(5, 5, 5, 0.46);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -700,8 +703,8 @@
 
 .processHeading h2 {
   max-width: 600px;
-  font-size: clamp(4.7rem, 7.5vw, 8.2rem);
-  line-height: 0.92;
+  font-size: clamp(3.2rem, 4.7vw, 5.2rem);
+  line-height: 1;
 }
 
 .processHeading > p:last-child {
@@ -732,7 +735,7 @@
 
 .processIndex,
 .historyIndex {
-  color: rgba(5, 5, 5, 0.42);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -747,7 +750,7 @@
 .processList p {
   margin: 0;
   color: rgba(5, 5, 5, 0.65);
-  font-size: 0.94rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -792,7 +795,7 @@
 }
 
 .stackRow dt span {
-  color: rgba(5, 5, 5, 0.38);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.66rem;
   letter-spacing: 0;
 }
@@ -889,7 +892,7 @@
 }
 
 .experienceList .historyIndex {
-  color: rgba(248, 247, 242, 0.4);
+  color: rgba(248, 247, 242, 0.56);
 }
 
 .experienceList h3 {
@@ -901,8 +904,8 @@
 
 .experienceList p {
   margin: 0;
-  color: rgba(248, 247, 242, 0.56);
-  font-size: 0.86rem;
+  color: rgba(248, 247, 242, 0.66);
+  font-size: 0.95rem;
 }
 
 .experienceList .historyDescription {
@@ -975,11 +978,21 @@
 }
 
 .nowSection {
+  color: var(--paper);
   background:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
-    #f1efe7;
+    linear-gradient(rgba(248, 247, 242, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 247, 242, 0.035) 1px, transparent 1px),
+    #11120f;
   background-size: 56px 56px, 56px 56px, auto;
+}
+
+.nowSection .eyebrow {
+  color: var(--teal);
+}
+
+.nowSection .sectionRail {
+  border-color: rgba(248, 247, 242, 0.2);
+  color: rgba(248, 247, 242, 0.66);
 }
 
 .nowLayout {
@@ -987,8 +1000,8 @@
   grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1.24fr);
   gap: clamp(64px, 10vw, 156px);
   padding: clamp(52px, 7vw, 96px) 0;
-  border-top: 1px solid rgba(5, 5, 5, 0.22);
-  border-bottom: 1px solid rgba(5, 5, 5, 0.22);
+  border-top: 1px solid rgba(248, 247, 242, 0.22);
+  border-bottom: 1px solid rgba(248, 247, 242, 0.22);
 }
 
 .nowHeading {
@@ -1002,14 +1015,13 @@
 }
 
 .nowPulse {
-  position: absolute;
-  top: 7px;
-  right: 3%;
-  width: 10px;
+  display: inline-block;
+  width: 9px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--teal);
-  box-shadow: 0 0 0 8px rgba(88, 187, 180, 0.14);
+  margin-right: 10px;
+  vertical-align: 1px;
   animation: status-pulse 2.8s ease-in-out infinite;
 }
 
@@ -1025,11 +1037,11 @@
   grid-template-columns: 46px minmax(0, 1fr);
   gap: 18px;
   padding: clamp(24px, 3vw, 38px) 0;
-  border-bottom: 1px solid rgba(5, 5, 5, 0.17);
+  border-bottom: 1px solid rgba(248, 247, 242, 0.17);
 }
 
 .nowList li > span {
-  color: rgba(5, 5, 5, 0.4);
+  color: rgba(248, 247, 242, 0.56);
   font-size: 0.68rem;
   font-weight: 700;
 }
@@ -1044,8 +1056,8 @@
 .nowList p {
   max-width: 590px;
   margin: 0;
-  color: rgba(5, 5, 5, 0.64);
-  font-size: 0.91rem;
+  color: rgba(248, 247, 242, 0.68);
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -1342,6 +1354,12 @@
   .contactDetails {
     max-width: 570px;
   }
+
+  .contactSection {
+    min-height: 0;
+    padding-top: 96px;
+    padding-bottom: 112px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1374,7 +1392,8 @@
   }
 
   .aboutHeading h2 {
-    font-size: clamp(4.45rem, 23vw, 7rem);
+    font-size: clamp(3.6rem, 18vw, 7rem);
+    overflow-wrap: break-word;
   }
 
   .aboutNarrative {
@@ -1411,7 +1430,8 @@
 
   .projectsHeading h2,
   .stackHeading h2 {
-    font-size: clamp(4.4rem, 21.5vw, 7rem);
+    font-size: clamp(3.6rem, 17.5vw, 7rem);
+    overflow-wrap: break-word;
   }
 
   .projectsGrid {
@@ -1623,4 +1643,45 @@
   .emailLink:hover span {
     transform: none;
   }
+}
+
+/* --- Audit pass: invisible extended hit areas for small uppercase links --- */
+.sectionRail a,
+.projectLinks a,
+.socialLinks a,
+.footerTop nav a {
+  position: relative;
+}
+
+.sectionRail a::before,
+.projectLinks a::before,
+.socialLinks a::before,
+.footerTop nav a::before {
+  position: absolute;
+  inset: -12px -8px;
+  content: "";
+}
+
+/* Press feedback on the big pressables */
+.emailLink {
+  transition: transform 140ms var(--ease-out);
+}
+
+.emailLink:active {
+  transform: scale(0.985);
+}
+
+.projectLinks a:active,
+.socialLinks a:active,
+.footerTop nav a:active {
+  transform: translateY(1px);
+}
+
+/* Focus ring stays visible on the dark surfaces */
+.projectsSection :focus-visible,
+.experienceSection :focus-visible,
+.nowSection :focus-visible,
+.contactSection :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--teal);
 }

@@ -17,7 +17,7 @@ export const tr = {
   common: {
     skipToContent: "İçeriğe geç",
     caseStudy: "Vaka çalışması",
-    review: "İncele",
+    review: "Vaka çalışması",
     live: "Canlı",
     liveDemo: "Canlı demo",
     github: "GitHub",
@@ -76,7 +76,7 @@ export const tr = {
   },
   history: {
     rail: "Geçmiş",
-    railRight: "Deneyim + Eğitim",
+    railRight: "2022 — bugün",
     experienceEyebrow: "Deneyim.",
     experienceTitle: "Öğrenirken",
     experienceTitleEm: " üretmek.",
@@ -92,7 +92,7 @@ export const tr = {
   },
   contact: {
     rail: "İletişim",
-    eyebrow: "Yeni bir şey üzerinde mi düşünüyorsun?",
+    eyebrow: "Yeni bir şey üzerinde mi düşünüyorsunuz?",
     title: "Konuşarak",
     titleEm: " dijitale dönüşelim.",
     blurb:
@@ -141,12 +141,12 @@ export const tr = {
     architectureTitle: "Sistemin katmanları",
     featuresLabel: "04 / Ürün kapsamı",
     featuresTitle: "Öne çıkan özellikler",
-    technologyLabel: "05 / Technology",
+    technologyLabel: "05 / Stack",
     technologyTitle: "Bu iş için kullanılan araçlar.",
     interfaceLabel: "Arayüz",
     galleryTitle: "Ürün ekranları",
     resultLabel: "Sonuç",
-    resultTitle: "Sonuç",
+    resultTitle: "Ne değişti?",
     linksLabel: "Proje bağlantıları",
     openProject: "Projeyi aç",
     otherProjects: "Diğer projeler",

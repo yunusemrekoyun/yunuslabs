@@ -78,10 +78,6 @@
   height: 100%;
 }
 
-.mark:hover {
-  transform: scale(1.08);
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -103,10 +99,6 @@
   transition: border-color 160ms ease;
 }
 
-.nav > a:first-child:hover {
-  border-color: currentColor;
-}
-
 .navPill {
   display: inline-flex;
   min-height: 34px;
@@ -118,12 +110,6 @@
   background: #050505;
   color: #f8f7f2;
   transition: background 200ms var(--ease-out), color 200ms var(--ease-out), transform 160ms var(--ease-out);
-}
-
-.navPill:hover {
-  background: #58bbb4;
-  color: #050505;
-  transform: translateY(-2px);
 }
 
 .navPill:active {
@@ -147,10 +133,6 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.breadcrumb a:hover {
-  color: #050505;
 }
 
 .heroHeading {
@@ -186,7 +168,7 @@
 
 .heroBottom {
   display: grid;
-  grid-template-columns: minmax(200px, 0.8fr) minmax(260px, 1.2fr);
+  grid-template-columns: minmax(300px, 1.1fr) minmax(260px, 0.9fr);
   gap: clamp(28px, 5vw, 76px);
   align-items: start;
   margin-top: clamp(68px, 9vw, 132px);
@@ -219,7 +201,7 @@
 }
 
 .heroMeta dt {
-  color: rgba(5, 5, 5, 0.48);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -250,8 +232,11 @@
   z-index: 3;
   top: clamp(22px, 3vw, 46px);
   left: clamp(20px, 5vw, 72px);
-  color: var(--visual-ink);
-  font-size: 0.76rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(5, 5, 5, 0.55);
+  color: #f8f7f2;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -370,16 +355,11 @@
 .storyIndex a {
   padding: 13px 0;
   border-bottom: 1px solid rgba(5, 5, 5, 0.17);
-  color: rgba(5, 5, 5, 0.58);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  transition: color 160ms ease, padding-left 160ms ease;
-}
-
-.storyIndex a:hover {
-  padding-left: 7px;
-  color: #050505;
+  transition: color 160ms var(--ease-out), transform 160ms var(--ease-out);
 }
 
 .story {
@@ -562,10 +542,6 @@
   transition: text-decoration-color 160ms var(--ease-out);
 }
 
-.stackSection a:hover {
-  text-decoration-color: var(--teal);
-}
-
 .galleryGrid {
   display: grid;
   gap: 44px;
@@ -588,7 +564,7 @@
 
 .galleryGrid figcaption {
   margin-top: 12px;
-  color: rgba(5, 5, 5, 0.58);
+  color: rgba(5, 5, 5, 0.62);
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -644,15 +620,6 @@
 
 .projectNavigation a:last-child {
   text-align: right;
-}
-
-.projectNavigation a:hover {
-  background: #151711;
-  color: #f8f7f2;
-}
-
-.projectNavigation a:hover span {
-  color: #75d2cb;
 }
 
 .projectNavigation span {
@@ -874,5 +841,67 @@
 
   .navPill:hover {
     transform: none;
+  }
+}
+
+/* --- Audit pass --- */
+@media (pointer: coarse) {
+  .navPill {
+    min-height: 44px;
+  }
+}
+
+/* --- Audit pass: hover effects only for real pointers --- */
+@media (hover: hover) and (pointer: fine) {
+  .mark:hover {
+    transform: scale(1.08);
+  }
+
+  .nav > a:first-child:hover {
+    border-color: currentColor;
+  }
+
+  .navPill:hover {
+    background: #58bbb4;
+    color: #050505;
+    transform: translateY(-2px);
+  }
+
+  .breadcrumb a:hover {
+    color: #050505;
+  }
+
+  .storyIndex a:hover {
+    transform: translateX(7px);
+    color: #050505;
+  }
+
+  .stackSection a:hover {
+    text-decoration-color: var(--teal);
+  }
+
+  .projectNavigation a:hover {
+    background: #151711;
+    color: #f8f7f2;
+  }
+
+  .projectNavigation a:hover span {
+    color: #75d2cb;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 10px;
+    padding: 6px 6px 6px 12px;
+    font-size: 0.68rem;
+  }
+
+  .navPill {
+    padding: 0 11px;
+  }
+
+  .nav > a:not(.navPill) {
+    display: none;
   }
 }
