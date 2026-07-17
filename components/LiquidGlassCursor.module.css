@@ -14,8 +14,8 @@
   z-index: 2147483000;
   top: 0;
   left: 0;
-  width: clamp(116px, 11vw, 168px);
-  height: clamp(80px, 7.6vw, 116px);
+  width: clamp(72px, 6vw, 96px);
+  height: clamp(50px, 4.2vw, 66px);
   overflow: hidden;
   pointer-events: none;
   border: 2px solid rgba(255, 255, 255, 0.78);

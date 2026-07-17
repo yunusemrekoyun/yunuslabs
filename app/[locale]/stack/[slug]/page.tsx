@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
+import { YekMark } from "@/components/YekMark";
 import { getProfile, getTechItems, getTechSlugs, projectsUsingTech } from "@/data/portfolio";
 import { isLocale, withLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -110,7 +111,9 @@ export default async function StackDetailPage({ params }: StackPageProps) {
         </a>
 
         <header className={styles.siteHeader}>
-          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home} />
+          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home}>
+            <YekMark />
+          </Link>
           <nav className={styles.nav} aria-label={dict.nav.primaryNav}>
             <Link href={withLocale(locale, "/#stack")}>{dict.nav.stack}</Link>
             <Link href={withLocale(locale, "/projects")}>{dict.nav.projects}</Link>

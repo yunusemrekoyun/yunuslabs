@@ -38,19 +38,18 @@ function ProjectArtwork({
       <span className={styles.artLabel}>{label}</span>
       <span className={styles.artTopbar} aria-hidden="true" />
       <span className={styles.artRail} aria-hidden="true" />
-      <span className={styles.artPanelMain} aria-hidden="true">
-        {image ? (
-          <span className={styles.artImageFrame}>
-            <Image
-              alt={imageAlt}
-              fill
-              loading={featured ? "eager" : "lazy"}
-              sizes="(max-width: 760px) 92vw, (max-width: 1100px) 60vw, 40vw"
-              src={image}
-            />
-          </span>
-        ) : null}
-      </span>
+      <span className={styles.artPanelMain} aria-hidden="true" />
+      {image ? (
+        <span className={styles.artImageFrame} aria-hidden="true">
+          <Image
+            alt={imageAlt}
+            fill
+            loading={featured ? "eager" : "lazy"}
+            sizes="(max-width: 760px) 92vw, (max-width: 1100px) 60vw, 40vw"
+            src={image}
+          />
+        </span>
+      ) : null}
       <span className={styles.artPanelSide} aria-hidden="true" />
       <span className={styles.artSignal} aria-hidden="true" />
       <span className={styles.artNotch} aria-hidden="true" />

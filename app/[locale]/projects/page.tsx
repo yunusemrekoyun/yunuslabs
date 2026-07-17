@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
+import { YekMark } from "@/components/YekMark";
 import { getProfile, getProjects } from "@/data/portfolio";
 import { isLocale, withLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -56,7 +57,9 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
         </a>
 
         <header className={styles.siteHeader}>
-          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home} />
+          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home}>
+            <YekMark />
+          </Link>
           <nav className={styles.nav} aria-label={dict.nav.primaryNav}>
             <Link href={withLocale(locale, "/#about")}>{dict.nav.about}</Link>
             <Link className={styles.activeLink} href={withLocale(locale, "/projects")} aria-current="page">
@@ -121,19 +124,18 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                   >
                     <span className={styles.visualLabel}>{project.visual.label}</span>
                     <span className={styles.visualRail} data-motion="line" />
-                    <span className={styles.visualPanel} data-motion="parallax">
-                      {project.gallery[0] ? (
-                        <span className={styles.visualImageFrame}>
-                          <Image
-                            alt=""
-                            fill
-                            loading="lazy"
-                            sizes="(max-width: 900px) 92vw, 56vw"
-                            src={project.gallery[0].src}
-                          />
-                        </span>
-                      ) : null}
-                    </span>
+                    <span className={styles.visualPanel} data-motion="parallax" />
+                    {project.gallery[0] ? (
+                      <span className={styles.visualImageFrame} data-motion="parallax">
+                        <Image
+                          alt=""
+                          fill
+                          loading="lazy"
+                          sizes="(max-width: 900px) 92vw, 56vw"
+                          src={project.gallery[0].src}
+                        />
+                      </span>
+                    ) : null}
                     <span className={styles.visualNode} />
                     <span className={styles.visualLine} />
                   </div>

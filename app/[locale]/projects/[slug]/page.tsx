@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { LiquidGlassCursor } from "@/components/LiquidGlassCursor";
+import { YekMark } from "@/components/YekMark";
 import {
   getProfile,
   getProjects,
@@ -127,7 +128,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         </a>
 
         <header className={styles.siteHeader}>
-          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home} />
+          <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home}>
+            <YekMark />
+          </Link>
           <nav className={styles.nav} aria-label={dict.nav.primaryNav}>
             <Link href={withLocale(locale, "/projects")}>{dict.nav.allProjects}</Link>
             <a className={styles.navPill} href={profile.links.email}>
@@ -182,19 +185,18 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <div className={styles.coverSystem}>
                 <span className={styles.coverRail} data-motion="line" />
                 <span className={styles.coverBar} />
-                <span className={styles.coverPanel}>
-                  {project.gallery[0] ? (
-                    <span className={styles.coverImageFrame}>
-                      <Image
-                        alt=""
-                        fill
-                        priority
-                        sizes="(max-width: 900px) 94vw, 72vw"
-                        src={project.gallery[0].src}
-                      />
-                    </span>
-                  ) : null}
-                </span>
+                <span className={styles.coverPanel} />
+                {project.gallery[0] ? (
+                  <span className={styles.coverImageFrame}>
+                    <Image
+                      alt=""
+                      fill
+                      priority
+                      sizes="(max-width: 900px) 94vw, 72vw"
+                      src={project.gallery[0].src}
+                    />
+                  </span>
+                ) : null}
                 <span className={styles.coverNode} />
               </div>
             </div>

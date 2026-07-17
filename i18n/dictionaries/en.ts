@@ -35,7 +35,7 @@ export const en: Dictionary = {
     nameLine: "YUNUS EMRE KOYUN — FULL-STACK SOFTWARE DEVELOPER",
     stampText: "FULL STACK SOFTWARE DEVELOPER * DIGITAL TRANSFORMATION *",
     available: "Available",
-    copy: "I turn shared ideas into working products.",
+    copy: "Let's turn the idea we shape together into a digital product.",
   },
   about: {
     rail: "About",

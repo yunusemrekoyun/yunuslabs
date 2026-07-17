@@ -139,8 +139,8 @@ export function LiquidGlassCursor() {
       speed: 0,
     };
 
-    let lensWidth = 150;
-    let lensHeight = 104;
+    let lensWidth = 84;
+    let lensHeight = 58;
     let frameId = 0;
     let isAnimating = false;
     let interactionEnabled = false;
@@ -226,9 +226,9 @@ export function LiquidGlassCursor() {
       lens.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${angle * 0.04}deg) scale(${stretch})`;
       cursor.style.transform = `translate3d(${state.targetX - 3.5}px, ${state.targetY - 3.5}px, 0)`;
 
-      redShift.setAttribute("scale", (28 + state.speed * 14).toFixed(2));
-      greenShift.setAttribute("scale", (24 + state.speed * 12).toFixed(2));
-      blueShift.setAttribute("scale", (20 + state.speed * 9).toFixed(2));
+      redShift.setAttribute("scale", (17 + state.speed * 9).toFixed(2));
+      greenShift.setAttribute("scale", (14 + state.speed * 7).toFixed(2));
+      blueShift.setAttribute("scale", (12 + state.speed * 6).toFixed(2));
 
       state.speed *= 0.88;
       const remainingDistance = Math.hypot(state.targetX - state.x, state.targetY - state.y);
@@ -341,7 +341,7 @@ export function LiquidGlassCursor() {
             ref={redShiftRef}
             in="SourceGraphic"
             in2="DISPLACEMENT_MAP"
-            scale="28"
+            scale="17"
             xChannelSelector="R"
             yChannelSelector="G"
             result="RED_SHIFT"
@@ -356,7 +356,7 @@ export function LiquidGlassCursor() {
             ref={greenShiftRef}
             in="SourceGraphic"
             in2="DISPLACEMENT_MAP"
-            scale="24"
+            scale="14"
             xChannelSelector="R"
             yChannelSelector="G"
             result="GREEN_SHIFT"
@@ -371,7 +371,7 @@ export function LiquidGlassCursor() {
             ref={blueShiftRef}
             in="SourceGraphic"
             in2="DISPLACEMENT_MAP"
-            scale="20"
+            scale="12"
             xChannelSelector="R"
             yChannelSelector="G"
             result="BLUE_SHIFT"

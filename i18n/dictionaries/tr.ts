@@ -35,7 +35,7 @@ export const tr = {
     nameLine: "YUNUS EMRE KOYUN — FULL-STACK SOFTWARE DEVELOPER",
     stampText: "FULL STACK SOFTWARE DEVELOPER * DİJİTAL DÖNÜŞÜM *",
     available: "Müsait",
-    copy: "Ortak fikirden ürüne geliştirme yapıyorum.",
+    copy: "Ürettiğimiz fikri birlikte dijitale dönüştürelim.",
   },
   about: {
     rail: "Hakkında",

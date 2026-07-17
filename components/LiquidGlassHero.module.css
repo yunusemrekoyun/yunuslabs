@@ -58,11 +58,17 @@
 }
 
 .mark {
-  width: clamp(42px, 4.7vw, 74px);
+  display: block;
+  width: clamp(38px, 4.2vw, 62px);
   aspect-ratio: 1;
-  background: var(--ink);
-  clip-path: polygon(50% 0, 63% 31%, 100% 50%, 63% 69%, 50% 100%, 37% 69%, 0 50%, 37% 31%);
-  transition: transform 260ms ease;
+  color: var(--ink);
+  transition: transform 260ms var(--ease-out);
+}
+
+.mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .nav {
@@ -159,19 +165,28 @@
   width: clamp(138px, 15vw, 236px);
   aspect-ratio: 1;
   pointer-events: none;
-  animation: spin 20s linear infinite;
 }
 
-.stamp svg {
+/* The ring of text spins; the logo in the middle stays put. */
+.stampRing {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
+  animation: spin 20s linear infinite;
 }
 
-.stamp text {
+.stampRing text {
   font-family: var(--font-space-grotesk), Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
+}
+
+.stampLogo {
+  position: absolute;
+  inset: 31%;
+  display: block;
 }
 
 .heroCopy {
@@ -211,18 +226,6 @@
   transform: rotate(180deg);
 }
 
-.fineDot {
-  position: absolute;
-  z-index: 4;
-  top: 48%;
-  left: 66%;
-  width: clamp(13px, 1.2vw, 20px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--ink);
-  pointer-events: none;
-}
-
 .srOnly {
   position: absolute;
   width: 1px;
@@ -243,7 +246,7 @@
 
 @media (hover: hover) {
   .mark:hover {
-    transform: rotate(45deg);
+    transform: scale(1.08);
   }
 
   .nav a:not(.navPill):hover::after {
@@ -257,7 +260,7 @@
 }
 
 @media (prefers-reduced-motion: reduce), (pointer: coarse) {
-  .stamp {
+  .stampRing {
     animation: none;
   }
 }

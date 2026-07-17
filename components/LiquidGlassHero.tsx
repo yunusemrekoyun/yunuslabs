@@ -4,6 +4,7 @@ import { withLocale, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LiquidGlassCursor } from "./LiquidGlassCursor";
+import { YekMark } from "./YekMark";
 import styles from "./LiquidGlassHero.module.css";
 
 type LiquidGlassHeroProps = {
@@ -25,7 +26,9 @@ export function LiquidGlassHero({ children, locale, dict }: LiquidGlassHeroProps
             <h1 className={styles.srOnly}>Yunus Emre Koyun — {dict.hero.h1Suffix}</h1>
 
             <header className={styles.siteHeader} aria-label={dict.nav.primaryNav}>
-              <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home} />
+              <Link className={styles.mark} href={withLocale(locale, "/")} aria-label={dict.nav.home}>
+                <YekMark />
+              </Link>
               <nav className={styles.nav}>
                 <a href="#projects">{dict.nav.projects}</a>
                 <a href="#about">{dict.nav.about}</a>
@@ -45,7 +48,7 @@ export function LiquidGlassHero({ children, locale, dict }: LiquidGlassHeroProps
             </div>
 
             <div className={styles.stamp} data-motion="parallax" aria-hidden="true">
-              <svg viewBox="0 0 200 200">
+              <svg className={styles.stampRing} viewBox="0 0 200 200">
                 <defs>
                   <path id="stampCircle" d="M 100 100 m -74 0 a 74 74 0 1 1 148 0 a 74 74 0 1 1 -148 0" />
                 </defs>
@@ -59,11 +62,11 @@ export function LiquidGlassHero({ children, locale, dict }: LiquidGlassHeroProps
                     {dict.hero.stampText}
                   </textPath>
                 </text>
-                <path fill="currentColor" d="M100 48 L115 83 L152 100 L115 117 L100 152 L85 117 L48 100 L85 83 Z" />
               </svg>
+              <span className={styles.stampLogo}>
+                <YekMark />
+              </span>
             </div>
-
-            <div className={styles.fineDot} data-motion="parallax" aria-hidden="true" />
             <div className={styles.sideBadge} data-motion="parallax" aria-hidden="true">
               <span>{dict.hero.available}</span>
             </div>
