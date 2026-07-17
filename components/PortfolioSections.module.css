@@ -107,7 +107,7 @@
 .aboutHeading h2 {
   max-width: 890px;
   font-size: clamp(5.2rem, 10.2vw, 10.8rem);
-  line-height: 0.78;
+  line-height: 0.92;
 }
 
 .aboutHeading h2 em,
@@ -220,8 +220,8 @@
 
 .projectsHeading h2 {
   max-width: 1050px;
-  font-size: clamp(5rem, 10.6vw, 11.4rem);
-  line-height: 0.8;
+  font-size: clamp(4.6rem, 9.2vw, 10rem);
+  line-height: 0.92;
 }
 
 .projectsGrid {
@@ -424,6 +424,30 @@
   border: 1px solid color-mix(in srgb, var(--art-ink), transparent 80%);
   background: color-mix(in srgb, var(--art-accent), transparent 62%);
   content: "";
+}
+
+/* Real screenshot inside the translucent "screen" panel. The panel border
+   stays visible as a thin frame; the decorative fills step aside. */
+.projectArtwork[data-has-image="true"] .artPanelMain {
+  overflow: hidden;
+  background: var(--art-surface);
+}
+
+.projectArtwork[data-has-image="true"] .artPanelMain::before {
+  content: none;
+}
+
+.artImageFrame {
+  position: absolute;
+  display: block;
+  inset: 7px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--art-bg), #fff 40%);
+}
+
+.artImageFrame img {
+  object-fit: cover;
+  object-position: top center;
 }
 
 .artPanelSide {
@@ -679,7 +703,7 @@
 .processHeading h2 {
   max-width: 600px;
   font-size: clamp(4.7rem, 7.5vw, 8.2rem);
-  line-height: 0.8;
+  line-height: 0.92;
 }
 
 .processHeading > p:last-child {
@@ -742,7 +766,7 @@
 .stackHeading h2 {
   max-width: 1020px;
   font-size: clamp(5rem, 10vw, 10.6rem);
-  line-height: 0.79;
+  line-height: 0.92;
 }
 
 .stackList {
@@ -847,7 +871,7 @@
 
 .historyHeading h2 {
   font-size: clamp(5rem, 8.7vw, 9.2rem);
-  line-height: 0.8;
+  line-height: 0.92;
 }
 
 .experienceList {
@@ -908,11 +932,11 @@
 .educationBlock > h2 {
   margin: 0 0 clamp(70px, 10vw, 138px);
   font-family: var(--font-display), "Times New Roman", serif;
-  font-size: clamp(4.6rem, 7vw, 7.4rem);
+  font-size: clamp(2rem, 2.9vw, 3.1rem);
   font-style: italic;
   font-weight: 900;
-  line-height: 0.8;
-  letter-spacing: -0.05em;
+  line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .educationBlock article {
@@ -976,7 +1000,7 @@
 .nowHeading h2 {
   max-width: 600px;
   font-size: clamp(4.8rem, 7.4vw, 8rem);
-  line-height: 0.8;
+  line-height: 0.92;
 }
 
 .nowPulse {
@@ -1066,8 +1090,8 @@
 
 .contactGrid h2 {
   max-width: 900px;
-  font-size: clamp(5.5rem, 11vw, 12rem);
-  line-height: 0.77;
+  font-size: clamp(4.8rem, 9.4vw, 10.4rem);
+  line-height: 0.92;
 }
 
 .contactDetails {
@@ -1437,7 +1461,8 @@
   .processHeading h2,
   .historyHeading h2,
   .nowHeading h2 {
-    font-size: clamp(4.35rem, 20vw, 6.8rem);
+    font-size: clamp(3.5rem, 16vw, 5.6rem);
+    overflow-wrap: break-word;
   }
 
   .processList li {

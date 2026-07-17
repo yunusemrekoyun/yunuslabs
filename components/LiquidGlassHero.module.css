@@ -121,34 +121,34 @@
   position: absolute;
   z-index: 5;
   left: clamp(24px, 5vw, 92px);
-  top: 22%;
+  top: 26%;
   display: grid;
-  gap: clamp(0px, 0.5vw, 10px);
-  line-height: 0.76;
+  gap: clamp(2px, 0.6vw, 12px);
+  line-height: 0.9;
   user-select: none;
 }
 
 .nameBlock span {
   display: block;
   font-family: var(--font-display), "Didot", "Bodoni 72", "Times New Roman", serif;
-  font-size: clamp(8.6rem, 19.5vw, 20.5rem);
+  font-size: clamp(4.6rem, 10.5vw, 11rem);
   font-weight: 900;
   font-style: italic;
   font-optical-sizing: auto;
   font-variation-settings: "opsz" 96;
-  letter-spacing: 0;
+  letter-spacing: -0.01em;
   color: var(--ink);
 }
 
 .nameBlock small {
-  margin-top: clamp(20px, 2.2vw, 34px);
+  margin-top: clamp(28px, 3vw, 46px);
   padding-left: clamp(4px, 0.7vw, 12px);
   font-family: var(--font-space-grotesk), Arial, sans-serif;
-  font-size: clamp(0.68rem, 0.82vw, 0.86rem);
+  font-size: clamp(0.76rem, 0.92vw, 0.98rem);
   font-style: normal;
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 0.16em;
+  line-height: 1.35;
+  letter-spacing: 0.14em;
 }
 
 .stamp {
@@ -278,12 +278,18 @@
   }
 
   .nameBlock {
-    top: 27%;
+    top: 30%;
     left: 22px;
+    right: 22px;
   }
 
   .nameBlock span {
-    font-size: clamp(6.8rem, 31vw, 10.8rem);
+    font-size: clamp(3.4rem, 16vw, 5.8rem);
+  }
+
+  .nameBlock small {
+    font-size: 0.72rem;
+    line-height: 1.4;
   }
 
   .stamp {

@@ -30,11 +30,12 @@ export const tr = {
   },
   hero: {
     h1Suffix: "Full-stack Yazılım Geliştirici",
-    nameTagline: "FULL-STACK GELİŞTİRİCİ",
-    stampText: "ÜRÜN MÜHENDİSLİĞİ * SİSTEM TASARIMI * FULL STACK *",
+    headline1: "Bir fikirle",
+    headline2: "başla.",
+    nameLine: "YUNUS EMRE KOYUN — FULL-STACK SOFTWARE DEVELOPER",
+    stampText: "FULL STACK SOFTWARE DEVELOPER * DİJİTAL DÖNÜŞÜM *",
     available: "Müsait",
-    // Placeholder until the real tagline arrives from profile content.
-    copy: "Arayüzden veritabanına, sunucudan canlı ortama kadar ürünün tamamıyla ilgileniyorum. Sağlam sistemleri, net kullanıcı deneyimleriyle bir araya getiriyorum.",
+    copy: "Ortak fikirden ürüne geliştirme yapıyorum.",
   },
   about: {
     rail: "Hakkında",
@@ -52,17 +53,17 @@ export const tr = {
   projects: {
     rail: "Seçili Projeler",
     eyebrow: "Gerçek süreçler. Çalışan ürünler.",
-    title: "İşin görünen yüzü",
-    titleEm: " kadar altyapısı da.",
+    title: "İşin görünen yüzü kadar",
+    titleEm: " altyapısı da önemli.",
     technicalFocus: "Teknik odak",
     artworkAlt: "Proje arayüzü için ayrılan görsel alan",
   },
   process: {
     rail: "Yaklaşım",
     railRight: "Fikir → canlı ortam",
-    eyebrow: "Koddan önce bağlam.",
-    title: "Önce sistemi",
-    titleEm: " doğru kurarım.",
+    eyebrow: "Fikrinizi anlayalım.",
+    title: "Her şeyden önce",
+    titleEm: " nasıl yaparım?",
     intro:
       "Bir özelliği tek başına değil, ürünün geri kalanı ve onu kullanacak insanların gerçek akışı içinde ele alırım.",
   },
@@ -80,7 +81,7 @@ export const tr = {
     experienceTitle: "Öğrenirken",
     experienceTitleEm: " üretmek.",
     educationEyebrow: "Eğitim.",
-    educationTitle: "Temel.",
+    educationTitle: "Bilgisayar mühendisi.",
     graduation: "Mezuniyet",
     gpa: "GPA",
   },
@@ -93,7 +94,7 @@ export const tr = {
     rail: "İletişim",
     eyebrow: "Yeni bir şey üzerinde mi düşünüyorsun?",
     title: "Konuşarak",
-    titleEm: " netleştirelim.",
+    titleEm: " dijitale dönüşelim.",
     blurb:
       "Yeni projeler, freelance çalışmalar, full-time pozisyonlar ve teknik iş birlikleri için iletişime açığım.",
     socialLabel: "Sosyal ve belge bağlantıları",

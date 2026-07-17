@@ -30,11 +30,12 @@ export const en: Dictionary = {
   },
   hero: {
     h1Suffix: "Full-stack Software Developer",
-    nameTagline: "FULL-STACK DEVELOPER",
-    stampText: "PRODUCT ENGINEERING * SYSTEM DESIGN * FULL STACK *",
+    headline1: "Start with",
+    headline2: "an idea.",
+    nameLine: "YUNUS EMRE KOYUN — FULL-STACK SOFTWARE DEVELOPER",
+    stampText: "FULL STACK SOFTWARE DEVELOPER * DIGITAL TRANSFORMATION *",
     available: "Available",
-    // Placeholder until the real tagline arrives from profile content.
-    copy: "From the interface to the database, from the server to production, I care about the whole product. I bring solid systems together with clear user experiences.",
+    copy: "I turn shared ideas into working products.",
   },
   about: {
     rail: "About",
@@ -52,17 +53,17 @@ export const en: Dictionary = {
   projects: {
     rail: "Selected Projects",
     eyebrow: "Real processes. Working products.",
-    title: "The visible side of the work",
-    titleEm: " and its foundation too.",
+    title: "The foundation matters",
+    titleEm: " as much as the visible side.",
     technicalFocus: "Technical focus",
     artworkAlt: "Reserved visual space for the project interface",
   },
   process: {
     rail: "Approach",
     railRight: "Idea → production",
-    eyebrow: "Context before code.",
-    title: "I set up the system",
-    titleEm: " right, first.",
+    eyebrow: "Let's understand your idea.",
+    title: "Before anything else —",
+    titleEm: " how do I build it?",
     intro:
       "I approach a feature not on its own, but within the rest of the product and the real flow of the people who will use it.",
   },
@@ -80,7 +81,7 @@ export const en: Dictionary = {
     experienceTitle: "Building",
     experienceTitleEm: " while learning.",
     educationEyebrow: "Education.",
-    educationTitle: "Foundation.",
+    educationTitle: "Computer engineer.",
     graduation: "Graduation",
     gpa: "GPA",
   },
@@ -92,8 +93,8 @@ export const en: Dictionary = {
   contact: {
     rail: "Contact",
     eyebrow: "Thinking about something new?",
-    title: "Let's make it clear",
-    titleEm: " by talking.",
+    title: "Let's talk",
+    titleEm: " and go digital.",
     blurb:
       "I'm open to new projects, freelance work, full-time roles, and technical collaborations.",
     socialLabel: "Social and document links",

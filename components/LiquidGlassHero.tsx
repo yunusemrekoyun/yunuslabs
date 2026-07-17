@@ -39,9 +39,9 @@ export function LiquidGlassHero({ children, locale, dict }: LiquidGlassHeroProps
             </header>
 
             <div className={styles.nameBlock} data-motion="parallax scale" aria-hidden="true">
-              <span>Yunus</span>
-              <span>Emre</span>
-              <small>KOYUN / {dict.hero.nameTagline}</small>
+              <span>{dict.hero.headline1}</span>
+              <span>{dict.hero.headline2}</span>
+              <small>{dict.hero.nameLine}</small>
             </div>
 
             <div className={styles.stamp} data-motion="parallax" aria-hidden="true">
@@ -50,7 +50,12 @@ export function LiquidGlassHero({ children, locale, dict }: LiquidGlassHeroProps
                   <path id="stampCircle" d="M 100 100 m -74 0 a 74 74 0 1 1 148 0 a 74 74 0 1 1 -148 0" />
                 </defs>
                 <text fill="currentColor">
-                  <textPath href="#stampCircle" startOffset="0">
+                  <textPath
+                    href="#stampCircle"
+                    startOffset="0"
+                    textLength="460"
+                    lengthAdjust="spacingAndGlyphs"
+                  >
                     {dict.hero.stampText}
                   </textPath>
                 </text>

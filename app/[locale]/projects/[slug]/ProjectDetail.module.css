@@ -173,7 +173,7 @@
   font-weight: 900;
   font-optical-sizing: auto;
   font-variation-settings: "opsz" 96;
-  line-height: 0.76;
+  line-height: 0.9;
   letter-spacing: -0.04em;
   overflow-wrap: anywhere;
 }
@@ -305,6 +305,21 @@
   right: 3%;
   bottom: 7%;
   left: 21%;
+  overflow: hidden;
+}
+
+/* Real screenshot inside the glass cover panel. */
+.coverImageFrame {
+  position: absolute;
+  display: block;
+  inset: 9px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.coverImageFrame img {
+  object-fit: cover;
+  object-position: top center;
 }
 
 .coverNode {
@@ -387,7 +402,7 @@
   font-weight: 900;
   font-optical-sizing: auto;
   font-variation-settings: "opsz" 96;
-  line-height: 0.84;
+  line-height: 0.92;
   letter-spacing: -0.028em;
 }
 
@@ -428,7 +443,7 @@
   font-weight: 900;
   font-optical-sizing: auto;
   font-variation-settings: "opsz" 96;
-  line-height: 0.84;
+  line-height: 0.92;
   letter-spacing: -0.028em;
 }
 
@@ -647,7 +662,7 @@
   font-size: clamp(2.9rem, 6vw, 7rem);
   font-style: italic;
   font-weight: 900;
-  line-height: 0.82;
+  line-height: 0.92;
 }
 
 .footer {
