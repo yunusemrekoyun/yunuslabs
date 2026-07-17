@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.DS_Store
+*.tsbuildinfo
+*.zip
+.env
+.env.*
+PORTFOLIO_CONTENT_NOTES.md
+PORTFOLIO_UPLOAD_README.md
+Dockerfile
+docker-compose.yml

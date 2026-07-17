@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: https://yunusemrekoyun.com
+    image: yunusemrekoyun-portfolio-app
+    container_name: yunusemrekoyun-portfolio
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_SITE_URL: https://yunusemrekoyun.com
+    ports:
+      - "127.0.0.1:3001:3000"
