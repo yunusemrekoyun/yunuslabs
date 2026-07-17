@@ -1,3 +1,8 @@
+# Explicit project name: the deploy dir is named "app", and another tenant on
+# the VPS (garden otel) was also deployed from a dir named "app" — without this,
+# compose treats that container as an orphan of THIS project.
+name: yunusemrekoyun-portfolio
+
 services:
   app:
     build:
