@@ -1,0 +1,73 @@
+/* Floating app-style tab bar — mobile only. Pure liquid-glass recipe from the
+   global tokens, so the no-backdrop-filter and reduced-transparency fallbacks
+   come for free. */
+.bar {
+  position: fixed;
+  z-index: 80;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  display: none;
+  align-items: stretch;
+  gap: 2px;
+  padding: 6px;
+  border: 1px solid var(--glass-light-stroke);
+  border-radius: 999px;
+  /* More opaque than the standard light glass: the bar floats over the dark
+     experience→now→contact tail too, where ink icons need a frosted base. */
+  background: color-mix(in srgb, var(--paper), transparent 30%);
+  box-shadow: var(--glass-light-shadow);
+  backdrop-filter: var(--glass-filter);
+  -webkit-backdrop-filter: var(--glass-filter);
+  translate: -50% 0;
+}
+
+.item {
+  display: flex;
+  min-width: 52px;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px 9px 7px;
+  border-radius: 999px;
+  color: rgba(5, 5, 5, 0.74);
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background 200ms var(--ease-out),
+    color 200ms var(--ease-out),
+    scale 160ms var(--ease-out);
+}
+
+.item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.item:active {
+  scale: 0.94;
+}
+
+.itemActive {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (max-width: 760px) {
+  .bar {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+
+  .item:active {
+    scale: 1;
+  }
+}

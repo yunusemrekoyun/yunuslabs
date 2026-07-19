@@ -192,12 +192,26 @@ export function PortfolioSections({ locale, dict }: { locale: Locale; dict: Dict
                             {dict.common.github} <span aria-hidden="true">↗</span>
                           </a>
                         ) : null}
-                        <Link href={withLocale(locale, `/projects/${project.slug}`)}>
+                        <Link
+                          className={styles.projectCaseLink}
+                          href={withLocale(locale, `/projects/${project.slug}`)}
+                        >
                           {dict.common.review} <span aria-hidden="true">→</span>
                         </Link>
                       </div>
                     </div>
                   </div>
+
+                  {/* Whole-card hit area. Sits above the artwork via DOM order
+                      but below .projectContent (z-1), whose own stretched link
+                      covers the text column — so demo/GitHub stay clickable.
+                      Hidden from AT/keyboard: the visible link is canonical. */}
+                  <Link
+                    aria-hidden="true"
+                    tabIndex={-1}
+                    className={styles.projectCardOverlay}
+                    href={withLocale(locale, `/projects/${project.slug}`)}
+                  />
                 </article>
               );
             })}

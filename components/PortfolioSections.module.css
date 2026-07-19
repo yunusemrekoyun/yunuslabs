@@ -243,6 +243,53 @@
   box-shadow: 0 28px 90px rgba(0, 0, 0, 0.14);
 }
 
+/* The whole card opens the case study. Two hit layers are needed because
+   .projectContent (z-1) forms its own stacking context: the overlay link
+   (unpositioned z, last in DOM) covers the artwork side, and the case-study
+   link's ::after stretches over the content column inside that context. */
+.projectCardOverlay {
+  position: absolute;
+  inset: 0;
+}
+
+.projectCaseLink::after {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  content: "";
+}
+
+.projectLinks a {
+  position: relative;
+  z-index: 5;
+}
+
+/* z-index must stay auto here: as a flex item the link would otherwise form
+   its own stacking context and drag the ::after above the sibling external
+   links (flex items honor z-index even when static). */
+.projectLinks a.projectCaseLink {
+  position: static;
+  z-index: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .projectCard {
+    transition: box-shadow 260ms var(--ease-out);
+  }
+
+  .projectCard:hover {
+    box-shadow: 0 36px 110px rgba(0, 0, 0, 0.2);
+  }
+
+  .artImageFrame img {
+    transition: scale 420ms var(--ease-out);
+  }
+
+  .projectCard:hover .artImageFrame img {
+    scale: 1.02;
+  }
+}
+
 .projectCard[data-card="1"],
 .projectCard[data-card="0"]:not(.projectFeatured) {
   grid-column: span 7;

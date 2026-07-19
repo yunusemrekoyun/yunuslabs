@@ -70,6 +70,13 @@ body {
   font-family: var(--font-space-grotesk), Arial, sans-serif;
 }
 
+/* Room for the floating bottom tab bar on small screens. */
+@media (max-width: 760px) {
+  body {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

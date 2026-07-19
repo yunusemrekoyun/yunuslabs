@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
+import { BottomNav } from "@/components/BottomNav";
 import { ScrollMotion } from "@/components/ScrollMotion";
 import StructuredData from "@/components/StructuredData";
 import { isLocale, locales, type Locale } from "@/i18n/config";
@@ -110,6 +111,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   }
 
   const activeLocale: Locale = locale;
+  const dict = getDictionary(activeLocale);
 
   return (
     <html lang={activeLocale} className={`${spaceGrotesk.variable} ${bodoniModa.variable}`}>
@@ -117,6 +119,17 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
         <StructuredData locale={activeLocale} />
         <ScrollMotion />
         {children}
+        <BottomNav
+          locale={activeLocale}
+          navLabel={dict.nav.primaryNav}
+          labels={{
+            home: dict.nav.home,
+            projects: dict.nav.projects,
+            stack: dict.nav.stack,
+            about: dict.nav.about,
+            contact: dict.nav.contact,
+          }}
+        />
       </body>
     </html>
   );
