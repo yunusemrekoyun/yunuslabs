@@ -448,10 +448,10 @@
         }
       },
       {
-        "src": "/images/projects/ceplife/admin-products.jpg",
+        "src": "/images/projects/ceplife/admin-dashboard.jpg",
         "alt": {
-          "tr": "CepLife ürün yönetimi",
-          "en": "CepLife product management"
+          "tr": "CepLife yönetim paneli",
+          "en": "CepLife admin dashboard"
         },
         "caption": {
           "tr": "Ürün, kategori ve satış verilerini birleştiren admin alanı.",
@@ -594,14 +594,14 @@
     },
     "gallery": [
       {
-        "src": "/images/projects/sv-hukuk/practice-areas-desktop.jpg",
+        "src": "/images/projects/sv-hukuk/home-hero.jpg",
         "alt": {
-          "tr": "SV Hukuk uzmanlık alanları",
-          "en": "SV Hukuk practice areas"
+          "tr": "SV Hukuk ana sayfası",
+          "en": "SV Hukuk homepage"
         },
         "caption": {
-          "tr": "Hukuki hizmetlerin açık bir içerik hiyerarşisiyle sunumu.",
-          "en": "Legal services presented with a clear content hierarchy."
+          "tr": "Premium hukuk danışmanlığını yansıtan güven odaklı açılış.",
+          "en": "A trust-focused opening that reflects premium legal counsel."
         }
       }
     ],
@@ -734,6 +734,17 @@
     },
     "gallery": [
       {
+        "src": "/images/projects/kutahya-satilik/admin-dashboard.jpg",
+        "alt": {
+          "tr": "Kütahya Satılık admin paneli",
+          "en": "Kütahya Satılık admin dashboard"
+        },
+        "caption": {
+          "tr": "İlan, talep, dönüşüm ve görüntülenme metrikleri.",
+          "en": "Listing, request, conversion, and view metrics."
+        }
+      },
+      {
         "src": "/images/projects/kutahya-satilik/valuation-mobile.jpg",
         "alt": {
           "tr": "Kütahya Satılık değerleme başlangıcı",
@@ -753,17 +764,6 @@
         "caption": {
           "tr": "İlçe, mülk türü ve alana göre çalışan deterministik değerleme formu.",
           "en": "A deterministic valuation form driven by district, property type, and area."
-        }
-      },
-      {
-        "src": "/images/projects/kutahya-satilik/admin-dashboard.jpg",
-        "alt": {
-          "tr": "Kütahya Satılık admin paneli",
-          "en": "Kütahya Satılık admin dashboard"
-        },
-        "caption": {
-          "tr": "İlan, talep, dönüşüm ve görüntülenme metrikleri.",
-          "en": "Listing, request, conversion, and view metrics."
         }
       },
       {

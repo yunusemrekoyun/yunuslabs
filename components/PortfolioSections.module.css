@@ -435,12 +435,22 @@
   display: none;
 }
 
+/* The frame keeps the screenshots' own aspect ratio (full Safari window at
+   3644x2192) and centers inside the card, so the window is never zoom-cropped
+   regardless of how the card's proportions flex across breakpoints. Width is
+   the locked axis (all cards are narrower than the screenshot ratio); height
+   derives from aspect-ratio. */
 .artImageFrame {
   position: absolute;
-  inset: 9% 7%;
   z-index: 3;
+  top: 50%;
+  right: 7%;
+  left: 7%;
   display: block;
+  aspect-ratio: 3644 / 2192;
+  max-height: 84%;
   overflow: hidden;
+  translate: 0 -50%;
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.14);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.16);

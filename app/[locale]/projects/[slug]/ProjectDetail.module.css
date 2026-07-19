@@ -299,13 +299,19 @@
   overflow: hidden;
 }
 
-/* Real screenshot filling the whole glass cover window; shapes stay behind. */
+/* Real screenshot in the glass cover window; locked to the screenshots' own
+   full-window aspect ratio so the browser window shows without zoom-cropping. */
 .coverImageFrame {
   position: absolute;
-  inset: 10px;
   z-index: 2;
+  top: 50%;
+  right: 10px;
+  left: 10px;
   display: block;
+  aspect-ratio: 3644 / 2192;
+  max-height: calc(100% - 20px);
   overflow: hidden;
+  translate: 0 -50%;
 }
 
 .coverImageFrame img {
@@ -553,7 +559,7 @@
 
 .galleryImage {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3644 / 2192;
   overflow: hidden;
   background: #ebe9df;
 }
