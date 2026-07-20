@@ -1,6 +1,7 @@
-/* Floating app-style tab bar — mobile only. Pure liquid-glass recipe from the
-   global tokens, so the no-backdrop-filter and reduced-transparency fallbacks
-   come for free. */
+/* Floating app-style tab bar — mobile only. Real liquid glass: a translucent
+   white base with a strong backdrop blur + saturate, a bright top specular
+   sheen, and layered inset highlights, so it reads as glass over both the
+   light hero and the dark experience→now→contact tail. */
 .bar {
   position: fixed;
   z-index: 80;
@@ -10,18 +11,39 @@
   align-items: stretch;
   gap: 2px;
   padding: 6px;
-  border: 1px solid var(--glass-light-stroke);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 999px;
-  /* More opaque than the standard light glass: the bar floats over the dark
-     experience→now→contact tail too, where ink icons need a frosted base. */
-  background: color-mix(in srgb, var(--paper), transparent 30%);
-  box-shadow: var(--glass-light-shadow);
-  backdrop-filter: var(--glass-filter);
-  -webkit-backdrop-filter: var(--glass-filter);
+  background: linear-gradient(
+    157deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.42) 55%,
+    rgba(255, 255, 255, 0.5)
+  );
+  box-shadow:
+    0 16px 40px rgba(5, 5, 5, 0.2),
+    0 4px 12px rgba(5, 5, 5, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -12px 26px rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(24px) saturate(1.9);
+  backdrop-filter: blur(24px) saturate(1.9);
   translate: -50% 0;
+  isolation: isolate;
+}
+
+/* Bright curved highlight along the top edge — the wet-glass specular. */
+.bar::before {
+  position: absolute;
+  z-index: -1;
+  inset: 2px 9% auto;
+  height: 42%;
+  border-radius: 999px;
+  background: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0));
+  content: "";
+  pointer-events: none;
 }
 
 .item {
+  position: relative;
   display: flex;
   min-width: 52px;
   flex-direction: column;
@@ -29,7 +51,7 @@
   gap: 3px;
   padding: 8px 9px 7px;
   border-radius: 999px;
-  color: rgba(5, 5, 5, 0.74);
+  color: rgba(5, 5, 5, 0.72);
   font-size: 0.54rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -37,8 +59,8 @@
   text-transform: uppercase;
   white-space: nowrap;
   transition:
-    background 200ms var(--ease-out),
-    color 200ms var(--ease-out),
+    background 220ms var(--ease-out),
+    color 220ms var(--ease-out),
     scale 160ms var(--ease-out);
 }
 
@@ -51,9 +73,13 @@
   scale: 0.94;
 }
 
+/* Selected tab — solid ink pill so it stays unmistakable over any backdrop. */
 .itemActive {
   background: var(--ink);
   color: var(--paper);
+  box-shadow:
+    0 6px 16px rgba(5, 5, 5, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
 }
 
 @media (max-width: 760px) {
@@ -62,9 +88,35 @@
   }
 }
 
+/* No backdrop-filter → near-solid paper so the bar still reads as a panel. */
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  .bar {
+    background: rgba(248, 247, 242, 0.93);
+  }
+
+  .bar::before {
+    display: none;
+  }
+}
+
+/* Honor reduced transparency: frost solid, drop the blur and sheen. */
+@media (prefers-reduced-transparency: reduce) {
+  .bar {
+    background: rgba(248, 247, 242, 0.97);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .bar::before {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .item {
-    transition: none;
+    transition:
+      background 220ms var(--ease-out),
+      color 220ms var(--ease-out);
   }
 
   .item:active {
